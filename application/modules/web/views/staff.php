@@ -25,7 +25,7 @@
                             <h4><?php echo $obj->name; ?></h4> 
                             <div class="detailWrap">                         
                                 <h5><?php echo $obj->designation; ?></h5>                          
-                                <ul class="list-unstyled">
+                                <ul class="list-unstyled clearfix">
                                     <li><div  class="left-part"><i class="fa fa-map-marker"></i></div> <div  class="right-part"><?php echo $obj->present_address; ?></div></li>
                                     <li><div class="left-part"><i class="fa fa-phone"></i></div> <div  class="right-part"><?php echo $obj->phone; ?></div></li>
                                     <li><div class="left-part"><i class="fa fa-envelope"></i></div> <div  class="right-part"><?php echo $obj->email; ?></div></li>

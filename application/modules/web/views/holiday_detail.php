@@ -27,7 +27,7 @@
 
             </div>
             <div class="col-md-12 col-lg-4">
-                <section class="right-pane">
+                <div class="right-pane clearfix">
                     <h2 class="widget-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('holiday'); ?></h2> 
 
                     <?php if (isset($holidays) && !empty($holidays)) { ?>
@@ -49,7 +49,7 @@
                         <?php } ?>
                     <?php } ?>
 
-                </section>
+                </div>
 
             </div>
         </div>
