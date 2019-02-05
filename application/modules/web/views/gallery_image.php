@@ -13,7 +13,7 @@
     </div>
 </section>
 
-<section class="content-area">
+<section class="go-content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-lg-8">    

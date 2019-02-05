@@ -6,7 +6,7 @@
     </div>
 </section>
 
-<section class="content-area">
+<section class="go-content-area">
     <div class="container">
         <div class="row">
 
@@ -22,14 +22,16 @@
                                 <img src="<?php echo IMG_URL; ?>/default-user.png" alt="" width="120" class="img-circle img-responsive"/> 
                                 <?php } ?>
                             </div>
-                            <h4><?php echo $obj->name; ?></h4>                          
-                            <h5><?php echo $obj->designation; ?></h5>                          
-                            <ul class="list-unstyled">
-                                <li><div  class="left-part"><i class="fa fa-map-marker"></i></div> <div  class="right-part"><?php echo $obj->present_address; ?></div></li>
-                                <li><div class="left-part"><i class="fa fa-phone"></i></div> <div  class="right-part"><?php echo $obj->phone; ?></div></li>
-                                <li><div class="left-part"><i class="fa fa-envelope"></i></div> <div  class="right-part"><?php echo $obj->email; ?></div></li>
-                                <li><div class="left-part"><i class="fa fa-tint"></i></div> <div class="right-part"><?php echo $this->lang->line($obj->blood_group); ?></div></li>
-                            </ul> 
+                            <h4><?php echo $obj->name; ?></h4> 
+                            <div class="detailWrap">                         
+                                <h5><?php echo $obj->designation; ?></h5>                          
+                                <ul class="list-unstyled">
+                                    <li><div  class="left-part"><i class="fa fa-map-marker"></i></div> <div  class="right-part"><?php echo $obj->present_address; ?></div></li>
+                                    <li><div class="left-part"><i class="fa fa-phone"></i></div> <div  class="right-part"><?php echo $obj->phone; ?></div></li>
+                                    <li><div class="left-part"><i class="fa fa-envelope"></i></div> <div  class="right-part"><?php echo $obj->email; ?></div></li>
+                                    <li><div class="left-part"><i class="fa fa-tint"></i></div> <div class="right-part"><?php echo $this->lang->line($obj->blood_group); ?></div></li>
+                                </ul>
+                            </div> 
 
                             <ul class="social">
                                 <?php if($obj->facebook_url){ ?>
@@ -41,12 +43,12 @@
                                 <?php if($obj->google_plus_url){ ?>
                                 <li><a target="_blank" href="<?php echo $obj->google_plus_url; ?>"><i class="fa fa-google-plus-square"></i></a></li>
                                 <?php } ?>
-                                <?php if($obj->instagram_url){ ?>
+                               <!--  <?php if($obj->instagram_url){ ?>
                                 <li><a target="_blank" href="<?php echo $obj->instagram_url; ?>"><i class="fa fa-instagram"></i></a></li>
-                                <?php } ?>
-                                <?php if($obj->pinterest_url){ ?>
+                                <?php } ?> -->
+                              <!--   <?php if($obj->pinterest_url){ ?>
                                 <li><a target="_blank" href="<?php echo $obj->pinterest_url; ?>"><i class="fa fa-pinterest-square"></i></a></li>
-                                <?php } ?>
+                                <?php } ?> -->
                                 <?php if($obj->twitter_url){ ?>
                                 <li><a target="_blank" href="<?php echo $obj->twitter_url; ?>"><i class="fa fa-twitter-square"></i></a></li>
                                 <?php } ?>

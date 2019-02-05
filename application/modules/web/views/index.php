@@ -34,9 +34,9 @@
     </div>
   </div>
 </section>
-<!-- <section class="content-area about-content">
+<section class="content-area about-content">
     <div class="container">
-        <div class="row about-area">
+       <!--  <div class="row about-area">
             <div class="col-12">
                 <div class="site-title">
                     <h3 class="title-section1"><?php echo $about->page_title; ?></h3>
@@ -48,7 +48,7 @@
             <div class="col-lg-6">
                 <img class="img-fluid img-thumbnail" src="<?php echo UPLOAD_PATH; ?>/page/<?php echo $about->page_image; ?>" alt="">
             </div>
-        </div>
+        </div> -->
 
         <?php if(isset($notices) && !empty($notices)){ ?>
         <div class="row text-center">
@@ -74,7 +74,7 @@
         <?php } ?>
         
     </div>
-</section> --> 
+</section> 
 
  <?php if(isset($events) && !empty($events)){ ?>
     <section id="events" class="event-area">
@@ -124,11 +124,9 @@
                 </div>
             </div>
        
-        <!-- Container -->
-       
-            <!-- Row -->
+    
             <div class="row">
-                <!-- team -->
+             
                 <div class="col-sm-4">
                     <div class="team">
                         <div class="team-img">
@@ -147,9 +145,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- /team -->
-
-                <!-- team -->
+            
                 <div class="col-sm-4">
                     <div class="team">
                         <div class="team-img">
@@ -168,9 +164,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- /team -->
-
-                <!-- team -->
+             
                 <div class="col-sm-4">
                     <div class="team">
                         <div class="team-img">
@@ -189,13 +183,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- /team -->
+            
 
             </div>
-            <!-- /Row -->
-
-        
-        <!-- /Container -->
+         
     </div>
 </section>
 
