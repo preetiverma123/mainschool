@@ -26,7 +26,7 @@
               <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
               </p>
             </div>
-            <div class="text-left btn_view pb-4"><a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+            <div class="text-left btn_view pb-4"><a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
          </div>
           </div>
          </div>
@@ -113,13 +113,14 @@
 
 <?php } ?>
 <!-- our team -->
+<?php if (isset($teachers) && !empty($teachers)) { ?>
 <section class="section_team md-padding">
     <div id="team" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="site-title">
-                        <h3 class="title-section1">Our Team</h3>
+                        <h3 class="title-section1">Our Teachers</h3>
                     </div>
                 </div>
             </div>
@@ -127,68 +128,59 @@
     
             <div class="row">
              
+                <?php foreach ($teachers as $key => $obj) { ?>
+                  <?php if($key<3){ ?>
                 <div class="col-sm-4">
                     <div class="team">
                         <div class="team-img">
-                            <img class="img-responsive" src="assets/images/team1.jpg" alt="">
+                          <?php  if($obj->photo != ''){ ?>
+                            <img class="img-responsive" src="<?php echo UPLOAD_PATH; ?>/teacher-photo/<?php echo $obj->photo; ?>" alt="">
+                          <?php }else{ ?>
+                            <img src="<?php echo IMG_URL; ?>/default-user.png" alt="" width="120" class="img-circle img-responsive"/> 
+                          <?php } ?>
                             <div class="overlay">
                                 <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                <?php if($obj->facebook_url){ ?>
+                                <a target="_blank" href="<?php echo $obj->facebook_url; ?>"><i class="fa fa-facebook"></i></a>
+                                <?php } ?>
+                                <?php if($obj->linkedin_url){ ?>
+                                <a target="_blank" href="<?php echo $obj->linkedin_url; ?>"><i class="fa fa-linkedin"></i></a>
+                                <?php } ?>
+                                <?php if($obj->google_plus_url){ ?>
+                                <a target="_blank" href="<?php echo $obj->google_plus_url; ?>"><i class="fa fa-google-plus"></i></a>
+                                <?php } ?>
+                               <!--  <?php if($obj->instagram_url){ ?>
+                                <li><a target="_blank" href="<?php echo $obj->instagram_url; ?>"><i class="fa fa-instagram"></i></a></li>
+                                <?php } ?> -->
+                                <!-- <?php if($obj->pinterest_url){ ?>
+                                <li><a target="_blank" href="<?php echo $obj->pinterest_url; ?>"><i class="fa fa-pinterest-square"></i></a></li>
+                                <?php } ?> -->
+                                <?php if($obj->twitter_url){ ?>
+                                <a target="_blank" href="<?php echo $obj->twitter_url; ?>"><i class="fa fa-twitter"></i></a>
+                                <?php } ?>
+                                <?php if($obj->youtube_url){ ?>
+                                <a target="_blank" href="<?php echo $obj->youtube_url; ?>"><i class="fa fa-youtube"></i></a>
+                                <?php } ?>
+                                   <!--  <a  href="<?php echo $obj->facebook_url; ?>"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a> -->
                                 </div>
                             </div>
                         </div>
                         <div class="team-content">
-                            <h3>John Doe</h3>
-                            <span>Web Designer</span>
+                            <h3><?php echo $obj->name; ?></h3>
+                            <span><?php echo $obj->responsibility; ?></span>
                         </div>
                     </div>
                 </div>
-            
-                <div class="col-sm-4">
-                    <div class="team">
-                        <div class="team-img">
-                            <img class="img-responsive" src="assets/images/team2.jpg" alt="">
-                            <div class="overlay">
-                                <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3>John Doe</h3>
-                            <span>Web Designer</span>
-                        </div>
-                    </div>
-                </div>
-             
-                <div class="col-sm-4">
-                    <div class="team">
-                        <div class="team-img">
-                            <img class="img-responsive" src="assets/images/team3.jpg" alt="">
-                            <div class="overlay">
-                                <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3>John Doe</h3>
-                            <span>Web Designer</span>
-                        </div>
-                    </div>
-                </div>
-            
-
+            <?php } ?>
+          <?php } ?>
+       
             </div>
          
     </div>
 </section>
+<?php } ?>
 
 <!-- our gallery -->
 <!-- <section id="gallery" class="gallery-wrap">

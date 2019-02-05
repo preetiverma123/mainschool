@@ -1,7 +1,7 @@
 <section class="page-title-area bg-white">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12"><h1 class="page-title"><?php echo $this->lang->line('about us'); ?> <?php echo $this->lang->line('school'); ?></h1></div>
+            <div class="col-lg-12"><h1 class="page-title"><?php echo $this->lang->line('about us'); ?> <?php echo $settings->school_name; ?></h1></div>
         </div>
     </div>
 </section>
@@ -27,8 +27,8 @@
                 Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include storytelling, discussion, teaching, training, and directed research. Education frequently takes place under the guidance of educators and also learners may also educate themselves. Education can take place in formal or informal settings and any experience that has a formative effect on the way one thinks, feels, or acts may be considered educational.
               </p>
             </div>
-            <div class="text-left btn_view pb-4"><a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
-         </div>
+           <!--  <div class="text-left btn_view pb-4"><a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+         </div> -->
           </div>
          </div>
       </div>
@@ -38,12 +38,12 @@
 <section class="go-content-area pd-all about-content">
     <div class="container">
          <div class="row">
-            <div class="col-lg-12"><h1><?php echo $this->lang->line('about us'); ?> <?php echo $this->lang->line('school'); ?></h1></div>
+            <div class="col-lg-12"><h1><?php echo $this->lang->line('about us'); ?> <?php echo 'About '.$settings->school_name; ?></h1></div>
         </div>
         <div class="row">
             <div class="col-lg-6">
                 <?php echo $about->page_description; ?>
-                <div class="about_us_page">
+               <!--  <div class="about_us_page">
                 <div class="row">
                     <h3>Why Choose Us?</h3>
                     <div class="list-style">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                   </div>
-              </div>
+              </div> -->
             </div>
             <div class="col-lg-6">
                 <img class="img-fluid img-thumbnail" src="<?php echo UPLOAD_PATH; ?>/page/<?php echo $about->page_image; ?>" alt="">
