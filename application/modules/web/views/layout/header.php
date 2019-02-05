@@ -1,14 +1,14 @@
 <header id="header">
     <div class="header-top-area">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-xs-12 header-top">
+                <div class="col-md-6 col-sm-6 col-xs-12 header-top">
                     <p>
                         <a href="mailto:<?php echo $settings->email; ?>"><i class="fa fa-envelope"></i> <?php echo $settings->email; ?></a>
                         <a href="tel:<?php echo $settings->phone; ?>"><i class="fa fa-phone"></i> <?php echo $settings->phone; ?></a>
                     </p>
                 </div>
-                <div class="col-md-6 col-xs-12">                            
+                <div class="col-md-6 col-sm-6 col-xs-12">                            
                     <div class="top-menu">
                         <ul>
                             <li><a href="<?php echo site_url('admission'); ?>"><?php echo $this->lang->line('admission'); ?></a></li>
@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="header-area d-flex align-items-center">
-        <div class="container pos">
+        <div class="container-fluid pos">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo">
