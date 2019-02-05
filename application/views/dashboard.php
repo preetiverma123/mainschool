@@ -36,7 +36,7 @@
         </div>
     </div>
     <?php } ?>
-    <?php if(has_permission(VIEW, 'accounting', 'income')){ ?>
+   <!--  <?php if(has_permission(VIEW, 'accounting', 'income')){ ?>
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div class="stats-count-inner">
                 <span class="count_top"><i class="fa fa-dollar"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('income'); ?></span>
@@ -44,8 +44,8 @@
                 <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
             </div>
         </div>
-     <?php } ?>
-    <?php if(has_permission(VIEW, 'accounting', 'expenditure')){ ?>
+     <?php } ?> -->
+  <!--   <?php if(has_permission(VIEW, 'accounting', 'expenditure')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
             <span class="count_top"><i class="fa fa-dollar"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('expenditure'); ?></span>
@@ -54,7 +54,7 @@
         </div>
     </div>
      <?php } ?>
-    
+     -->
 </div>
 <!-- /top tiles -->
 
@@ -127,7 +127,7 @@
             </div>          
         </div>          
 
-        <div class="col-md-6 col-sm-4 col-xs-12">
+      <!--   <div class="col-md-6 col-sm-4 col-xs-12">
             <div class="x_panel tile overflow_hidden">
                 <div class="x_title">
                     <h4 class="head-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('news'); ?></h4>
@@ -163,8 +163,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        </div> -->
+   <!--      <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="x_panel tile overflow_hidden">
                 <div class="x_title">
                     <h4 class="head-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('notice'); ?></h4>
@@ -194,7 +194,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
