@@ -13,8 +13,8 @@
             <?php if (isset($teachers) && !empty($teachers)) { ?>
                 <?php foreach ($teachers as $obj) { ?>
 
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class=" profile-details">                       
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="profile-details">                       
                             <div class="text-center">
                                 <?php  if($obj->photo != ''){ ?>
                                 <img src="<?php echo UPLOAD_PATH; ?>/teacher-photo/<?php echo $obj->photo; ?>" alt="" width="120" class="img-circle img-responsive"/> 
@@ -32,7 +32,7 @@
                                     <li><div class="left-part"><i class="fa fa-tint"></i></div> <div class="right-part"><?php echo $this->lang->line($obj->blood_group); ?></div></li>
                                 </ul> 
                             </div>
-                            <ul class="social">
+                            <ul class="social clearfix">
                                 <?php if($obj->facebook_url){ ?>
                                 <li><a target="_blank" href="<?php echo $obj->facebook_url; ?>"><i class="fa fa-facebook-square"></i></a></li>
                                 <?php } ?>
