@@ -465,16 +465,16 @@ footer{
 
 .news-content{
     float: left;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .news-listing-img{
-    max-width:250px !important;
+    max-width: 266px !important;
 }
 
-.news-content img{   
-    padding: 4px;
-    float: left;
-    margin-right: 10px;
+.news-content img{
+    /* padding: 4px; */
+    /* float: left; */
+    /* margin-right: 10px; */
     max-width: 500px;
 }
 
@@ -559,9 +559,17 @@ button.btn.btn-primary.btn-blue {
     background: #fff;
 }
 .detail-notice{
-    text-align:left;
+    text-align: left;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px 0 #00000014;
 }
-
+.notice-content h3 {
+    font-size: 20px;
+}
+.single-notice h3 {
+    font-size: 22px;
+}
 .notice-content h3 {
     margin-bottom: 15px;
     line-height: 1.5;
