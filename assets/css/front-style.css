@@ -465,16 +465,16 @@ footer{
 
 .news-content{
     float: left;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .news-listing-img{
-    max-width:250px !important;
+    max-width: 266px !important;
 }
 
-.news-content img{   
-    padding: 4px;
-    float: left;
-    margin-right: 10px;
+.news-content img{
+    /* padding: 4px; */
+    /* float: left; */
+    /* margin-right: 10px; */
     max-width: 500px;
 }
 
