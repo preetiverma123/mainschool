@@ -11,7 +11,7 @@
     </div>
 </section>
 
-<section class="content-area">
+<section class="contact-content-area">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-lg-12">

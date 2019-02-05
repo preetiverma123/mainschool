@@ -6,7 +6,7 @@
     </div>
 </section>
 
-<section class="content-area">
+<section class="go-content-area">
     <div class="container">       
             <div class="row">
                 <div class="col-md-8 col-lg-8">  
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="col-md-4 col-lg-4">
-                    <section class="right-pane">
+                    <div class="right-pane clearfix">
                         <h2 class="widget-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('event'); ?></h2>                  
 
                          <?php if(isset($events) && !empty($events)) { ?>
@@ -55,7 +55,7 @@
                             </div>
                         <?php } ?>
                         <?php } ?>
-                    </section> 
+                    </div> 
                 </div>
             </div>       
     </div>

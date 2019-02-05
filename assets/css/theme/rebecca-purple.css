@@ -20,8 +20,21 @@ body {
 .event-area{
     padding: 60px 0;
 }
+.bg-white{
+    background-color: #fff;
+}
+.pd-all{
+    padding: 60px 0;
+}
 .about-content{
     padding: 60px 0;
+    border-top: 1px solid #33a0ca;
+}
+.detailWrap{
+    padding: 10px 20px;
+}
+.teacher-detail{
+    padding: 10px 20px;
 }
 .nav.side-menu>li>a, .nav.child_menu>li>a {
     color: #fdfdfd;   
@@ -139,7 +152,13 @@ body {
     font-size: 30px;
 }
 .padding-btm{
-    padding: 60px 0;
+     padding: 60px 0; 
+}
+.pd-b{
+    padding-bottom: 60px;
+}
+.about-content h1{
+    font-size: 30px;
 }
 .main-menu ul li ul.submenu{
     background: #000;
@@ -326,7 +345,7 @@ footer {
 }
 .title-section1 {
     font-size: 30px;
-    line-height: 1.2;
+    line-height: 1.5;
     font-weight: 500;
     text-align: center;
     padding-bottom: 12px;
@@ -339,6 +358,11 @@ footer {
     text-transform: uppercase;
     background-image: none;
     border-color: #429FFD;
+}
+.btn_view .btn-outline-dark:hover {
+    color: #fff;
+    background-color:#429FFD;
+    border-color: #fff;
 }
 .btn.btn-lng {
     padding: .3rem 2rem .1rem;

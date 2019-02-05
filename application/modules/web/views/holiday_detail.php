@@ -7,7 +7,7 @@
 </section>
 
 
-<section class="content-area">
+<section class="go-content-area">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-8">
