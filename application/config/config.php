@@ -24,7 +24,7 @@ date_default_timezone_set('Asia/Kolkata');
 |
 */
  
-$config['base_url'] =  'http://localhost/school';
+$config['base_url'] =  'http://localhost/mainschool';
 
 
 /*

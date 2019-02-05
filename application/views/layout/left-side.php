@@ -21,23 +21,23 @@
                             <?php if(has_permission(VIEW, 'setting', 'setting')){ ?>
                                 <li><a href="<?php echo site_url('setting'); ?>"><?php echo $this->lang->line('general'); ?> <?php echo $this->lang->line('setting'); ?></a></li>
                             <?php } ?>
-                            <?php if(has_permission(VIEW, 'setting', 'payment')){ ?> 
+                          <!--   <?php if(has_permission(VIEW, 'setting', 'payment')){ ?> 
                                 <li><a href="<?php echo site_url('setting/payment'); ?>"><?php echo $this->lang->line('payment'); ?> <?php echo $this->lang->line('setting'); ?></a></li>
-                            <?php } ?>
-                            <?php if(has_permission(VIEW, 'setting', 'sms')){ ?>
+                            <?php } ?> -->
+                          <!--   <?php if(has_permission(VIEW, 'setting', 'sms')){ ?>
                                 <li><a href="<?php echo site_url('setting/sms'); ?>"><?php echo $this->lang->line('sms'); ?> <?php echo $this->lang->line('setting'); ?></a></li>
-                            <?php } ?>
+                            <?php } ?> -->
                         </ul>
                     </li>
                     <?php } ?>
                     
-                    <?php if(has_permission(VIEW, 'theme', 'theme')){ ?>
+                    <!-- <?php if(has_permission(VIEW, 'theme', 'theme')){ ?>
                         <li><a  href="<?php echo site_url('theme'); ?>"><i class="fa fa-cubes"></i> <?php echo $this->lang->line('theme'); ?></a></li> 
-                    <?php } ?>
+                    <?php } ?> -->
                     
-                    <?php if(has_permission(VIEW, 'language', 'language')){ ?>
+                 <!--    <?php if(has_permission(VIEW, 'language', 'language')){ ?>
                         <li><a  href="<?php echo site_url('language'); ?>"><i class="fa fa-language"></i> <?php echo $this->lang->line('language'); ?></a></li>
-                    <?php } ?>
+                    <?php } ?> -->
                     
                     <?php if(has_permission(VIEW, 'administrator', 'year') || has_permission(VIEW, 'administrator', 'role') || has_permission(VIEW, 'administrator', 'permission') || has_permission(VIEW, 'administrator', 'user') || has_permission(EDIT, 'administrator', 'password') || has_permission(VIEW, 'administrator', 'backup')){ ?>    
                         <li><a><i class="fa fa-user"></i> <?php echo $this->lang->line('administrator'); ?> <span class="fa fa-chevron-down"></span></a>
