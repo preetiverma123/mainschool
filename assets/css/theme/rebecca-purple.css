@@ -395,6 +395,9 @@ footer {
     font-size: 23px;
     line-height: 1.5;
 }
+.profile-details{
+    height: 400px;
+}
 .top-menu ul li a:hover{
     color: #fff;
 }
