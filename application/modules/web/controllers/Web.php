@@ -42,7 +42,11 @@ class Web extends CI_Controller {
 
         $this->data['notices'] = $this->web->get_notice_list(3);
         $this->data['events'] = $this->web->get_event_list(3);
+        $this->data['teachers'] = $this->web->get_teacher_list();
+
         $this->data['list'] = TRUE;
+
+
         $this->layout->title($this->lang->line('home') . ' | ' . SMS);
         $this->layout->view('index', $this->data);
     }
