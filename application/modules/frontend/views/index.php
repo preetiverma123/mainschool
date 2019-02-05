@@ -173,12 +173,26 @@
                                 </div>
                                 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="page_title"><?php echo $this->lang->line('page'); ?> <?php echo $this->lang->line('title'); ?> <span class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="page_title">
+
+                                     <?php if($page->id=='4'){
+
+
+                                        echo 'MD Name' ?> <span class="required">*</span>
+                                    <?php } else
+                                    {
+                                     echo $this->lang->line('page'); 
+                                     echo $this->lang->line('title'); ?> 
+
+                                     <span class="required">*</span>
+                                    <?php }?>
                                     </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input  class="form-control col-md-7 col-xs-12"  name="page_title"  id="page_title" value="<?php echo isset($page->page_title) ?  $page->page_title : $post['page_title']; ?>" placeholder="<?php echo $this->lang->line('page'); ?> <?php echo $this->lang->line('title'); ?>" required="required" type="text">
-                                        <div class="help-block"><?php echo form_error('page_title'); ?></div>
-                                    </div>
+                                   
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input  class="form-control col-md-7 col-xs-12"  name="page_title"  id="page_title" value="<?php echo isset($page->page_title) ?  $page->page_title : $post['page_title']; ?>" placeholder="<?php echo $this->lang->line('page'); ?> <?php echo $this->lang->line('title'); ?>" required="required" type="text">
+                                            <div class="help-block"><?php echo form_error('page_title'); ?></div>
+                                        </div>
+                                    
                                 </div>
                                 
                                 <div class="item form-group">
@@ -232,7 +246,18 @@
                                     </div>
                                 </div>
                                 <div class="item form-group">
-                                    <label class="col-md-3 col-sm-3 col-xs-4"><?php echo $this->lang->line('page'); ?> <?php echo $this->lang->line('title'); ?></label>
+                                    <label class="col-md-3 col-sm-3 col-xs-4">
+                                    <?php 
+
+                                    if($page->id=='4')
+                                    {
+                                        echo 'MD Name'; ?> 
+                                    <?php }
+                                    else{
+                                        echo $this->lang->line('page'); 
+                                        echo $this->lang->line('title');
+                                    }?>
+                                    </label>
                                     <div class="col-md-9 col-sm-9 col-xs-8">
                                     : <?php echo $page->page_title; ?>
                                     </div>
