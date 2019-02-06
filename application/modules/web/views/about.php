@@ -5,34 +5,58 @@
         </div>
     </div>
 </section>
-<section class="messageContainer pd-b" id="message-section">
+<section class="messageContainer padding-btm" id="message-section">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="go-heading go-lined">
-          <h3 class="title-section1">MD's<br>Message</h3>
+          <h3 class="title-section1">MD's Message</h3>
         </div>
         
          <div class="row go-directors">
           <div class="col-md-4">
               <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="170px" height="203px" alt="director">
-              <h4>Shri Vishwanath Kesarwani</h4>
+              <h4><?php echo $mdmessage->page_title; ?></h4>
             </div>
           </div>
           <div class="col-md-8">
             <div class="message-content">
-              <h5>My Dear Students,</h5>
-              <h5>Welcome to School.</h5> 
               <p>
-                Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include storytelling, discussion, teaching, training, and directed research. Education frequently takes place under the guidance of educators and also learners may also educate themselves. Education can take place in formal or informal settings and any experience that has a formative effect on the way one thinks, feels, or acts may be considered educational.
+              <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
               </p>
             </div>
-           <!--  <div class="text-left btn_view pb-4"><a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
-         </div> -->
+            <div class="text-left btn_view pb-4"><a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+         </div>
           </div>
          </div>
       </div>
     </div>
+    <div class="message-principal">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="go-heading go-lined">
+            <h3 class="title-section1">MD's Message</h3>
+          </div>
+          
+           <div class="row go-directors">
+            <div class="col-md-8">
+              <div class="message-content">
+                <p>
+                <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
+                </p>
+              </div>
+              <div class="text-left btn_view pb-4"><a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+           </div>
+            </div>
+            <div class="col-md-4">
+                <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="170px" height="203px" alt="director">
+                <h4><?php echo $mdmessage->page_title; ?></h4>
+              </div>
+            </div>
+            </div>
+           </div>
+        </div>
+      </div>
   </div>
 </section>
 <section class="go-content-area pd-all about-content">

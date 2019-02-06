@@ -125,11 +125,17 @@ body {
 .theme-color .fa{
     color: #663399;
 }
-
+.message-principal{
+    margin-top: 30px;
+}
+.zs-enabled .zs-slideshow .zs-slides .zs-slide{
+    -webkit-transform:scale(1.1,1.1);
+    transform:scale(1.1,1.1);
+}
 /* front end stsrt========================================= */
 .header-top-area {
-        background: #000;
-        border-bottom: 1px solid #000;
+    background: #002f58;
+    border-bottom: 1px solid #002f58;
 }
 .header-area {
           background: #00b4d9;
@@ -427,6 +433,7 @@ footer {
     font-size: 16px;
 }
 .our-direct{
+    border: 1px solid;
     text-align: center;
     box-shadow: 0 2px 5px 0 #00000014;
     transition: all 200ms ease;
