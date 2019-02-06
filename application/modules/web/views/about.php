@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="go-heading go-lined">
-          <h3 class="title-section1">MD's<br>Message</h3>
+          <h3 class="title-section1">MD's Message</h3>
         </div>
         
          <div class="row go-directors">
@@ -35,7 +35,7 @@
     </div>
   </div>
 </section>
-<section class="go-content-area pd-all about-content">
+<section class="go-content-area pd-all about-content aboutus-wrap">
     <div class="container">
          <div class="row">
             <div class="col-lg-12"><h1><?php echo $this->lang->line('about us'); ?> <?php echo 'About '.$settings->school_name; ?></h1></div>
