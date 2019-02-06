@@ -13,12 +13,12 @@
             
             <?php if(isset($news_list) && !empty($news_list)) { ?>
                 <?php foreach ($news_list as $obj) { ?>
-                    <div class="col-md-6 col-lg-6 services-grid">
+                    <div class="col-sm-12 col-md-6 col-lg-6 services-grid clearfix">
                         <div class="newsWrap">
-                            <div class="col-md-6 serv-img">
+                            <div class="col-sm-12 col-md-12 col-lg-6 clearfix serv-img">
                                 <div class="news-content">
                                     <a href="<?php echo site_url('news-detail/'.$obj->id); ?>">
-                                        <img src="<?php echo UPLOAD_PATH; ?>/news/<?php echo $obj->image; ?>" alt="Foto" class="news-listing-img img-fluid">
+                                        <img src="<?php echo UPLOAD_PATH; ?>/news/<?php echo $obj->image; ?>" alt="Foto" class="news-listing-img img-fluid img-responsive">
                                     </a>
                                     <div class="news-discription">
                                         <div class="theme-border">
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                     
-                        <div class="col-md-6 serv-text">
+                        <div class="col-sm-12 col-md-12 col-lg-6 serv-text">
                             <a href="<?php echo site_url('news-detail/'.$obj->id); ?>">
                                 <h4><?php echo $obj->title; ?></h4>
                             </a>

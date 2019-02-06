@@ -9,10 +9,10 @@
 <section class="go-content-area">
     <div class="container">       
             <div class="row">
-                <div class="col-md-8 col-lg-8">  
+                <div class="col-md-8 col-lg-8 clearfix">  
                     <div class="detail-event">
                         <div class="event-detail-img">
-                            <img src="<?php echo UPLOAD_PATH; ?>/event/<?php echo $event->image; ?>" alt="">
+                            <img src="<?php echo UPLOAD_PATH; ?>/event/<?php echo $event->image; ?>" alt="" class="img-responsive">
                         </div>
                         <div class="event-content">
                             <div class="event-meta">

@@ -16,12 +16,12 @@
 <section class="go-content-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-lg-8">    
+            <div class="col-md-8 col-lg-8 clearfix">    
                 <?php foreach ($images as $obj) { ?>
                     <div class="row">
                         <div class="col-md-4 col-sm-4 gallery-img">                
                             <a class="group4" href="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
-                                <img src="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>" alt="<?php echo $obj->caption; ?>" style="width:100%">
+                                <img src="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>" alt="<?php echo $obj->caption; ?>" style="width:100%" class="img-responsive">
                             </a>
                         </div>
                     </div> 

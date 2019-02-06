@@ -9,7 +9,7 @@
 <section class="go-content-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-lg-8">
+            <div class="col-md-8 col-lg-8 clearfix">
                 <div class="text-center">
                     <div class="detail-notice"> 
                         <div class="notice-meta">
@@ -24,7 +24,7 @@
             </div>
 
             <div class="col-md-12 col-lg-4">
-                <section class="right-pane">
+                <section class="right-pane clearfix">
                     <h2 class="widget-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('notice'); ?></h2>                  
 
                     <?php if (isset($notices) && !empty($notices)) { ?>

@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title><?php echo $title_for_layout; ?></title>
-        <link rel="icon" href="<?php echo IMG_URL; ?>favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="<?php echo IMG_URL; ?>favicon.png" type="image/x-icon" />
         <!-- Bootstrap -->
         <link href="<?php echo VENDOR_URL; ?>bootstrap/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->

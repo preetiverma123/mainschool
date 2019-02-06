@@ -6,14 +6,14 @@
     </div>
 </section>
 
-<section class="go-content-area">
+<section class="go-content-area news_detail">
     <div class="container">
 
         <div class="row">
-             <div class="col-md-12 col-lg-8"> 
+             <div class="col-md-12 col-lg-8 clearfix"> 
             <article>
                 <div class="news-content">                   
-                        <img src="<?php echo UPLOAD_PATH; ?>/news/<?php echo $news->image; ?>" alt="Foto" class="img-fluid">                  
+                        <img src="<?php echo UPLOAD_PATH; ?>/news/<?php echo $news->image; ?>" alt="Foto" class="img-fluid img-responsive">                  
                     <div class="news-date"><i class="fa fa-calendar"></i> <?php echo date('M j, Y', strtotime($news->date)); ?></div>
                     <p>
                        <?php echo $news->news; ?>
@@ -23,7 +23,7 @@
         </div>
 
             <div class="col-md-12 col-lg-4">
-                <section class="right-pane">
+                <div class="right-pane clearfix">
                     <h2 class="widget-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('news'); ?></h2>                  
 
                     <?php if (isset($news_list) && !empty($news_list)) { ?>
@@ -40,7 +40,7 @@
                             </article>
                         <?php } ?>
                     <?php } ?>
-                </section> 
+                </div> 
             </div>
         </div>
     </div>

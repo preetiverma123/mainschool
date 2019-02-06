@@ -10,7 +10,7 @@
 <section class="go-content-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-lg-8">
+            <div class="col-md-12 col-lg-8 clearfix">
 
                 <div class="detail-notice"> 
                     <div class="notice-meta">

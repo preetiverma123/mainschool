@@ -1,7 +1,7 @@
 <section class="page-title-area">
     <div class="container">
         <div class="row">
-            <div class="col-xl-12"><h1 class="page-title"><?php echo $this->lang->line('staff'); ?>/ <?php echo $this->lang->line('employee'); ?></h1></div>
+            <div class="col-xs-12"><h1 class="page-title"><?php echo $this->lang->line('staff'); ?>/ <?php echo $this->lang->line('employee'); ?></h1></div>
         </div>
     </div>
 </section>
@@ -14,13 +14,19 @@
                 <?php foreach ($employees as $obj) { ?>
 
                     <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class=" profile-details">                       
-                            <div class="text-center">
-                                <?php  if($obj->photo != ''){ ?>
-                                <img src="<?php echo UPLOAD_PATH; ?>/employee-photo/<?php echo $obj->photo; ?>" alt="" width="120" class="img-circle img-responsive"/> 
-                                <?php }else{ ?>
-                                <img src="<?php echo IMG_URL; ?>/default-user.png" alt="" width="120" class="img-circle img-responsive"/> 
-                                <?php } ?>
+                        <div class=" profile-details">  
+                         <div class="ih-item circle effect5">                       
+                                <div class="text-center">
+                                    <div class="img">                     
+                            
+                                    <?php  if($obj->photo != ''){ ?>
+                                    <img src="<?php echo UPLOAD_PATH; ?>/employee-photo/<?php echo $obj->photo; ?>" alt="" width="120" class="img-circle img-responsive"/> 
+                                    <?php }else{ ?>
+                                    <img src="<?php echo IMG_URL; ?>/default-user.png" alt="" width="120" class="img-circle img-responsive"/> 
+                                    <?php } ?>
+                                    </div>
+                                   
+                                </div>
                             </div>
                             <h4><?php echo $obj->name; ?></h4> 
                             <div class="detailWrap">                         

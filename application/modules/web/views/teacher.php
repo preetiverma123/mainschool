@@ -14,13 +14,19 @@
                 <?php foreach ($teachers as $obj) { ?>
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="profile-details">                       
-                            <div class="text-center">
-                                <?php  if($obj->photo != ''){ ?>
-                                <img src="<?php echo UPLOAD_PATH; ?>/teacher-photo/<?php echo $obj->photo; ?>" alt="" width="120" class="img-circle img-responsive"/> 
-                                <?php }else{ ?>
-                                <img src="<?php echo IMG_URL; ?>/default-user.png" alt="" width="120" class="img-circle img-responsive"/> 
-                                <?php } ?>
+                        <div class="profile-details clearfix">
+                            <div class="ih-item circle effect5">                       
+                                <div class="text-center">
+                                    <div class="img">
+                                        <?php  if($obj->photo != ''){ ?>
+                                        <img src="<?php echo UPLOAD_PATH; ?>/teacher-photo/<?php echo $obj->photo; ?>" alt="" width="120" class="img-circle img-responsive"/> 
+
+                                        <?php }else{ ?>
+                                        <img src="<?php echo IMG_URL; ?>/default-user.png" alt="" width="120" class="img-circle img-responsive"/> 
+                                        <?php } ?>
+                                    </div>
+                                   
+                                </div>
                             </div>
                             <h4><?php echo $obj->name; ?></h4>
                             <div class="teacher-detail clearfix">                          
