@@ -16,7 +16,7 @@
         
          <div class="row go-directors">
           <div class="col-md-4">
-              <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="170px" height="203px" alt="director">
+              <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="200px" height="210px" alt="director">
               <h4><?php echo $mdmessage->page_title; ?></h4>
             </div>
           </div>
