@@ -130,13 +130,13 @@
              
                 <?php foreach ($teachers as $key => $obj) { ?>
                   <?php if($key<3){ ?>
-                <div class="col-sm-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="team">
                         <div class="team-img">
                           <?php  if($obj->photo != ''){ ?>
                             <img class="img-responsive" src="<?php echo UPLOAD_PATH; ?>/teacher-photo/<?php echo $obj->photo; ?>" alt="">
                           <?php }else{ ?>
-                            <img src="<?php echo IMG_URL; ?>/default-user.png" alt="" width="120" class="img-circle img-responsive"/> 
+                            <img src="<?php echo IMG_URL; ?>/default-user.png" alt="" width="120" class="img-responsive"/> 
                           <?php } ?>
                             <div class="overlay">
                                 <div class="team-social">

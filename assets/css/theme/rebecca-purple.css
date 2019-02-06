@@ -306,7 +306,15 @@ body {
 .team-img {
     position: relative;
     margin-bottom: 20px;
+    height: 320px;
     z-index: 11;
+}
+.team-img img {
+    height: 100%;
+    width: 100%;
+}
+.team-content h3{
+    font-size: 20px;
 }
 .team .overlay {
     background: #1C1D21;
