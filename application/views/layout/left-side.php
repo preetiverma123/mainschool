@@ -3,8 +3,24 @@
         <div class="navbar nav_title" style="border: 0;">
             <a href="<?php echo site_url('dashboard'); ?>" class="site_title_">
                 <!--<i class="fa fa-graduation-cap"></i> -->
-                <span>Global School</span>
-                <img class="logo" src="<?php echo IMG_URL; ?>/sms-logo-50.png">
+                <?php 
+                    $this->db->select('*');
+                    $this->db->from('settings');
+                    $this->db->where('id', 1 );
+                    $query = $this->db->get();
+
+                    if ( $query->num_rows() > 0 )
+                    {
+                        $row = $query->row_array();
+
+                        
+                    }
+
+                ?>
+                <span><?php  echo $row['school_name']; ?></span>
+               <!--  <img class="logo" src="<?php echo IMG_URL; ?>/sms-logo-50.png"> -->
+               <img class="logo" src="<?php echo UPLOAD_PATH; ?>/logo/<?php echo $row['logo']; ?>">
+
             </a>
         </div>
         <div class="clearfix"></div>        

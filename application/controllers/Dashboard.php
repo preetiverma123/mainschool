@@ -16,13 +16,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends MY_Controller {
 
+ public $data = array();
+
     public function __construct() {
 
         parent::__construct();
+
+        $this->db->select('*');
+        $this->db->from('settings');
+        $this->db->where('id', 1 );
+        $query = $this->db->get();
+
+        if ( $query->num_rows() > 0 )
+        {
+            $row = $query->row_array();
+
+            
+        }
+        $this->data['settings'] = $row;
         $this->load->model('Dashboard_Model', 'dashboard', true);
     }
 
-    public $data = array();
+   
 
     /*     * ***************Function index**********************************
      * @type            : Function

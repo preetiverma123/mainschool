@@ -22,7 +22,21 @@
         <div class="login_wrapper">
             <section>
                 <center>
-                    <img  width="100" height="100" src="<?php echo IMG_URL; ?>/sms-logo.png">
+                     <?php 
+                    $this->db->select('*');
+                    $this->db->from('settings');
+                    $this->db->where('id', 1 );
+                    $query = $this->db->get();
+
+                    if ( $query->num_rows() > 0 )
+                    {
+                        $row = $query->row_array();
+
+                        
+                    }
+
+                ?>
+                    <img  width="100" height="100" src="<?php echo UPLOAD_PATH; ?>/logo/<?php echo $row['logo']; ?>">
                 </center>
             </section>
             <div class="form login_form">

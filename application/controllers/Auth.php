@@ -47,7 +47,7 @@ class Auth extends CI_Controller {
 
             $data['email'] = $this->input->post('email');
             $data['password'] = md5($this->input->post('password'));
-
+            
             $login = $this->auth->get_single('users', $data);
 
             if (!empty($login)) {
