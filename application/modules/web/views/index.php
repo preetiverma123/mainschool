@@ -1,3 +1,4 @@
+
 <section class="slider_area">
   <div class="owl-carousel" id="slider_area">
     <div class="item">
