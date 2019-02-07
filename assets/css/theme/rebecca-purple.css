@@ -25,6 +25,15 @@ h6{
 .bg-white{
     background-color: #fff;
 }
+.slider_area img {
+    height: 650px;
+}
+.map-contact{
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);  
+}
+.contact-form {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+}
 .pd-all{
     padding: 60px 0;
 }

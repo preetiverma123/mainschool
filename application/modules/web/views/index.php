@@ -1,12 +1,19 @@
 <section class="slider_area">
   <div class="owl-carousel" id="slider_area">
     <div class="item">
-      <?php $slider_str = ''; foreach($sliders as $obj){ ?>
+      <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" alt="slider">
+      <!-- <?php $slider_str = ''; foreach($sliders as $obj){ ?>
         <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
       <?php } ?>
     <div id="demo-1" data-zs-src='[<?php echo rtrim($slider_str, ','); ?>]' data-zs-overlay="dots">
         <div class="demo-inner-content"></div>
-    </div> 
+    </div>  -->
+      </div>
+      <div class="item">
+        <img src="assets/uploads/slider/home-slider-1549453172-sms.jpg" alt="slider">
+      </div>
+       <div class="item">
+        <img src="assets/uploads/slider/home-slider-1523271702-sms.jpg" alt="slider">
       </div>
     </div>
 </section>
@@ -318,15 +325,17 @@
 </section>
 <?php } ?>
 <section class="contact-content-area" id="contact-section">
-   <div class="go-heading go-lined">
+   <div class="go-heading go-lined site-title">
       <h3 class="title-section1">Contact Us</h3>
     </div>
     <div class="container">
      
         <div class="row">
-            <div class="col-xs-12 col-lg-12">
-                <div id="map" style="height: 400px;"></div>
-                <script>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+              <div class="map-contact">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4165.321812020541!2d77.38378970022572!3d28.61164902546254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5aa32ba7abd%3A0x348f1dd49387e0a7!2sMainee+Steel+Works+Private+Limited!5e0!3m2!1sen!2sin!4v1543673481681" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+                <!-- <script>
                     function myMap() {
                         var myCenter = new google.maps.LatLng(<?php echo $settings->school_geocode; ?>);
                         var mapCanvas = document.getElementById("map");
@@ -336,13 +345,47 @@
                         marker.setMap(map);
                         //infowindow.open(map, marker);
                     }
-                </script>
+                </script> -->
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwNfbMeqVjiM6GstU-IfuyXvg0R1F2UaY&callback=myMap"></script>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="contact-form">
+                    <form action="<?php echo site_url('contact'); ?>" method="post" name="contact" id="contact">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="first_name" class="col-form-label"><?php echo $this->lang->line('first_name'); ?></label>
+                                <input type="text" class="form-control" id="first_name" placeholder="<?php echo $this->lang->line('first_name'); ?>" name="first_name" required="required">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="last_name" class="col-form-label"><?php echo $this->lang->line('last_name'); ?></label>
+                                <input type="text" class="form-control" id="last_name" placeholder="<?php echo $this->lang->line('last_name'); ?>" name="last_name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email" class="col-form-label"><?php echo $this->lang->line('email'); ?></label>
+                                <input type="email" class="form-control" id="email" placeholder="<?php echo $this->lang->line('email'); ?>" name="email" required="required">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone" class="col-form-label"><?php echo $this->lang->line('phone'); ?></label>
+                                <input type="text" class="form-control" id="phone" placeholder="<?php echo $this->lang->line('phone'); ?>" name="phone">
+                            </div>
+                        </div>  
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="comment"><?php echo $this->lang->line('comment'); ?></label>
+                                <textarea class="form-control" id="comment" rows="5" name="comment" required="required" placeholder="<?php echo $this->lang->line('comment'); ?>"></textarea>
+                            </div>                           
+                        </div>                           
+                        <button type="submit" class="btn btn-primary btn-blue" style="margin-left: 16px;"><?php echo $this->lang->line('submit'); ?></button>
+                        
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<section class="content-area">
+<!-- <section class="content-area">
   <div class="front-contact">
     <div class="container">
         <div class="row">
@@ -406,7 +449,7 @@
         </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- our gallery -->
 <!-- <section id="gallery" class="gallery-wrap">
         
