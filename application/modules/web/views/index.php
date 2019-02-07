@@ -1,109 +1,162 @@
-<section id="slider_area" class="slider_area">
-    <?php $slider_str = ''; foreach($sliders as $obj){ ?>
-        <?php $slider_str .= '"'.base_url().'assets/uploads/slider/'.$obj->image.'"'.','; ?>
-    <?php } ?>
+
+<section class="slider_area">
+  <div class="owl-carousel" id="slider_area">
+    <div class="item">
+      <?php $slider_str = ''; foreach($sliders as $obj){ ?>
+        <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
+      <?php } ?>
     <div id="demo-1" data-zs-src='[<?php echo rtrim($slider_str, ','); ?>]' data-zs-overlay="dots">
         <div class="demo-inner-content"></div>
+    </div> 
+      </div>
     </div>
 </section>
 <section class="messageContainer padding-btm" id="message-section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-8 col-md-8">
         <div class="go-heading go-lined">
-          <h3 class="title-section1">MD's Message</h3>
+          <h3 class="title-section1"><span style="color:#e41d43;">About</span> Bal Vidya Mandir</h3>
         </div>
-        
-         <div class="row go-directors">
-          <div class="col-md-4">
-              <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="200px" height="210px" alt="director">
-              <h4><?php echo $mdmessage->page_title; ?></h4>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="message-content">
-              <p>
-              <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
-              </p>
-            </div>
-            <div class="text-left btn_view pb-4"><a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
-         </div>
-          </div>
-         </div>
-      </div>
-    </div>
-    <div class="message-principal">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="go-heading go-lined">
-            <h3 class="title-section1">MD's Message</h3>
-          </div>
-          
+          <div class="directorWrapper">
            <div class="row go-directors">
-            <div class="col-md-8">
+            <div class="col-md-4">
+              <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="200px" height="210px" alt="director">
+                <h4><?php echo $mdmessage->page_title; ?></h4>
+              </div>
               <div class="message-content">
                 <p>
                 <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
                 </p>
               </div>
-              <div class="text-left btn_view pb-4"><a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
-           </div>
-            </div>
-            <div class="col-md-4">
-                <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="170px" height="203px" alt="director">
-                <h4><?php echo $mdmessage->page_title; ?></h4>
+              <div class="text-center btn_view pb-4">
+                <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
+            <div class="col-md-4">
+              <div class="owl-carousel" id="founder-msg">
+                <div class="item">
+                  <div class="go-box-wrap go-padding our-direct bg-light"> <img src="assets/images/team3.jpg" width="200px" height="210px" alt="director">
+                    <h4><?php echo $mdmessage->page_title; ?></h4>
+                  </div>
+                  <div class="message-content"> 
+                    <p>
+                    <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
+                    </p>
+                  </div>
+                  <div class="text-center btn_view pb-4">
+                    <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                  </div>
+                </div>
+              </div>
             </div>
-           </div>
-        </div>
+            <div class="col-md-4">
+              <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="200px" height="210px" alt="director">
+                <h4><?php echo $mdmessage->page_title; ?></h4>
+              </div>
+              <div class="message-content">
+                <p>
+                <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
+                </p>
+              </div>
+              <div class="text-center btn_view pb-4">
+                <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+              </div>
+            </div>
+          </div>
       </div>
-  </div>
-</section>
-<section class="content-area about-content">
-    <div class="container">
-       <!--  <div class="row about-area">
-            <div class="col-12">
-                <div class="site-title">
-                    <h3 class="title-section1"><?php echo $about->page_title; ?></h3>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <p class="aboutText"><?php echo $about->page_description; ?></p>
-            </div>
-            <div class="col-lg-6">
-                <img class="img-fluid img-thumbnail" src="<?php echo UPLOAD_PATH; ?>/page/<?php echo $about->page_image; ?>" alt="">
-            </div>
-        </div> -->
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="notice_board">
+              <div class="notice-board">
+                <?php if(isset($notices) && !empty($notices)){ ?>
+                  
+                    <div class="go-heading go-lined">
+                        <h3 class="title-section1"><?php echo $this->lang->line('notice'); ?></h3>
+                    </div>
+                     
 
-        <?php if(isset($notices) && !empty($notices)){ ?>
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <div class="site-title">
-                    <h3 class="title-section1"><?php echo $this->lang->line('notice'); ?></h3>
-                </div>
+                      <div class="row">
+                        <div class="notice-single col-lg-12">
+                         <div class="owl-carousel" id="notice-board">
+                            
+                          <?php foreach($notices as $obj){ ?>  
+                             <div class="item">             
+                              <div class="notice-title">
+                                  <h2><?php echo $obj->title; ?></h2>
+                                  <h3><i class="fa fa-calendar"></i>  <?php echo date('M j, Y', strtotime($obj->date)); ?> </h3>
+                              </div>
+                              <div>
+                                  <p><?php echo substr($obj->notice, 0,120); ?>...</p>
+                              </div>
+                              <div class="more-link"><a href="<?php echo site_url('notice-detail/'.$obj->id); ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
+                              </div>
+                          <?php } ?>  
+                        </div>   
+                      </div>
+                      <div class="video-single col-lg-12">
+                        <div class="about-school">
+                          <div class="addmission-board">
+                            <span>A</span>ddmission <span>o</span>pen
+                          </div>
+                          <div class="owl-carousel" id="addmission-board">
+                            <div class="item">
+                              <div class="addmissionImage">
+                                <img src="assets/uploads/event/event-1523282273-sms.jpg">
+                              </div>
+                            </div>
+                          </div>
+                        </div>  
+                      </div>
+                    </div>          
+                  </div>
+              <?php } ?>
+              </div>
             </div>
+          
+      </div>
 
-           <?php foreach($notices as $obj){ ?> 
-            <div class="notice-single col-lg-4">                
-                <div class="notice-title">
-                    <h2><?php echo $obj->title; ?></h2>
-                    <h3><i class="fa fa-calendar"></i>  <?php echo date('M j, Y', strtotime($obj->date)); ?> </h3>
-                </div>
-                <div>
-                    <p><?php echo substr($obj->notice, 0,120); ?>...</p>
-                </div>
-                <div class="more-link"><a href="<?php echo site_url('notice-detail/'.$obj->id); ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
-            </div>
-           <?php } ?>                
-        </div>
-        <?php } ?>
-        
     </div>
-</section> 
+
+  
+</section>
+<!-- Gallery section -->
+  <div class="gallery-section">
+    <div class="site-title">
+      <h3 class="title-section1">Gallery</h3>
+    </div>
+    <div class="gallerydiv">
+      <div class="grid-sizer"></div>
+      <div class="gallery-item gi-big set-bg" data-setbg="assets/images/gallery.jpg">
+        <a class="img-popup" href="assets/images/gallery.jpg"><i class="ti-plus"></i></a>
+      </div>
+      <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
+        <a class="img-popup" href="assets/images/gallery1.jpg"><i class="ti-plus"></i></a>
+      </div>
+      <div class="gallery-item set-bg" data-setbg="assets/images/gallery2.jpg">
+        <a class="img-popup" href="assets/images/gallery2.jpg"><i class="ti-plus"></i></a>
+      </div>
+      <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery3.jpg">
+        <a class="img-popup" href="assets/images/gallery3.jpg"><i class="ti-plus"></i></a>
+      </div>
+      <div class="gallery-item gi-big set-bg" data-setbg="assets/images/gallery4.jpg">
+        <a class="img-popup" href="assets/images/gallery4.jpg"><i class="ti-plus"></i></a>
+      </div>
+      <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery5.jpg">
+        <a class="img-popup" href="assets/images/gallery5.jpg"><i class="ti-plus"></i></a>
+      </div>
+      <div class="gallery-item set-bg" data-setbg="assets/images/gallery6.jpg">
+        <a class="img-popup" href="assets/images/gallery6.jpg"><i class="ti-plus"></i></a>
+      </div>
+      <div class="gallery-item set-bg" data-setbg="assets/images/gallery7.jpg">
+        <a class="img-popup" href="assets/images/gallery7.jpg"><i class="ti-plus"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- Gallery section -->
 
  <?php if(isset($events) && !empty($events)){ ?>
-    <section id="events" class="event-area">
+<section id="events" class="event-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -113,30 +166,88 @@
             </div>
         </div>
         <div class="service_container">
-        <div class="row text-center justify-content-center">
-            <?php foreach($events as $obj){ ?> 
-                <div class="col-md-4 col-sm-6">
+           
+              <div class="row text-center justify-content-center">
+                 <div class="col-md-12 col-sm-12">
+                   <div class="owl-carousel" id="event-held">
+                  <?php foreach($events as $obj){ ?> 
+                    <div class="item">
+               
                     <div class="single-event-list">
                         <div class="event-img">
                             <a href="<?php echo site_url('event-detail/'.$obj->id); ?>"><img src="<?php echo UPLOAD_PATH; ?>/event/<?php echo $obj->image; ?>" alt=""></a>
                         </div>
-                        <div class="event-content">
+                        <div class="event-content text-center">
                             <div class="event-meta">
                                 <div class="event-title"><?php echo $obj->title; ?></div>
                                 <div class="event-for"><span><?php echo $this->lang->line('event_for'); ?></span>: <?php echo $obj->name ? $obj->name : $this->lang->line('all'); ?></div>
-                                <div class="event-place"><span><?php echo $this->lang->line('event_place'); ?></span>: <?php echo $obj->event_place; ?></div>
-                                <div class="event-date"><span><?php echo $this->lang->line('start_date'); ?></span>: <i class="far fa-clock"></i> <?php echo date('M j, Y', strtotime($obj->event_from)); ?></div>
-                                <div class="event-date"><span><?php echo $this->lang->line('end_date'); ?></span>: <i class="far fa-clock"></i> <?php echo date('M j, Y', strtotime($obj->event_to)); ?></div>
+                                <div class="event-place"> 
+                                  <i class="fa fa-map-marker"></i>
+                                  <?php echo $obj->event_place; ?>
+                                </div>
+                                <div class="event-date">
+                                  <i class="fa fa-calendar-o"></i>
+                                  <!-- <span><?php echo $this->lang->line('start_date'); ?></span>:  -->
+                                   <?php echo date('M j, Y', strtotime($obj->event_from)); ?> -
+                                  
+                                   <!-- <span><?php echo $this->lang->line('end_date'); ?></span> -->
+                                   <?php echo date('M j, Y', strtotime($obj->event_to)); ?></div>
+                                </div>
+                               <!--  <div class="event-date"><span><?php echo $this->lang->line('end_date'); ?></span>: <i class="far fa-clock"></i> <?php echo date('M j, Y', strtotime($obj->event_to)); ?></div> -->
                             </div>
                             <div class="more-link"><a href="<?php echo site_url('event-detail/'.$obj->id); ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
                         </div>
                     </div>
+                   
+                    <?php } ?>
                 </div>
-            <?php } ?>
+              </div>
+            </div>
         </div>
-        </div>
+    </div>
 </section>
-
+<section class="fact-section spad set-bg" data-setbg="assets/images/background.jpg" style="background-image: url(assets/images/background.jpg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-3 fact">
+          <div class="fact-icon">
+            <i class="ti-crown"></i>
+          </div>
+          <div class="fact-text">
+            <h2>50</h2>
+            <p>YEARS</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 fact">
+          <div class="fact-icon">
+            <i class="ti-briefcase"></i>
+          </div>
+          <div class="fact-text">
+            <h2>80</h2>
+            <p>TEACHERS</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 fact">
+          <div class="fact-icon">
+            <i class="ti-user"></i>
+          </div>
+          <div class="fact-text">
+            <h2>500</h2>
+            <p>STUDENTS</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 fact">
+          <div class="fact-icon">
+            <i class="ti-pencil-alt"></i>
+          </div>
+          <div class="fact-text">
+            <h2>800+</h2>
+            <p>LESSONS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 <?php } ?>
 <!-- our team -->
 <?php if (isset($teachers) && !empty($teachers)) { ?>
@@ -207,7 +318,96 @@
     </div>
 </section>
 <?php } ?>
-
+<section class="contact-content-area" id="contact-section">
+   <div class="go-heading go-lined">
+      <h3 class="title-section1">Contact Us</h3>
+    </div>
+    <div class="container">
+     
+        <div class="row">
+            <div class="col-xs-12 col-lg-12">
+                <div id="map" style="height: 400px;"></div>
+                <script>
+                    function myMap() {
+                        var myCenter = new google.maps.LatLng(<?php echo $settings->school_geocode; ?>);
+                        var mapCanvas = document.getElementById("map");
+                        var mapOptions = {center: myCenter, zoom: 16};
+                        var map = new google.maps.Map(mapCanvas, mapOptions);
+                        var marker = new google.maps.Marker({position: myCenter});
+                        marker.setMap(map);
+                        //infowindow.open(map, marker);
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwNfbMeqVjiM6GstU-IfuyXvg0R1F2UaY&callback=myMap"></script>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content-area">
+  <div class="front-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="contact-form">
+                    <form action="<?php echo site_url('contact'); ?>" method="post" name="contact" id="contact">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="first_name" class="col-form-label"><?php echo $this->lang->line('first_name'); ?></label>
+                                <input type="text" class="form-control" id="first_name" placeholder="<?php echo $this->lang->line('first_name'); ?>" name="first_name" required="required">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="last_name" class="col-form-label"><?php echo $this->lang->line('last_name'); ?></label>
+                                <input type="text" class="form-control" id="last_name" placeholder="<?php echo $this->lang->line('last_name'); ?>" name="last_name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email" class="col-form-label"><?php echo $this->lang->line('email'); ?></label>
+                                <input type="email" class="form-control" id="email" placeholder="<?php echo $this->lang->line('email'); ?>" name="email" required="required">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone" class="col-form-label"><?php echo $this->lang->line('phone'); ?></label>
+                                <input type="text" class="form-control" id="phone" placeholder="<?php echo $this->lang->line('phone'); ?>" name="phone">
+                            </div>
+                        </div>  
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="comment"><?php echo $this->lang->line('comment'); ?></label>
+                                <textarea class="form-control" id="comment" rows="5" name="comment" required="required" placeholder="<?php echo $this->lang->line('comment'); ?>"></textarea>
+                            </div>                           
+                        </div>                           
+                        <button type="submit" class="btn btn-primary btn-blue" style="margin-left: 16px;"><?php echo $this->lang->line('submit'); ?></button>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="right-pane contact-mg clearfix">
+                    <h2 class="widget-title"><?php echo $this->lang->line('get_in_touch'); ?></h2> 
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <ul>
+                                <li>
+                                    <p><i class="fa fa-map-marker"></i><?php echo $settings->address; ?></p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-envelope"></i><?php echo $settings->email; ?></p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-phone"></i><?php echo $settings->phone; ?></p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-fax"></i><?php echo $settings->school_fax; ?></p>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
 <!-- our gallery -->
 <!-- <section id="gallery" class="gallery-wrap">
         
@@ -331,3 +531,65 @@
         </div>
       
       </section> -->
+<script type="text/javascript">
+ $(document).ready(function() {
+          $('#founder-msg').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: true,
+            items: 1,
+            dots: true,
+            autoplay: true
+          });
+          $('#notice-board').owlCarousel({
+            loop: true,
+            // margin: 30,
+            nav: false,
+            items: 1,
+            dots: true,
+            autoplay: true
+          });
+          $('#addmission-board').owlCarousel({
+            loop: true,
+            // margin: 30,
+            nav: false,
+            items: 1,
+            dots: true,
+            autoplay: true
+          });
+          $('#slider_area').owlCarousel({
+            loop: true,
+            // margin: 30,
+            nav: false,
+            items: 1,
+            dots: true,
+            autoplay: true
+          });
+          $('#event-held').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            items: 2,
+            dots: true,
+            autoplay: true,
+            responsive: {
+              0: {
+                  items: 1
+              },
+              360: {
+                  items: 1
+              },
+              576: {
+                  items: 1
+              },
+              991: {
+                  items: 2
+              },
+              1200: {
+                  items: 2
+              }
+            }
+          });
+         
+});
+ </script>

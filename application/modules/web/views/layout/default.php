@@ -12,20 +12,19 @@
         <title><?php echo $settings->school_name; ?></title>
       <!--   <link rel="icon" href="<?php echo IMG_URL; ?>favicon.png" type="image/x-icon" /> -->
          <link rel="icon" href=" <?php echo UPLOAD_PATH; ?>/logo/<?php echo $settings->logo; ?>" type="image/x-icon" />
-       
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
         <!-- Bootstrap -->
         <link href="<?php echo VENDOR_URL; ?>bootstrap/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Playfair+Display:400,400i,700" rel="stylesheet">
         
         <link href="<?php echo VENDOR_URL; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="<?php echo CSS_URL; ?>owl.carousel.css" rel="stylesheet">
         <link href="<?php echo CSS_URL; ?>owl.theme.default.css" rel="stylesheet">
         <!-- Custom Theme Style -->
         <link href="<?php echo CSS_URL; ?>front-style.css" rel="stylesheet">
-
+        <link href="<?php echo CSS_URL; ?>animate.css" rel="stylesheet">
         <link href="<?php echo CSS_URL; ?>front-colorbox.css" rel="stylesheet">
-        <link href="<?php echo CSS_URL; ?>front-zoomslider.css" rel="stylesheet">
+        <link href="<?php echo CSS_URL; ?>themify-icons.css" rel="stylesheet">
 
         <?php if ($theme->slug) { ?>
             <link href="<?php echo CSS_URL; ?>theme/<?php echo $theme->slug; ?>.css" rel="stylesheet">
@@ -66,8 +65,12 @@
         
         <script src="<?php echo JS_URL; ?>jquery.zoomslider.min.js"></script>        
         <script src="<?php echo JS_URL; ?>jquery.colorbox-min.js"></script>
+        <script src="<?php echo JS_URL; ?>jquery.countdown.js"></script>
+        <script src="<?php echo JS_URL; ?>masonry.pkgd.min.js"></script>
+        <script src="<?php echo JS_URL; ?>magnific-popup.min.js"></script>
+        <script src="<?php echo JS_URL; ?>isotope.pkgd.min.js"></script>
         <!-- dataTable with buttons end -->
-    
+        <script src="<?php echo JS_URL; ?>custom-1.js"></script>
         <!-- Custom Theme Scripts -->
         <script src="<?php echo JS_URL; ?>front-custom.js"></script>   
 
