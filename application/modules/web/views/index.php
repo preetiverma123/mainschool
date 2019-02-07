@@ -27,8 +27,14 @@
         </div>
           <div class="directorWrapper">
            <div class="row go-directors">
-            <div class="col-md-4">
-              <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="200px" height="210px" alt="director">
+            <div class="col-md-6">
+              <div class="go-box-wrap our-direct bg-light">
+                <div class="block-title">
+                    <h2>
+                        <span>MD's Message</span>
+                    </h2>
+                </div> 
+                <img src="assets/images/team1.jpg" width="200px" height="210px" alt="director">
                 <h4><?php echo $mdmessage->page_title; ?></h4>
               </div>
               <div class="message-content">
@@ -40,10 +46,16 @@
                 <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
-            <div class="col-md-4">
+<!--             <div class="col-md-4">
               <div class="owl-carousel" id="founder-msg">
                 <div class="item">
-                  <div class="go-box-wrap go-padding our-direct bg-light"> <img src="assets/images/team3.jpg" width="200px" height="210px" alt="director">
+                  <div class="go-box-wrap go-padding our-direct bg-light">
+                    <div class="block-title">
+                      <h2>
+                          <span>Principal's message</span>
+                      </h2>
+                    </div> 
+                   <img src="assets/images/team3.jpg" width="200px" height="210px" alt="director">
                     <h4><?php echo $mdmessage->page_title; ?></h4>
                   </div>
                   <div class="message-content"> 
@@ -56,9 +68,15 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="go-box-wrap our-direct bg-light"> <img src="assets/images/team1.jpg" width="200px" height="210px" alt="director">
+            </div> -->
+            <div class="col-md-6">
+              <div class="go-box-wrap our-direct bg-light">
+                <div class="block-title">
+                  <h2>
+                      <span>Principal's message</span>
+                  </h2>
+                </div> 
+               <img src="assets/images/team3.jpg" width="200px" height="210px" alt="director">
                 <h4><?php echo $mdmessage->page_title; ?></h4>
               </div>
               <div class="message-content">

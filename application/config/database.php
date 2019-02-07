@@ -29,6 +29,6 @@ $db['default'] = array(
 
 $db['default']['hostname'] = "localhost";
 $db['default']['username'] = "root";
-$db['default']['password'] = "Igniterpro@123";
+$db['default']['password'] = "";
 $db['default']['database'] = "igniterp_school";
 

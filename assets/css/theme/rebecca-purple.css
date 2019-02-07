@@ -106,6 +106,28 @@ h6{
     color: #fff;
     text-decoration: none;
 }
+/*.block-title {
+    background: none;
+    text-align: center;
+    background: url(assets/images/bg-line.png) no-repeat scroll bottom center transparent;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}*/
+.block-title h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.block-title span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+    letter-spacing: 1px;
+}
 .more-link a.btn-link:before {
     content: "";
     position: absolute;
