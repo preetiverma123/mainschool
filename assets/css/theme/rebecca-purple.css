@@ -134,11 +134,11 @@ body {
 }
 /* front end stsrt========================================= */
 .header-top-area {
-    background: #e2941a;
-    border-bottom: 1px solid #e2941a;
+    background: #243d77;
+    border-bottom: 1px solid #243d77;
 }
 .header-area {
-  background: #fff;
+  background: rgba(228, 29, 67, 1);
   border-bottom: 1px solid #e2941a;
 }
 .go-heading{
@@ -383,7 +383,7 @@ body {
     min-height: 270px;
 }
 footer {
-    background: #2e2c2c;
+    background: #e2941a;
     border-top: 1px solid #fff;
 }
 .footer-title{
