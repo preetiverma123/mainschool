@@ -1,6 +1,6 @@
 <section id="slider_area" class="slider_area">
     <?php $slider_str = ''; foreach($sliders as $obj){ ?>
-        <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
+        <?php $slider_str .= '"'.base_url().'assets/uploads/slider/'.$obj->image.'"'.','; ?>
     <?php } ?>
     <div id="demo-1" data-zs-src='[<?php echo rtrim($slider_str, ','); ?>]' data-zs-overlay="dots">
         <div class="demo-inner-content"></div>

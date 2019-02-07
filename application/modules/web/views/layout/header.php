@@ -18,7 +18,7 @@
                             <li>|</li>
                             <li><a href="<?php echo site_url('auth/logout'); ?>"><?php echo $this->lang->line('logout'); ?></a></li>
                             <?php }else{ ?>
-                            <li><a href="<?php echo site_url('login'); ?>"><?php echo $this->lang->line('login'); ?></a></li>
+                            <li><a href="<?php echo site_url('/'); ?>"><?php echo $this->lang->line('login'); ?></a></li>
                             <?php } ?>
                         </ul>
                     </div>
