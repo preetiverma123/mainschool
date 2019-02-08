@@ -31,7 +31,9 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo">
-                        <a href="<?php echo site_url(); ?>"><img src="<?php echo UPLOAD_PATH; ?>/logo/<?php echo $settings->logo;?>" alt="" /></a>
+                        <a href="<?php echo site_url(); ?>"><img src="<?php echo UPLOAD_PATH; ?>/logo/<?php echo $settings->logo;?>" alt="" />
+                            <span>Bal Vidya Mandir</span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-9 static">

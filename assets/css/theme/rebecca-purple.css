@@ -73,7 +73,16 @@ h6{
 .nav-sm .nav.side-menu li.active-sm {
     border-right: 5px solid #c081ff;
 }
-
+#cover {
+    background: url(../../images/loader.gif) no-repeat scroll center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    /*background-color: #d8d5da;*/
+    background-color: #fff;
+    background-size: 200px;
+}
 .main_menu span.fa{
     color: #ffffff;
 }
@@ -247,13 +256,17 @@ h6{
     font-size: 30px;
 }
 .main-menu ul li ul.submenu{
-    background: #000;
-    /* background: #bb7ef9 none repeat scroll 0 0; */
+    background: rgba(228, 29, 67, 1);
 }
 .main-menu ul li ul.submenu li {
     border-top: 1px solid #d4d4d4;
 }
-
+.eventDetailWrap .event-img{
+    height: unset;
+}
+.eventDetailWrap .event-img img {
+    height: 170px;
+}
 .page-title,
 .about-area,
 .right-pane .news-content,
@@ -481,6 +494,7 @@ h6{
 }
 .fact-text p {
     margin-bottom: 0;
+    text-align: center;
     text-transform: uppercase;
     color: #fff;
 }
@@ -489,6 +503,7 @@ h6{
     vertical-align: middle;
     display: flex;
     z-index: 9;
+    justify-content: center;
     align-items: center;
 }
 .front-contact{
@@ -833,9 +848,19 @@ footer {
 .footer-bottom {
     background: #000;
 }
+.admission-address h3{
+    color: rgba(228, 29, 67, 1);
+}
+.logo span {
+    color: #e41d43;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 600;
+}
 .admission-form{
-    border: 1px solid #bb7ef9;
+    border: 1px solid rgba(228, 29, 67, 1);
 }
 .static-links li i {
     margin-right: 10px;
+    color: #fff;
 }

@@ -11,15 +11,17 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="admission-form">
-                    <div class="row"> 
-                        <div class="col-md-10 col-sm-10 col-xs-10 ">
-                            <div class="admission-address">
+                    <div class="admission-address">
                                 <div><h3><?php echo $settings->school_name; ?></h3></div>
                                 <div><?php echo $settings->address; ?></div>
                                 <div><?php echo $settings->phone; ?></div>
                                 <div><?php echo $settings->email; ?></div>
                                 <div><h4><?php echo $this->lang->line('admission_form'); ?></h4></div>
                             </div>
+                    <div class="row"> 
+
+                        <div class="col-md-10 col-sm-10 col-xs-10 ">
+                            
                         </div>
                         <div class="col-md-2 col-sm-2 col-xs-2">
                             <span class="student-picture"><?php echo $this->lang->line('photo'); ?></span>

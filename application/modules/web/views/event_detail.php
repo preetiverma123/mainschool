@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="col-md-4 col-lg-4">
-                    <div class="right-pane clearfix">
+                    <div class="right-pane eventDetailWrap clearfix">
                         <h2 class="widget-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('event'); ?></h2>                  
 
                          <?php if(isset($events) && !empty($events)) { ?>

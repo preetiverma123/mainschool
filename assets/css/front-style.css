@@ -118,6 +118,7 @@ label {
     font-size: 14px;
     font-weight: 400;
 }
+
 *::-moz-selection {
     background: #d6b161;
     color: #fff;
@@ -307,6 +308,38 @@ label {
     padding: 5px 5px;
     text-transform: uppercase;
 }
+.owl-carousel .owl-nav {
+    height: 40px;
+    top: 50%;
+    width: 100%;
+    font-size: 0;
+    position: absolute;
+}
+/*.owl-carousel .owl-prev{
+    position: absolute;
+    left: 0;
+}
+.owl-carousel .owl-next{
+    position: absolute;
+    right: 0;
+}*/
+.owl-carousel .owl-prev:before{
+    content:"\f053";
+    font-size: 50px;
+    color: #d42a4b;
+    font-family: fontAwesome;
+    position: absolute;
+}
+
+.owl-carousel .owl-next:before{
+   content: "\f054";
+    font-size: 50px;
+    color: #d42a4b;
+    right: 8px;
+    /* left: auto; */
+    font-family: fontAwesome;
+    position: absolute;
+}
 .top-menu ul li:hover > a{color:#013e6d}
 .top-menu ul li > a.active{color:#013e6d;font-weight: bold;}
 .owl-carousel .owl-dots {
@@ -342,6 +375,16 @@ label {
 .page-title-area{
     /* background: #fbfbfb; */
     background: #ebf0f4;
+}
+.overlay{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.2;
 }
 .go-content-area{
   padding-bottom: 50px;
@@ -1102,7 +1145,9 @@ button.btn.btn-primary.btn-blue {
 
 @media only screen and (max-width: 767px) {
 
-    
+    .slider_area img{
+        height: unset !important;
+    }
     .main-menu ul li a,
     .main-menu ul li a:hover,
     .main-menu ul li.active > a {

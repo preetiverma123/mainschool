@@ -45,7 +45,7 @@
     </head>
 
     <body>
-        
+        <div id="cover"></div>
         <?php $this->load->view('layout/header'); ?>   
 
         
@@ -73,7 +73,7 @@
         <script src="<?php echo JS_URL; ?>custom-1.js"></script>
         <!-- Custom Theme Scripts -->
         <script src="<?php echo JS_URL; ?>front-custom.js"></script>   
-
+       
         <script type="text/javascript">
 
             jQuery.extend(jQuery.validator.messages, {
@@ -92,6 +92,15 @@
                 range: jQuery.validator.format("Please enter a value between {0} and {1}."),
                 max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
                 min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+            });
+
+
+        </script>
+        <script type="text/javascript">
+            $(window).load(function(){
+                setTimeout(function(){
+                    $('#cover').css("display","none");
+                },100)
             });
         </script>
 

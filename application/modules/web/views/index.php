@@ -1,8 +1,9 @@
-
+ 
 <section class="slider_area">
   <div class="owl-carousel" id="slider_area">
     <div class="item">
-      <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" alt="slider">
+      <img src="assets/uploads/slider/slider-move.jpg" alt="slider">
+      <div class="overlay"></div>
       <!-- <?php $slider_str = ''; foreach($sliders as $obj){ ?>
         <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
       <?php } ?>
@@ -11,10 +12,12 @@
     </div>  -->
       </div>
       <div class="item">
-        <img src="assets/uploads/slider/home-slider-1549453172-sms.jpg" alt="slider">
+        <img src="assets/uploads/slider/slider-banner.jpg" alt="slider">
+        <div class="overlay"></div>
       </div>
        <div class="item">
-        <img src="assets/uploads/slider/home-slider-1523271702-sms.jpg" alt="slider">
+        <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" alt="slider">
+        <div class="overlay"></div>
       </div>
     </div>
 </section>
@@ -43,7 +46,7 @@
                 </p>
               </div>
               <div class="text-center btn_view pb-4">
-                <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
 <!--             <div class="col-md-4">
@@ -85,7 +88,7 @@
                 </p>
               </div>
               <div class="text-center btn_view pb-4">
-                <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
           </div>
@@ -114,7 +117,7 @@
                               <div>
                                   <p><?php echo substr($obj->notice, 0,120); ?>...</p>
                               </div>
-                              <div class="more-link"><a href="<?php echo site_url('notice-detail/'.$obj->id); ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
+                              <div class="more-link"><a href="javascript:void(0);" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
                               </div>
                           <?php } ?>  
                         </div>   
@@ -619,10 +622,9 @@
             autoplay: true
           });
           $('#slider_area').owlCarousel({
-            loop: true,
-            // margin: 30,
-            nav: false,
             items: 1,
+            loop: true,
+            nav: true,
             dots: true,
             autoplay: true
           });
@@ -651,6 +653,8 @@
               }
             }
           });
+
          
 });
+
  </script>
