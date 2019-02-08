@@ -13,9 +13,9 @@ h6{
     position: fixed;
     height: 100%;
     width: 100%;
-    /*z-index: 2;*/
+    z-index: 2;
     /*background-color: #d8d5da;*/
-    /*background-color: #fff;*/
+    background-color: #fff;
     background-size: 200px;
 }
 #content-block {
@@ -540,17 +540,19 @@ footer {
 .addmission-board {
     padding: 15px 0 15px;
     font-size: 26px;
+    margin-bottom: 20px;
 }
 .addmissionImage img{
     padding: 10px;
     height: 200px;
+    margin-top: 4px;
     border:2px solid #e41d43;
 }
 .about-school {
     padding: 10px 0;
 }
 .addmission-board span{
-    font-size: 21px;
+    font-size: 26px;
     color: #e41d43;
     font-weight: 600;
     text-transform: uppercase;
@@ -858,9 +860,14 @@ footer {
 }
 .logo span {
     color: #e41d43;
-    font-size: 20px;
+   
+    font-size: 30px;
     font-family: inherit;
+    vertical-align: middle;
     font-weight: 600;
+}
+.logo span:first-child{
+     padding-left: 10px;
 }
 .admission-form{
     border: 1px solid rgba(228, 29, 67, 1);

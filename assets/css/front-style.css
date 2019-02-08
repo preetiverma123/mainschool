@@ -203,10 +203,10 @@ label {
     margin-right: 15px;
 }
 .logo {
-    /* padding: 5px 0 0; */
+     padding: 5px 0 5px; 
 }
 .logo img{
-    max-width: 80px;
+    max-width: 72px;
 }
 
 /* Menu Area start  */
@@ -215,7 +215,7 @@ label {
     margin-top: 6px;
 }
 .main-menu ul li ul.submenu li a:hover{
-    color: #e41d43 !important;
+    color: #000 !important;
 }
 .pb-4, .py-4 {
     padding-bottom: 1.5rem!important;
@@ -318,14 +318,56 @@ label {
     font-size: 0;
     position: absolute;
 }
-/*.owl-carousel .owl-prev{
+.about-school .owl-carousel .owl-nav.disabled{
+    display: block;
+    top: -30px;
+}
+.about-school .owl-carousel .owl-prev:before {
+    content: "\f053";
+    font-size: 15px;
+    color: #fff;
+    right: 35px;
+    border:1px solid transparent;
+    padding: 5px 5px 2px;
+    background-color: #d42a4b;
+    font-family: fontAwesome;
     position: absolute;
-    left: 0;
+}
+.about-school .owl-carousel .owl-next:before {
+    content: "\f054";
+    font-size: 15px;
+    color: #fff;
+    border:1px solid transparent;
+    padding: 5px 5px 2px;
+    background-color: #d42a4b;
+    font-family: fontAwesome;
+    position: absolute;
+}
+.about-school .owl-carousel .owl-prev:hover:before {
+    content: "\f053";
+    font-size: 15px;
+    color: #d42a4b;
+    border:1px solid #d42a4b;
+    right: 35px;
+    padding: 5px 5px 2px;
+    background-color: #fff;
+    font-family: fontAwesome;
+    position: absolute;
+}
+.about-school .owl-carousel .owl-next:hover:before {
+    content: "\f054";
+    font-size: 15px;
+    color: #d42a4b;
+    border:1px solid #d42a4b;
+    padding: 5px 5px 2px;
+    background-color: #fff;
+    font-family: fontAwesome;
+    position: absolute;
 }
 .owl-carousel .owl-next{
     position: absolute;
     right: 0;
-}*/
+}
 .owl-carousel .owl-prev:before{
     content:"\f053";
     font-size: 50px;
@@ -1147,7 +1189,9 @@ button.btn.btn-primary.btn-blue {
 /* Mobile Layout: 320px. */
 
 @media only screen and (max-width: 767px) {
-
+    .logo span {
+        font-size: 20px !important;
+    }
     .slider_area img{
         height: unset !important;
     }
