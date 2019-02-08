@@ -30,8 +30,9 @@
 
                 <div class="col-md-4 col-lg-4">
                     <div class="right-pane eventDetailWrap clearfix">
+                        
                         <h2 class="widget-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('event'); ?></h2>                  
-
+                        <div class="owl-carousel" id="held-event">
                          <?php if(isset($events) && !empty($events)) { ?>
                             <?php foreach($events as $obj) { ?>
                             <div class="col-md-12 col-sm-12">
@@ -57,6 +58,7 @@
                         <?php } ?>
                     </div> 
                 </div>
-            </div>       
+            </div>
+        </div>       
     </div>
 </section>

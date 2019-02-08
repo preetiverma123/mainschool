@@ -107,6 +107,17 @@
                 },100)
             });
         </script>
+        <script>
+        $('#held-event').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            items: 1,
+            dots: true,
+            autoplay: true,
+            
+          });
+        </script>
 
     </body>
 </html>

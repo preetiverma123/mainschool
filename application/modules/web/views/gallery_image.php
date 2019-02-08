@@ -5,9 +5,11 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <p>
-                    <?php echo $gallery->note; ?>
-                </p>
+                <div class="gallery_image">
+                    <p>
+                        <?php echo $gallery->note; ?>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
