@@ -1,13 +1,27 @@
 body {   
     font-family: 'Rubik', sans-serif;
 }
+
 h6{
     font-family: 'Rubik', sans-serif;
 }
 .left_col {
     background: #663399;
 }
-
+#cover {
+    background: url(../../images/loader.gif) no-repeat scroll center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /*z-index: 2;*/
+    /*background-color: #d8d5da;*/
+    /*background-color: #fff;*/
+    background-size: 200px;
+}
+#content-block {
+    position: relative;
+    overflow: hidden;
+}
 .nav_title {
     background: #663399;
 }
@@ -73,16 +87,7 @@ h6{
 .nav-sm .nav.side-menu li.active-sm {
     border-right: 5px solid #c081ff;
 }
-#cover {
-    background: url(../../images/loader.gif) no-repeat scroll center center;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    /*background-color: #d8d5da;*/
-    background-color: #fff;
-    background-size: 200px;
-}
+
 .main_menu span.fa{
     color: #ffffff;
 }

@@ -1,3 +1,4 @@
+ <div id="cover"></div>
 <header id="header">
     <div class="header-top-area">
         <div class="container-fluid">
