@@ -41,11 +41,12 @@
         <script src="<?php echo JS_URL; ?>jquery.mixitup.js"></script>
         <script src="<?php echo JS_URL; ?>jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="<?php echo JS_URL; ?>jquery.validate.js"></script>
-
+         
     </head>
 
     <body>
         <div id="cover"></div>
+
         <?php $this->load->view('layout/header'); ?>   
 
         
@@ -97,7 +98,8 @@
 
         </script>
         <script type="text/javascript">
-            $(window).load(function(){
+            $(document).on('ready',function(){
+               
                 setTimeout(function(){
                     $('#cover').css("display","none");
                 },100)
