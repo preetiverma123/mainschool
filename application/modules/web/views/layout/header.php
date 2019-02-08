@@ -19,7 +19,9 @@
                             <li>|</li>
                             <li><a href="<?php echo site_url('auth/logout'); ?>"><?php echo $this->lang->line('logout'); ?></a></li>
                             <?php }else{ ?>
-                            <li><a href="<?php echo site_url('/login'); ?>"><?php echo $this->lang->line('login'); ?></a></li>
+
+                            <li><a href="<?php echo site_url('login'); ?>"><?php echo $this->lang->line('login'); ?></a></li>
+
                             <?php } ?>
                         </ul>
                     </div>
@@ -33,7 +35,7 @@
                 <div class="col-lg-4">
                     <div class="logo">
                         <a href="<?php echo site_url(); ?>"><img src="<?php echo UPLOAD_PATH; ?>/logo/<?php echo $settings->logo;?>" alt="" />
-                            <span>Bal Vidya Mandir</span>
+                            <a><span>B</span>al <span>V</span>idya <span>M</span>andir</a>
                         </a>
                     </div>
                 </div>

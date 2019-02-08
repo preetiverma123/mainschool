@@ -179,7 +179,11 @@
 
 
                                         echo 'MD Name' ?> <span class="required">*</span>
-                                    <?php } else
+                                    <?php } elseif($page->id=='5'){
+
+                                         echo 'Principal Name' ?> <span class="required">*</span>
+                                    <?php
+                                        }else
                                     {
                                      echo $this->lang->line('page'); 
                                      echo $this->lang->line('title'); ?> 
@@ -251,8 +255,10 @@
 
                                     if($page->id=='4')
                                     {
-                                        echo 'MD Name'; ?> 
-                                    <?php }
+                                        echo 'MD Name'; 
+                                    }elseif ($page->id=='5') {
+                                        echo 'Principal Name';
+                                    }
                                     else{
                                         echo $this->lang->line('page'); 
                                         echo $this->lang->line('title');

@@ -40,14 +40,58 @@ class Web extends CI_Controller {
         $this->data['sliders'] = $this->web->get_list('sliders', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
 
+        $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');
+
         $this->data['notices'] = $this->web->get_notice_list(3);
         $this->data['events'] = $this->web->get_event_list(3);
         $this->data['teachers'] = $this->web->get_teacher_list();
+        $this->data['galleries'] = $this->web->get_list('galleries', array('status'=>1, 'is_view_on_web'=>1), '', '', '', 'id', 'DESC');
 
+        ///StudentsCount
+        $this->db->select('*');
+        $this->db->from('students');
+        $query = $this->db->get();
+
+        if ( $query->num_rows() > 0 )
+        {
+            $students = $query->row_array();
+
+            
+        }
+        $this->data['students'] = $students;
+
+        ////Subjects Count
+        $this->db->select('*');
+        $this->db->from('sections');
+        $query = $this->db->get();
+
+        if ( $query->num_rows() > 0 )
+        {
+            $sections = $query->row_array();
+
+            
+        }
+        $this->data['sections'] = $sections;
+
+        ////Employees Count
+        $this->db->select('*');
+        $this->db->from('employees');
+        $query = $this->db->get();
+
+        if ( $query->num_rows() > 0 )
+        {
+            $employees = $query->row_array();
+
+            
+        }
+        $this->data['employees'] = $employees;
+
+        ////List
         $this->data['list'] = TRUE;
 
 
         $this->layout->title($this->lang->line('home') . ' | ' . SMS);
+
         $this->layout->view('index', $this->data);
     }
     
@@ -302,6 +346,9 @@ class Web extends CI_Controller {
     * ********************************************************** */
     public function about() {
         
+        $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
+        
+        $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');
         $this->data['list'] = TRUE;
         $this->layout->title($this->lang->line('about_us') . ' ' . $this->lang->line('school'). ' | ' . SMS);
         $this->layout->view('about', $this->data);

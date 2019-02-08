@@ -37,7 +37,7 @@
                             <div class="col-md-12 col-sm-12">
                                 <div class="single-event-list">
                                     <div class="event-img">
-                                        <a href="<?php echo site_url('event-detail'.$obj->id); ?>">
+                                        <a href="<?php echo site_url('event-detail/'.$obj->id); ?>">
                                             <img src="<?php echo UPLOAD_PATH; ?>/event/<?php echo $obj->image; ?>" alt="">
                                         </a>
                                     </div>
@@ -49,7 +49,7 @@
                                                 <div class="event-date"><span><?php echo $this->lang->line('start_date'); ?></span>: <i class="far fa-clock"></i> <?php echo date('M j, Y', strtotime($obj->event_from)); ?></div>
                                                 <div class="event-date"><span><?php echo $this->lang->line('end_date'); ?></span>: <i class="far fa-clock"></i> <?php echo date('M j, Y', strtotime($obj->event_to)); ?></div>
                                             </div>
-                                            <div class="more-link"><a href="<?php echo site_url('event-detail'.$obj->id); ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
+                                            <div class="more-link"><a href="<?php echo site_url('event-detail/'.$obj->id); ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
                                     </div>
                                 </div>
                             </div>

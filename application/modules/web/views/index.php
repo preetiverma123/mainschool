@@ -2,7 +2,7 @@
 <section class="slider_area">
   <div class="owl-carousel" id="slider_area">
     <div class="item">
-      <img src="assets/uploads/slider/slider-move.jpg" alt="slider">
+      <img src="assets/uploads/slider/slider-move.jpg" class="img-responsive" alt="slider">
       <div class="overlay"></div>
       <!-- <?php $slider_str = ''; foreach($sliders as $obj){ ?>
         <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
@@ -12,11 +12,11 @@
     </div>  -->
       </div>
       <div class="item">
-        <img src="assets/uploads/slider/slider-banner.jpg" alt="slider">
+        <img src="assets/uploads/slider/slider-banner.jpg" class="img-responsive" alt="slider">
         <div class="overlay"></div>
       </div>
        <div class="item">
-        <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" alt="slider">
+        <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" class="img-responsive" alt="slider">
         <div class="overlay"></div>
       </div>
     </div>
@@ -30,23 +30,25 @@
         </div>
           <div class="directorWrapper">
            <div class="row go-directors">
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
               <div class="go-box-wrap our-direct bg-light">
                 <div class="block-title">
                     <h2>
                         <span>MD's Message</span>
                     </h2>
                 </div> 
-                <img src="assets/images/team1.jpg" width="200px" height="210px" alt="director">
+                <img src="assets/uploads/page/<?php echo $mdmessage->page_image;?>" width="200px" height="210px" alt="director">
                 <h4><?php echo $mdmessage->page_title; ?></h4>
               </div>
               <div class="message-content">
                 <p>
-                <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
+                <?php $this->load->helper('text');
+                $desc= strip_tags($mdmessage->page_description);
+                echo word_limiter($desc,15); ?>
                 </p>
               </div>
               <div class="text-center btn_view pb-4">
-                <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
 <!--             <div class="col-md-4">
@@ -76,19 +78,24 @@
               <div class="go-box-wrap our-direct bg-light">
                 <div class="block-title">
                   <h2>
-                      <span>Principal's message</span>
+                      <span>Principal's Message</span>
                   </h2>
                 </div> 
-               <img src="assets/images/team3.jpg" width="200px" height="210px" alt="director">
-                <h4><?php echo $mdmessage->page_title; ?></h4>
+               <img src="assets/uploads/page/<?php echo $principal_message->page_image;?>" width="200px" height="210px" alt="director">
+                <h4><?php echo $principal_message->page_title; ?></h4>
               </div>
               <div class="message-content">
                 <p>
-                <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
+                <?php 
+                $this->load->helper('text');
+                $desc= strip_tags($principal_message->page_description);
+                echo word_limiter($desc,15);
+
+                ?>
                 </p>
               </div>
               <div class="text-center btn_view pb-4">
-                <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
           </div>
@@ -155,10 +162,14 @@
     </div>
     <div class="gallerydiv">
       <div class="grid-sizer"></div>
-      <div class="gallery-item gi-big set-bg" data-setbg="assets/images/gallery.jpg">
-        <a class="img-popup" href="assets/images/gallery.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
+      <?php if (isset($galleries) && !empty($galleries)) { ?>
+        <?php foreach($galleries as $obj){?>
+          <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
+            <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><i class="ti-plus"></i></a>
+          </div>
+        <?php }?>
+      <?php }?>
+     <!--  <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
         <a class="img-popup" href="assets/images/gallery1.jpg"><i class="ti-plus"></i></a>
       </div>
       <div class="gallery-item set-bg" data-setbg="assets/images/gallery2.jpg">
@@ -178,7 +189,7 @@
       </div>
       <div class="gallery-item set-bg" data-setbg="assets/images/gallery7.jpg">
         <a class="img-popup" href="assets/images/gallery7.jpg"><i class="ti-plus"></i></a>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- Gallery section -->
@@ -189,7 +200,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="site-title">
-                    <h3 class="title-section1"><?php echo $this->lang->line('event'); ?></h3>
+                    <h3 class="title-section1"><?php echo 'Our Events' ?></h3>
                 </div>
             </div>
         </div>
@@ -239,11 +250,13 @@
       <div class="row">
         <div class="col-sm-6 col-lg-3 fact">
           <div class="fact-icon">
-            <i class="ti-crown"></i>
+            <i class="ti-pencil-alt"></i>
           </div>
           <div class="fact-text">
-            <h2 class="move-counter js-counter" data-from="0" data-speed="50" data-refresh-interval="50">50</h2>
-            <p>YEARS</p>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($sections);?>" data-speed="60" data-refresh-interval="50"><?php echo count($sections);?></span>
+            <!-- <h2><?php echo count($sections);?></h2> -->
+            <p>Sections</p>
+
           </div>
         </div>
         <div class="col-sm-6 col-lg-3 fact">
@@ -251,7 +264,9 @@
             <i class="ti-briefcase"></i>
           </div>
           <div class="fact-text">
-            <h2 class="move-counter js-counter" data-from="0" data-speed="80" data-refresh-interval="50">80</h2>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($teachers);?>" data-speed="60" data-refresh-interval="50"><?php echo count($teachers);?></span>
+            <!-- <h2></h2> -->
+
             <p>TEACHERS</p>
           </div>
         </div>
@@ -260,7 +275,8 @@
             <i class="ti-user"></i>
           </div>
           <div class="fact-text">
-            <h2 class="move-counter js-counter" data-from="0" data-speed="500" data-refresh-interval="50">500</h2>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($students);?>" data-speed="60" data-refresh-interval="50"><?php echo count($students);?></span>
+            <!-- <h2><?php echo count($students);?></h2> -->
             <p>STUDENTS</p>
           </div>
         </div>
@@ -269,8 +285,9 @@
             <i class="ti-pencil-alt"></i>
           </div>
           <div class="fact-text">
-            <h2 class="move-counter js-counter" data-from="0" data-speed="5000" data-refresh-interval="50">800+</h2>
-            <p>LESSONS</p>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($employees);?>" data-speed="60" data-refresh-interval="50"><?php echo count($employees);?></span>
+            <!-- <h2><?php echo count($employees);?></h2> -->
+            <p>EMPLOYEES</p>
           </div>
         </div>
       </div>
