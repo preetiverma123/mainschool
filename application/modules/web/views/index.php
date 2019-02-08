@@ -43,8 +43,8 @@
               <div class="message-content">
                 <p>
                 <?php $this->load->helper('text');
-                $desc= htmlspecialchars_decode(stripslashes($mdmessage->page_description));
-                echo word_limiter($desc,35); ?>
+                $desc= strip_tags($mdmessage->page_description);
+                echo word_limiter($desc,15); ?>
                 </p>
               </div>
               <div class="text-center btn_view pb-4">
@@ -88,8 +88,8 @@
                 <p>
                 <?php 
                 $this->load->helper('text');
-                $desc= htmlspecialchars_decode(stripslashes($principal_message->page_description));
-                echo word_limiter($desc,40);
+                $desc= strip_tags($principal_message->page_description);
+                echo word_limiter($desc,15);
 
                 ?>
                 </p>
@@ -200,7 +200,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="site-title">
-                    <h3 class="title-section1"><?php echo $this->lang->line('event'); ?></h3>
+                    <h3 class="title-section1"><?php echo 'Our Events' ?></h3>
                 </div>
             </div>
         </div>
@@ -250,7 +250,7 @@
       <div class="row">
         <div class="col-sm-6 col-lg-3 fact">
           <div class="fact-icon">
-            <i class="ti-crown"></i>
+            <i class="ti-pencil-alt"></i>
           </div>
           <div class="fact-text">
             <h2><?php echo count($sections);?></h2>
