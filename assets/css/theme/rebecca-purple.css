@@ -1,13 +1,27 @@
 body {   
     font-family: 'Rubik', sans-serif;
 }
+
 h6{
     font-family: 'Rubik', sans-serif;
 }
 .left_col {
     background: #663399;
 }
-
+#cover {
+    background: url(../../images/loader.gif) no-repeat scroll center center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    /*background-color: #d8d5da;*/
+    background-color: #fff;
+    background-size: 200px;
+}
+#content-block {
+    position: relative;
+    overflow: hidden;
+}
 .nav_title {
     background: #663399;
 }
@@ -73,16 +87,7 @@ h6{
 .nav-sm .nav.side-menu li.active-sm {
     border-right: 5px solid #c081ff;
 }
-#cover {
-    background: url(../../images/loader.gif) no-repeat scroll center center;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    /*background-color: #d8d5da;*/
-    background-color: #fff;
-    background-size: 200px;
-}
+
 .main_menu span.fa{
     color: #ffffff;
 }
@@ -271,7 +276,7 @@ h6{
 .about-area,
 .right-pane .news-content,
 .right-pane .single-notice{
-    border-bottom: 1px solid #e41d43  !important;
+    border-bottom: 2px solid #e41d43  !important;
     border: 0;    
 }
 .team {
@@ -487,9 +492,19 @@ h6{
     display: inline-block;
     text-align: left;
 }
-.fact-text h2 {
+.gallery-title a {
+    color: #e41d43;
+}
+.gallery_image{
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px 0 #00000014;
+    margin-bottom: 20px;
+}
+.fact-text span{
     color: #f6783a;
     font-weight: 400;
+    font-size: 36px;
     margin: 10px;
 }
 .fact-text p {
@@ -535,17 +550,19 @@ footer {
 .addmission-board {
     padding: 15px 0 15px;
     font-size: 26px;
+    margin-bottom: 20px;
 }
 .addmissionImage img{
     padding: 10px;
-    height: 200px;
+    height: 140px;
+    margin-top: 4px;
     border:2px solid #e41d43;
 }
 .about-school {
     padding: 10px 0;
 }
 .addmission-board span{
-    font-size: 21px;
+    font-size: 26px;
     color: #e41d43;
     font-weight: 600;
     text-transform: uppercase;
@@ -609,6 +626,7 @@ footer {
 }
 .message-content p {
     font-size: 16px;
+    margin-top: 15px;
 }
 .our-direct{
     border: 1px solid #d42a4b;
@@ -694,14 +712,28 @@ footer {
 .news-discription {
     text-align: center;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
+    top: 10px;
     opacity: 0;
+    padding: 0;
     overflow: hidden;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
+    height: 92%;
+    width: 93%;
     background: rgba(0, 0, 0, 0.80);
     color: #fff;
+    transition: .3s ease-in;
+}
+.news-content img {
+    height: 230px;
+}
+.serv-text {
+    padding: 10px;
+}
+.newsWrap:hover {
+    box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
+}
+.news-title h4 a{
+    color: #e41d43;
 }
 .theme-border {
     height: 100%;
@@ -711,9 +743,16 @@ footer {
     position: relative;
 }
 .serv-img {
-    padding: 0px;
-    border: 5px solid #fff;
-    box-shadow: 0 1px 3px rgba(97, 92, 92, 0.75);
+    padding: 10px;
+    /*padding: 0px;*/
+    /*border: 5px solid #fff;*/
+    /*box-shadow: 0 1px 3px rgba(97, 92, 92, 0.75);*/
+}
+.services-grid .more-link{
+    margin-bottom: 0;
+}
+.services-grid .more-link{
+    padding: 0;
 }
 .services-grid {
     margin-bottom: 30px;
@@ -753,9 +792,10 @@ footer {
     margin-bottom: 0;
 }
 .serv-text h4 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 600;
-    color: #006e96;
+    color: #e41d43;
+
     line-height: 1.2;
     margin-bottom: 0.5em;
     font-family: 'Oswald', sans-serif;
@@ -840,6 +880,9 @@ footer {
 .about_description{
     padding-right: 50px;
 }
+.list-unstyled .left-part i{
+    font-size: 20px;
+}
 .social-links .fa, 
 .footer-contact-info .fa{
     /*color: #5c0fab !important;*/
@@ -851,11 +894,19 @@ footer {
 .admission-address h3{
     color: rgba(228, 29, 67, 1);
 }
-.logo span {
+.logo a {
     color: #e41d43;
-    font-size: 20px;
+    font-size: 30px;
+    /*padding-left: 10px;*/
     font-family: inherit;
+    vertical-align: middle;
     font-weight: 600;
+}
+.logo span:first-child{
+     padding-left: 10px;
+}
+.logo span{
+     color: #000;
 }
 .admission-form{
     border: 1px solid rgba(228, 29, 67, 1);

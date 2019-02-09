@@ -14,6 +14,9 @@ body {
     color: #000;
 }
 
+.theme2{
+    background-color: #fff;
+}
 .img {
     max-width: 100%;
     transition: all 0.3s ease-out 0s;
@@ -200,10 +203,10 @@ label {
     margin-right: 15px;
 }
 .logo {
-    /* padding: 5px 0 0; */
+    padding: 1px 0 0;
 }
 .logo img{
-    max-width: 80px;
+    max-width: 72px;
 }
 
 /* Menu Area start  */
@@ -212,7 +215,7 @@ label {
     margin-top: 6px;
 }
 .main-menu ul li ul.submenu li a:hover{
-    color: #e41d43 !important;
+    color: #000 !important;
 }
 .pb-4, .py-4 {
     padding-bottom: 1.5rem!important;
@@ -315,14 +318,56 @@ label {
     font-size: 0;
     position: absolute;
 }
-/*.owl-carousel .owl-prev{
+.about-school .owl-carousel .owl-nav.disabled{
+    display: block;
+    top: -30px;
+}
+.about-school .owl-carousel .owl-prev:before {
+    content: "\f053";
+    font-size: 15px;
+    color: #fff;
+    right: 35px;
+    border:1px solid transparent;
+    padding: 5px 5px 2px;
+    background-color: #d42a4b;
+    font-family: fontAwesome;
     position: absolute;
-    left: 0;
+}
+.about-school .owl-carousel .owl-next:before {
+    content: "\f054";
+    font-size: 15px;
+    color: #fff;
+    border:1px solid transparent;
+    padding: 5px 5px 2px;
+    background-color: #d42a4b;
+    font-family: fontAwesome;
+    position: absolute;
+}
+.about-school .owl-carousel .owl-prev:hover:before {
+    content: "\f053";
+    font-size: 15px;
+    color: #d42a4b;
+    border:1px solid #d42a4b;
+    right: 35px;
+    padding: 5px 5px 2px;
+    background-color: #fff;
+    font-family: fontAwesome;
+    position: absolute;
+}
+.about-school .owl-carousel .owl-next:hover:before {
+    content: "\f054";
+    font-size: 15px;
+    color: #d42a4b;
+    border:1px solid #d42a4b;
+    padding: 5px 5px 2px;
+    background-color: #fff;
+    font-family: fontAwesome;
+    position: absolute;
 }
 .owl-carousel .owl-next{
     position: absolute;
     right: 0;
-}*/
+}
 .owl-carousel .owl-prev:before{
     content:"\f053";
     font-size: 50px;
@@ -925,7 +970,7 @@ button.btn.btn-primary.btn-blue {
 }
 
 .profile-details h4{
-    background: #00b4de;
+    background: #e41d43;
     padding: 5px;
     font-size: 20px;
     margin: 0 20px;
@@ -933,6 +978,9 @@ button.btn.btn-primary.btn-blue {
     margin-top: 20px;
     text-align: center;
 }  
+.news-discription:hover {
+    opacity: .5;
+}
 .teacher-detail h5 {
     font-weight: 600;
 }  
@@ -954,7 +1002,7 @@ button.btn.btn-primary.btn-blue {
     padding: 40px 10px 0;
     background: #fff;
     margin-bottom: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 43px;
 }
 
 .admission-form{      
@@ -1136,22 +1184,55 @@ button.btn.btn-primary.btn-blue {
     .logo{
         padding: 0;
     }
-    .message-content {
+    /*.message-content {
         padding-top: 30px;
+    }*/
+    .message-content p{
+        margin-bottom: 0;
+    }
+    .notice-board {
+        padding-top: 20px;
+    }
+    .spad {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .fact{
+        margin: 10px 0;
     }
     
 }
 /* Mobile Layout: 320px. */
 
 @media only screen and (max-width: 767px) {
-
+    .logo a {
+        font-size: 20px !important;
+    }
+    
+    .go-content-area{
+        padding-bottom: 30px;
+    }
     .slider_area img{
         height: unset !important;
     }
     .main-menu ul li a,
     .main-menu ul li a:hover,
     .main-menu ul li.active > a {
-        color: #ffffff;
+        color: #000000;
+    }
+    .slider_area .owl-carousel .owl-nav{
+        top: 30%;
+    }
+    .slider_area .owl-carousel .owl-prev:before{
+        font-size: 30px;
+        left: 10px;
+    }
+    .slider_area .owl-carousel .owl-next{
+        right: 0px;
+    }
+    .slider_area .owl-carousel .owl-next:before{
+        font-size: 30px;
+        /*right: 10px;*/
     }
     #header.sticky .lang_social_area{
         display: none;
@@ -1231,6 +1312,13 @@ button.btn.btn-primary.btn-blue {
 @media only screen and (max-width: 576px){
     .logo img {
         max-width: 60px;
+    }
+    .gallery-section{
+        padding: 30px 0;
+    }
+    .spad {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
     }
     section .title-section1{
         font-size: 25px;

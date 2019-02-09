@@ -1,3 +1,4 @@
+
 <header id="header">
     <div class="header-top-area">
         <div class="container-fluid">
@@ -18,7 +19,9 @@
                             <li>|</li>
                             <li><a href="<?php echo site_url('auth/logout'); ?>"><?php echo $this->lang->line('logout'); ?></a></li>
                             <?php }else{ ?>
+
                             <li><a href="<?php echo site_url('login'); ?>"><?php echo $this->lang->line('login'); ?></a></li>
+
                             <?php } ?>
                         </ul>
                     </div>
@@ -29,14 +32,14 @@
     <div class="header-area d-flex align-items-center">
         <div class="container-fluid pos">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="logo">
                         <a href="<?php echo site_url(); ?>"><img src="<?php echo UPLOAD_PATH; ?>/logo/<?php echo $settings->logo;?>" alt="" />
-                            <span>Bal Vidya Mandir</span>
+                            <a><span>B</span>al <span>V</span>idya <span>M</span>andir</a>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-9 static">
+                <div class="col-lg-8 static">
                     <div class="main-menu">
                         <nav>
                             <ul class="mainmenu" id="mainmenu">
@@ -74,7 +77,6 @@
                             }
                         }
                     </script>
-                    
                 </div>
             </div>
         </div>

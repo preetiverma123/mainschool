@@ -2,7 +2,7 @@
 <section class="slider_area">
   <div class="owl-carousel" id="slider_area">
     <div class="item">
-      <img src="assets/uploads/slider/slider-move.jpg" alt="slider">
+      <img src="assets/uploads/slider/slider-move.jpg" class="img-responsive" alt="slider">
       <div class="overlay"></div>
       <!-- <?php $slider_str = ''; foreach($sliders as $obj){ ?>
         <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
@@ -12,11 +12,11 @@
     </div>  -->
       </div>
       <div class="item">
-        <img src="assets/uploads/slider/slider-banner.jpg" alt="slider">
+        <img src="assets/uploads/slider/slider-banner.jpg" class="img-responsive" alt="slider">
         <div class="overlay"></div>
       </div>
        <div class="item">
-        <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" alt="slider">
+        <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" class="img-responsive" alt="slider">
         <div class="overlay"></div>
       </div>
     </div>
@@ -30,7 +30,7 @@
         </div>
           <div class="directorWrapper">
            <div class="row go-directors">
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
               <div class="go-box-wrap our-direct bg-light">
                 <div class="block-title">
                     <h2>
@@ -245,7 +245,7 @@
         </div>
     </div>
 </section>
-<section class="fact-section spad set-bg" data-setbg="assets/images/background.jpg" style="background-image: url(assets/images/background.jpg);">
+<section class="fact-section spad set-bg" data-setbg="assets/images/background.jpg" style="background-image: url(assets/images/background.jpg);" id="move-counter">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-lg-3 fact">
@@ -253,8 +253,10 @@
             <i class="ti-pencil-alt"></i>
           </div>
           <div class="fact-text">
-            <h2><?php echo count($sections);?></h2>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($sections);?>" data-speed="60" data-refresh-interval="50"><?php echo count($sections);?></span>
+            <!-- <h2><?php echo count($sections);?></h2> -->
             <p>Sections</p>
+
           </div>
         </div>
         <div class="col-sm-6 col-lg-3 fact">
@@ -262,7 +264,9 @@
             <i class="ti-briefcase"></i>
           </div>
           <div class="fact-text">
-            <h2><?php echo count($teachers);?></h2>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($teachers);?>" data-speed="60" data-refresh-interval="50"><?php echo count($teachers);?></span>
+            <!-- <h2></h2> -->
+
             <p>TEACHERS</p>
           </div>
         </div>
@@ -271,7 +275,8 @@
             <i class="ti-user"></i>
           </div>
           <div class="fact-text">
-            <h2><?php echo count($students);?></h2>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($students);?>" data-speed="60" data-refresh-interval="50"><?php echo count($students);?></span>
+            <!-- <h2><?php echo count($students);?></h2> -->
             <p>STUDENTS</p>
           </div>
         </div>
@@ -280,7 +285,8 @@
             <i class="ti-pencil-alt"></i>
           </div>
           <div class="fact-text">
-            <h2><?php echo count($employees);?></h2>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($employees);?>" data-speed="60" data-refresh-interval="50"><?php echo count($employees);?></span>
+            <!-- <h2><?php echo count($employees);?></h2> -->
             <p>EMPLOYEES</p>
           </div>
         </div>
@@ -349,9 +355,12 @@
                         </div>
                     </div>
                 </div>
+
             <?php } ?>
           <?php } ?>
-       
+         <div class="text-center btn_view pb-4">
+                <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+              </div>
             </div>
          
     </div>
@@ -617,18 +626,18 @@
             autoplay: true
           });
           $('#notice-board').owlCarousel({
+            items: 1,
             loop: true,
             // margin: 30,
             nav: false,
-            items: 1,
+            
             dots: true,
             autoplay: true
           });
           $('#addmission-board').owlCarousel({
-            loop: true,
-            // margin: 30,
-            nav: false,
             items: 1,
+            loop: true,
+            nav: true,
             dots: true,
             autoplay: true
           });

@@ -11,7 +11,7 @@
        <!--  <title><?php echo $title_for_layout; ?></title> -->
         <title><?php echo $settings->school_name; ?></title>
       <!--   <link rel="icon" href="<?php echo IMG_URL; ?>favicon.png" type="image/x-icon" /> -->
-         <link rel="icon" href=" <?php echo UPLOAD_PATH; ?>/logo/<?php echo $settings->logo; ?>" type="image/x-icon" />
+         <link rel="icon" href="<?php echo UPLOAD_PATH; ?>logo/favicon.png" type="image/x-icon" />
         <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
         <!-- Bootstrap -->
         <link href="<?php echo VENDOR_URL; ?>bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -39,6 +39,8 @@
         <script src="<?php echo JS_URL; ?>jquery-1.11.2.min.js"></script>
         <script src="<?php echo JS_URL; ?>main.js"></script>
         <script src="<?php echo JS_URL; ?>jquery.mixitup.js"></script>
+        <script src="<?php echo JS_URL; ?>jquery.countTo.js"></script>
+        <script src="<?php echo JS_URL; ?>jquery.waypoints.min.js"></script>
         <script src="<?php echo JS_URL; ?>jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="<?php echo JS_URL; ?>jquery.validate.js"></script>
          
@@ -101,9 +103,20 @@
             $(document).on('ready',function(){
                
                 setTimeout(function(){
-                    $('#cover').css("display","none");
+                    $('#cover').fadeOut(500);
                 },100)
             });
+        </script>
+        <script>
+        $('#held-event').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            items: 1,
+            dots: true,
+            autoplay: true,
+            
+          });
         </script>
 
     </body>
