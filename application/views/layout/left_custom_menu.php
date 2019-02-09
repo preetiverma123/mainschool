@@ -25,14 +25,16 @@
         </div>
         <div class="clearfix"></div>        
         <!-- sidebar menu -->
+
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
                 <?php $classes = get_classes(); ?>
-                <ul class="nav side-menu">                    
+                <ul class="nav side-menu">  
+                                  
                     <li><a href="<?php echo site_url('dashboard'); ?>"><i class="fa fa-dashboard"></i> <?php echo $this->lang->line('dashboard'); ?></a>  </li>
-                    
-                    <?php if(has_permission(VIEW, 'setting', 'setting') || has_permission(VIEW, 'setting', 'payment') || has_permission(VIEW, 'setting', 'sms')){ ?>
-                    <li><a><i class="fa fa-gears"></i> <?php echo $this->lang->line('setting'); ?> <span class="fa fa-chevron-down"></span></a>
+                
+                    <?php if(!empty($page_name) && $page_name=='setting'){ ?>
+                    <li id="setting"><a><i class="fa fa-gears"></i> <?php echo $this->lang->line('setting'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">                            
                             <?php if(has_permission(VIEW, 'setting', 'setting')){ ?>
                                 <li><a href="<?php echo site_url('setting'); ?>"><?php echo $this->lang->line('general'); ?> <?php echo $this->lang->line('setting'); ?></a></li>
@@ -45,17 +47,20 @@
                             <?php } ?>  -->
                         </ul>
                     </li>
-                    <?php } ?>
+                   <?php } ?>
                     
-                   <!--   <?php if(has_permission(VIEW, 'theme', 'theme')){ ?>
+                     <?php if(!empty($page_name) && $page_name=='theme'){ ?>
+                   
                         <li><a  href="<?php echo site_url('theme'); ?>"><i class="fa fa-cubes"></i> <?php echo $this->lang->line('theme'); ?></a></li> 
-                    <?php } ?> 
-                     -->
-                     <?php if(has_permission(VIEW, 'language', 'language')){ ?>
+                    
+                     <?php } ?>
+
+
+                      <?php if(!empty($page_name) && $page_name=='language'){ ?>
                         <li><a  href="<?php echo site_url('language'); ?>"><i class="fa fa-language"></i> <?php echo $this->lang->line('language'); ?></a></li>
                     <?php } ?>
                     
-                    <!-- <?php if(has_permission(VIEW, 'administrator', 'year') || has_permission(VIEW, 'administrator', 'role') || has_permission(VIEW, 'administrator', 'permission') || has_permission(VIEW, 'administrator', 'user') || has_permission(EDIT, 'administrator', 'password') || has_permission(VIEW, 'administrator', 'backup')){ ?>    
+                     <?php if(!empty($page_name) && $page_name=='administrator'){ ?>   
                         <li><a><i class="fa fa-user"></i> <?php echo $this->lang->line('administrator'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'administrator', 'year')){ ?>   
@@ -78,9 +83,9 @@
                                 <?php } ?>
                             </ul>
                         </li>
-                    <?php } ?>  -->
+                    <?php } ?>
                     
-                    <?php if(has_permission(VIEW, 'hrm', 'designation') || has_permission(VIEW, 'hrm', 'employee')){ ?>    
+                     <?php if(!empty($page_name) && $page_name=='human_resource'){ ?>  
                     <li><a><i class="fa fa-user-md"></i> <?php echo $this->lang->line('human_resource'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <?php if(has_permission(VIEW, 'hrm', 'designation')){ ?>   
@@ -93,15 +98,15 @@
                     </li> 
                     <?php } ?>
                    
-                    <?php if(has_permission(VIEW, 'teacher', 'teacher')){ ?>
+                    <?php if(!empty($page_name) && $page_name=='teacher'){ ?>
                         <li><a href="<?php echo site_url('teacher'); ?>"><i class="fa fa-users"></i> <?php echo $this->lang->line('teacher'); ?></a> </li>  
+                   <?php } ?>
+                    
+                   <?php if(!empty($page_name) && $page_name=='class'){ ?>
+                        <li><a href="<?php echo site_url('academic/classes/index'); ?>"><i class="fa fa-slideshare"></i> <?php echo $this->lang->line('class'); ?></a> </li> 
                     <?php } ?>
                     
-                  <!--   <?php if(has_permission(VIEW, 'academic', 'classes')){ ?>
-                        <li><a href="<?php echo site_url('academic/classes/index'); ?>"><i class="fa fa-slideshare"></i> <?php echo $this->lang->line('class'); ?></a> </li> 
-                    <?php } ?> -->
-                    
-                   <!--  <?php if(has_permission(VIEW, 'academic', 'section')){ ?>                    
+                    <?php if(!empty($page_name) && $page_name=='section'){ ?>                   
                         <li><a <?php if(empty($classes)){ ?> onclick="alert('<?php echo $this->lang->line('class_add_alert'); ?>');" <?php } ?>><i class="fa fa-bars"></i> <?php echo $this->lang->line('section'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">                            
                                 <?php foreach($classes as $obj){ ?>
@@ -113,9 +118,9 @@
                                 <?php } ?>
                             </ul>                    
                         </li>         
-                    <?php } ?> -->
+                   <?php } ?>
                     
-                   <!--  <?php if(has_permission(VIEW, 'academic', 'subject')){ ?>
+                   <?php if(!empty($page_name) && $page_name=='subject'){ ?>
                         <li><a <?php if(empty($classes)){ ?> onclick="alert('<?php echo $this->lang->line('class_add_alert'); ?>');" <?php } ?>><i class="fa fa-folder-open"></i> <?php echo $this->lang->line('subject'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">                            
                                 <?php foreach($classes as $obj){ ?>
@@ -127,9 +132,9 @@
                                 <?php } ?>
                             </ul>                    
                         </li>  
-                    <?php } ?> -->
-                   <!--  
-                    <?php if(has_permission(VIEW, 'academic', 'syllabus')){ ?>
+                   <?php } ?>
+
+                   <?php if(!empty($page_name) && $page_name=='syllabus'){ ?>
                         <li><a <?php if(empty($classes)){ ?> onclick="alert('<?php echo $this->lang->line('class_add_alert'); ?>');" <?php } ?>><i class="fa fa-clipboard"></i> <?php echo $this->lang->line('syllabus'); ?> <span class="fa fa-chevron-down"></span></a> 
                             <ul class="nav child_menu">
                                 <?php foreach($classes as $obj){ ?>
@@ -141,9 +146,9 @@
                                 <?php } ?>
                             </ul>                    
                         </li> 
-                    <?php } ?> -->
+                    <?php } ?>
                     
-                  <!--   <?php if(has_permission(VIEW, 'academic', 'routine')){ ?>
+                  <?php if(!empty($page_name) && $page_name=='class_routine'){ ?>
                         <li <?php if(empty($classes)){ ?> onclick="alert('<?php echo $this->lang->line('class_add_alert'); ?>');" <?php } ?>><a><i class="fa fa-clock-o"></i> <?php echo $this->lang->line('class'); ?> <?php echo $this->lang->line('routine'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php foreach($classes as $obj){ ?>
@@ -155,13 +160,13 @@
                                 <?php } ?>
                             </ul>
                         </li>
-                    <?php } ?> -->
+                   <?php } ?>
                     
-                    <!-- <?php if(has_permission(VIEW, 'guardian', 'guardian')){ ?>    
+                    <?php if(!empty($page_name) && $page_name=='guardian'){ ?>  
                         <li><a href="<?php echo site_url('guardian/index/'); ?>"><i class="fa fa-paw"></i> <?php echo $this->lang->line('guardian'); ?></a> </li>
                     <?php } ?>
                     
-                    <?php if(has_permission(VIEW, 'student', 'student') || has_permission(ADD, 'student', 'student')){ ?>    
+                     <?php if(!empty($page_name) && $page_name=='student'){ ?>  
                         <li><a><i class="fa fa-group"></i> <?php echo $this->lang->line('student'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(ADD, 'student', 'student')){ ?>
@@ -176,9 +181,9 @@
                                 <?php } ?>                               
                             </ul>
                         </li> 
-                    <?php } ?> -->
+                   <?php } ?>
                     
-                   <!--  <?php if(has_permission(VIEW, 'attendance', 'student') || has_permission(VIEW, 'attendance', 'teacher') || has_permission(VIEW, 'attendance', 'employee')){ ?>
+                   <?php if(!empty($page_name) && $page_name=='attendance'){ ?>
                         <li><a><i class="fa fa-check-circle-o"></i> <?php echo $this->lang->line('attendance'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'attendance', 'student')){ ?>                                    
@@ -196,9 +201,9 @@
                                 <?php } ?>
                             </ul>
                         </li> 
-                    <?php } ?>
-                     -->
-                 <!--    <?php if(has_permission(VIEW, 'assignment', 'assignment')){ ?>
+                   <?php } ?>
+                    
+                 <?php if(!empty($page_name) && $page_name=='assignment'){ ?>
                         <li  <?php if(empty($classes)){ ?> onclick="alert('<?php echo $this->lang->line('class_add_alert'); ?>');" <?php } ?>><a><i class="fa fa-file-word-o"></i> <?php echo $this->lang->line('assignment'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">                                                                                                                   
                                 <?php foreach($classes as $obj){ ?>
@@ -210,9 +215,9 @@
                                 <?php } ?> 
                             </ul>
                         </li> 
-                    <?php } ?> -->
+                    <?php } ?>
                     
-                 <!--    <?php if(has_permission(VIEW, 'exam', 'grade') || has_permission(VIEW, 'exam', 'exam') || has_permission(VIEW, 'exam', 'schedule') || has_permission(VIEW, 'exam', 'suggestion') || has_permission(VIEW, 'exam', 'attendance')){ ?>    
+                 <?php if(!empty($page_name) && $page_name=='exam'){ ?>   
                         <li><a><i class="fa fa-graduation-cap"></i> <?php echo $this->lang->line('exam'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'exam', 'grade')){ ?>
@@ -223,9 +228,8 @@
                                 <?php } ?> 
                             </ul>
                         </li> 
-                    <?php } ?> -->
-                   <!--      
-                      <?php if(has_permission(VIEW, 'exam', 'schedule')){ ?>
+                    <?php } ?>
+                   <?php if(!empty($page_name) && $page_name=='exam_schedule'){ ?>
                         <li><a <?php if(empty($classes)){ ?> onclick="alert('<?php echo $this->lang->line('class_add_alert'); ?>');" <?php } ?>><i class="fa fa-thumb-tack"></i><?php echo $this->lang->line('exam'); ?> <?php echo $this->lang->line('schedule'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">                                                          
                                 <?php foreach($classes as $obj){ ?>
@@ -237,9 +241,8 @@
                                 <?php } ?>                            
                             </ul>
                         </li> 
-                    <?php } ?>   
-                         -->
-                    <!--  <?php if(has_permission(VIEW, 'exam', 'suggestion')){ ?>
+                   <?php } ?>
+                    <?php if(!empty($page_name) && $page_name=='exam_suggestion'){ ?>
                         <li><a <?php if(empty($classes)){ ?> onclick="alert('<?php echo $this->lang->line('class_add_alert'); ?>');" <?php } ?>><i class="fa fa-file-text"></i><?php echo $this->lang->line('exam'); ?> <?php echo $this->lang->line('suggestion'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">                                                          
                                 <?php foreach($classes as $obj){ ?>
@@ -251,13 +254,11 @@
                                 <?php } ?>                              
                             </ul>
                         </li> 
-                    <?php } ?>  -->
-                        
-                   <!--  <?php if(has_permission(VIEW, 'exam', 'attendance')){ ?>
+                   <?php } ?>
+                   <?php if(!empty($page_name) && $page_name=='exam_attendance'){ ?>
                         <li><a  href="<?php echo site_url('exam/attendance/'); ?>"><i class="fa fa-check"></i> <?php echo $this->lang->line('exam'); ?> <?php echo $this->lang->line('attendance'); ?></a></li>
-                    <?php } ?>    
-                         -->
-                   <!--  <?php if(has_permission(VIEW, 'exam', 'mark') || has_permission(VIEW, 'exam', 'marksheet') || has_permission(VIEW, 'exam', 'result') || has_permission(VIEW, 'exam', 'sms') || has_permission(VIEW, 'exam', 'mail')){ ?>    
+                    <?php } ?>
+                   <?php if(!empty($page_name) && $page_name=='exam_mark'){ ?> 
                         <li><a><i class="fa fa-file-text-o"></i> <?php echo $this->lang->line('exam_mark'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'exam', 'mark')){ ?>
@@ -277,13 +278,12 @@
                                 <?php } ?>
                             </ul>
                         </li>
-                    <?php } ?> -->
+                   <?php } ?>
                     
-                    <!-- <?php if(has_permission(VIEW, 'academic', 'promotion')){ ?>
+                     <?php if(!empty($page_name) && $page_name=='promotion'){ ?>
                         <li><a href="<?php echo site_url('academic/promotion'); ?>"><i class="fa fa-mail-forward"></i><?php echo $this->lang->line('promotion'); ?></a></li>                   
-                    <?php } ?> -->
-                         
-                  <!--    <?php if(has_permission(VIEW, 'certificate', 'certificate') || has_permission(VIEW, 'certificate', 'type')){ ?>
+                    <?php } ?>
+                  <?php if(!empty($page_name) && $page_name=='certificate'){ ?>
                     <li><a><i class="fa fa-certificate"></i> <?php echo $this->lang->line('certificate'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <?php if(has_permission(VIEW, 'certificate', 'type')){ ?>
@@ -294,9 +294,9 @@
                             <?php } ?>                                
                         </ul>
                     </li>
-                    <?php } ?>  -->
+                    <?php } ?>
                     
-                    <!-- <?php if(has_permission(VIEW, 'library', 'book') || has_permission(VIEW, 'library', 'member') || has_permission(VIEW, 'library', 'issue')){ ?>    
+                     <?php if(!empty($page_name) && $page_name=='library'){ ?> 
                         <li><a><i class="fa fa-book"></i> <?php echo $this->lang->line('library'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'library', 'book')){ ?>
@@ -310,9 +310,9 @@
                                 <?php } ?>
                             </ul>
                         </li> 
-                    <?php } ?>  -->
+                    <?php } ?>
                     
-                   <!--  <?php if(has_permission(VIEW, 'transport', 'vehicle') || has_permission(VIEW, 'transport', 'route') || has_permission(VIEW, 'transport', 'member')){ ?>        
+                    <?php if(!empty($page_name) && $page_name=='transport'){ ?>       
                         <li><a><i class="fa fa-bus"></i> <?php echo $this->lang->line('transport'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'transport', 'vehicle')){ ?>
@@ -328,7 +328,7 @@
                         </li>  
                     <?php } ?>
                         
-                     <?php if(has_permission(VIEW, 'hostel', 'hostel') || has_permission(VIEW, 'hostel', 'room') || has_permission(VIEW, 'hostel', 'member')){ ?>        
+                     <<?php if(!empty($page_name) && $page_name=='hostel'){ ?>              
                         <li><a><i class="fa fa-hotel"></i> <?php echo $this->lang->line('hostel'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'hostel', 'hostel')){ ?>
@@ -342,13 +342,13 @@
                                 <?php } ?>
                             </ul>
                         </li>
-                   <?php } ?>  -->
+                   <?php } ?> 
                     
-                    <!-- <?php if(has_permission(VIEW, 'message', 'message')){ ?>    
+                     <?php if(!empty($page_name) && $page_name=='message'){ ?> 
                         <li><a href="<?php echo site_url('message/inbox'); ?>"><i class="fa fa-comments-o"></i> <?php echo $this->lang->line('message'); ?></a></li>                   
-                    <?php } ?> -->
+                    <?php } ?>
                     
-                  <!--   <?php if(has_permission(VIEW, 'message', 'mail') || has_permission(VIEW, 'message', 'text')){ ?>
+                  <?php if(!empty($page_name) && $page_name=='mail_and_sms'){ ?>
                         <li><a><i class="fa fa-envelope-o"></i> <?php echo $this->lang->line('mail_and_sms'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'message', 'mail')){ ?>  
@@ -359,9 +359,9 @@
                                 <?php } ?>
                             </ul>
                         </li>   
-                    <?php } ?> -->
+                    <?php } ?>
                     
-                    <?php if(has_permission(VIEW, 'announcement', 'notice') || has_permission(VIEW, 'announcement', 'news') || has_permission(VIEW, 'announcement', 'holiday')){ ?>            
+                    <?php if(!empty($page_name) && $page_name=='announcement'){ ?>            
                         <li><a><i class="fa fa-bullhorn"></i> <?php echo $this->lang->line('announcement'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'announcement', 'notice')){ ?>
@@ -377,16 +377,16 @@
                         </li>  
                     <?php } ?>
                    
-                    <?php if(has_permission(VIEW, 'event', 'event')){ ?>    
+                     <?php if(!empty($page_name) && $page_name=='event'){ ?>    
                         <li><a href="<?php echo site_url('event/index/'); ?>"><i class="fa fa fa-calendar-check-o"></i> <?php echo $this->lang->line('event'); ?></a></li>
                     <?php } ?>
                     
-                     <?php if(has_permission(VIEW, 'visitor', 'visitor')){ ?> 
+                     <?php if(!empty($page_name) && $page_name=='visitor_info'){ ?>
                         <li><a href="<?php echo site_url('visitor/index/'); ?>"><i class="fa fa-male"></i> <?php echo $this->lang->line('visitor_info'); ?></a></li>
                     <?php } ?>
                         
                     
-                   <!--  <?php if(has_permission(VIEW, 'payroll', 'grade') || has_permission(VIEW, 'payroll', 'payment')){ ?>
+                    <?php if(!empty($page_name) && $page_name=='payroll'){ ?>
                         <li><a><i class="fa fa-dollar"></i> <?php echo $this->lang->line('payroll'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'payroll', 'grade')){ ?>  
@@ -400,9 +400,9 @@
                                 <?php } ?>
                             </ul>
                         </li>   
-                    <?php } ?>     -->
+                    <?php } ?>
                     
-                    <!--  <?php if(has_permission(VIEW, 'accounting', 'invoice') || has_permission(VIEW, 'accounting', 'exphead') || has_permission(VIEW, 'accounting', 'expenditure') || has_permission(VIEW, 'accounting', 'incomehead') || has_permission(VIEW, 'accounting', 'income')){ ?>                
+                     <?php if(!empty($page_name) && $page_name=='accounting'){ ?>               
                         <li><a><i class="fa fa-calculator"></i> <?php echo $this->lang->line('accounting'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                <?php if(has_permission(VIEW, 'accounting', 'incomehead')){ ?>
@@ -429,9 +429,9 @@
                                 <?php } ?>                                
                             </ul>
                         </li> 
-                    <?php } ?> -->
+                    <?php } ?>
                     
-                     <!-- <?php if(has_permission(VIEW, 'report', 'report')){ ?>
+                     <?php if(!empty($page_name) && $page_name=='report'){ ?>
                         <li><a><i class="fa fa-bar-chart"></i> <?php echo $this->lang->line('report'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <li><a href="<?php echo site_url('report/income'); ?>"><?php echo $this->lang->line('income'); ?> <?php echo $this->lang->line('report'); ?></a></li>
@@ -449,9 +449,9 @@
                                 <li><a href="<?php echo site_url('report/payroll'); ?>"><?php echo $this->lang->line('payroll'); ?> <?php echo $this->lang->line('report'); ?></a></li>
                             </ul>
                         </li> 
-                    <?php } ?>  -->
+                   <?php } ?>
                    
-                   <?php if(has_permission(VIEW, 'gallery', 'gallery') || has_permission(VIEW, 'gallery', 'image')){ ?>     
+                   <?php if(!empty($page_name) && $page_name=='media_gallery'){ ?>
                     <li><a><i class="fa fa-image"></i><?php echo $this->lang->line('media_gallery'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <?php if(has_permission(VIEW, 'gallery', 'gallery')){ ?>
@@ -464,7 +464,7 @@
                     </li> 
                     <?php } ?>
                    
-                    <?php if(has_permission(VIEW, 'frontend', 'frontend') || has_permission(VIEW, 'frontend', 'slider')){ ?>
+                    <?php if(!empty($page_name) && $page_name=='frontend'){ ?>
                     <li><a><i class="fa fa-desktop"></i><?php echo $this->lang->line('frontend'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <?php if(has_permission(VIEW, 'frontend', 'frontend')){ ?>
@@ -478,8 +478,11 @@
                             <?php } ?>
                         </ul>
                     </li>  
-                    <?php } ?>
+                   <?php } ?>
                     
+
+                    
+                    <?php if(!empty($page_name) && $page_name=='profile'){ ?>
                     <li><a><i class="fa fa-lock"></i><?php echo $this->lang->line('profile'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo site_url('profile'); ?>"><?php echo $this->lang->line('my_profile'); ?></a></li>
@@ -490,7 +493,7 @@
                             <li><a href="<?php echo site_url('auth/logout'); ?>"><?php echo $this->lang->line('logout'); ?></a></li>
                         </ul>
                     </li>  
-                    
+                    <?php } ?>
                 </ul>
             </div>     
         </div>

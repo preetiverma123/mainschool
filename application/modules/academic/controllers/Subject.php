@@ -21,7 +21,8 @@ class Subject extends MY_Controller {
     function __construct() {
         parent::__construct();
   
-         $this->load->model('Subject_Model', 'subject', true);         
+         $this->load->model('Subject_Model', 'subject', true);  
+         $this->data['page_name'] = 'subject';       
     }
 
     

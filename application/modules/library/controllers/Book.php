@@ -19,7 +19,8 @@ class Book extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Book_Model', 'book', true);        
+        $this->load->model('Book_Model', 'book', true);   
+         $this->data['page_name'] = 'library';     
     }
 
     

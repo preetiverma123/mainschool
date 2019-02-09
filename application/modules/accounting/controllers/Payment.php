@@ -27,6 +27,7 @@ class Payment extends My_Controller {
          
          $this->config->load('custom');
          $this->load->library("paypal");
+          $this->data['page_name'] = 'accounting'; 
     }
 
     

@@ -20,7 +20,8 @@ class Exphead extends MY_Controller {
     
     function __construct() {
         parent::__construct();
-         $this->load->model('Exphead_Model', 'exphead', true);            
+         $this->load->model('Exphead_Model', 'exphead', true);  
+         $this->data['page_name'] = 'accounting';           
     }
 
     

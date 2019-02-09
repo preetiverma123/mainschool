@@ -20,11 +20,12 @@ class Exam extends MY_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Exam_Model', 'exam', true);
-        
+        $this->data['page_name'] = 'exam'; 
          // check running session
         if(!$this->academic_year_id){
             error($this->lang->line('academic_year_setting'));
             redirect('setting');
+
         } 
                
     }

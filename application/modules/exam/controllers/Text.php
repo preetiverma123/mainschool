@@ -27,7 +27,7 @@ class Text extends MY_Controller {
         $this->data['classes'] = $this->mark->get_list('classes', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['exams'] = $this->mark->get_list('exams', array('status' => 1, 'academic_year_id' => $this->academic_year_id), '', '', '', 'id', 'ASC');
         $this->data['mark_smses'] = $this->mark->get_mark_sms_list();
-        
+        $this->data['page_name'] = 'exam_mark'; 
         $this->load->library('twilio');
         $this->load->library('clickatell');
         $this->load->library('bulk');

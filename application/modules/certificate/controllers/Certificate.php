@@ -23,6 +23,7 @@ class Certificate extends MY_Controller {
         $this->load->model('Type_Model', 'type', true);
         $this->data['certificates'] = $this->type->get_list('certificates', array('status' => 1), '','', '', 'id', 'ASC'); 
         $this->data['classes'] = $this->type->get_list('classes', array('status' => 1), '','', '', 'id', 'ASC');
+        $this->data['page_name'] = 'certificate'; 
     }
 
   

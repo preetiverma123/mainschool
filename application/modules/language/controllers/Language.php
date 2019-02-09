@@ -23,7 +23,7 @@ class Language extends MY_Controller {
         
         $this->data['fields'] = $this->language->get_table_fields('languages');
         $this->data['active_lang'] = $this->db->get_where('settings', array('status'=>1))->row()->language;
-        
+         $this->data['page_name'] = 'language';
     }
 
     

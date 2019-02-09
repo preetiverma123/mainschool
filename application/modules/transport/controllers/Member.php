@@ -19,7 +19,8 @@ class Member extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Member_Model', 'member', true);        
+        $this->load->model('Member_Model', 'member', true);  
+         $this->data['page_name'] = 'transport';      
         
     }
 
