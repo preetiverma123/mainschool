@@ -117,6 +117,13 @@
             autoplay: true,
             
           });
+        $('#notice-detail').owlCarousel({
+            items: 1,
+            loop: true,
+            nav: false,
+            dots: true,
+            autoplay: true
+          });
         </script>
 
     </body>
