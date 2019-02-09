@@ -132,7 +132,7 @@
                       <div class="video-single col-lg-12">
                         <div class="about-school">
                           <div class="addmission-board">
-                            <span>A</span>ddmission <span>o</span>pen
+                            <span>A</span>dmission <span>o</span>pen
                           </div>
                           <div class="owl-carousel" id="addmission-board">
                             <div class="item">
@@ -640,15 +640,7 @@
             dots: true,
             autoplay: true
           });
-          $('#notice-detail').owlCarousel({
-            items: 1,
-            loop: true,
-            // margin: 30,
-            nav: false,
-            
-            dots: true,
-            autoplay: true
-          });
+          
           $('#addmission-board').owlCarousel({
             items: 1,
             loop: true,
@@ -663,6 +655,7 @@
             dots: true,
             autoplay: true
           });
+          
           $('#event-held').owlCarousel({
             loop: true,
             margin: 30,

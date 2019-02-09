@@ -726,6 +726,20 @@ footer {
 .news-content img {
     height: 230px;
 }
+.right-pane .news-content img {
+    height: 230px;
+    width: 100%;
+}
+.news_detail .news-content {
+    float: left;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 #00000014;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.news_detail .news-content img{
+    width: 100%;
+}
 .serv-text {
     padding: 10px;
 }
