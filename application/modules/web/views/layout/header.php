@@ -43,8 +43,8 @@
                     <div class="main-menu">
                         <nav>
                             <ul class="mainmenu" id="mainmenu">
-                                <li class="active"><a href="<?php echo site_url(); ?>"><?php echo $this->lang->line('home'); ?></a></li>
-                                <li><a href="#"><?php echo $this->lang->line('announcement'); ?> <i class="fa fa-caret-down"></i></a>                                       
+                                <li class="active"><a href="<?php echo site_url(); ?>" ><?php echo $this->lang->line('home'); ?></a></li>
+                                <li><a href="#" class="hidemenu"><?php echo $this->lang->line('announcement'); ?> <i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
                                         <li><a href="<?php echo site_url('news'); ?>"><?php echo $this->lang->line('news'); ?></a></li>
                                         <li><a href="<?php echo site_url('notice'); ?>"><?php echo $this->lang->line('notice'); ?></a></li>
@@ -76,7 +76,14 @@
                                 x.className = "mainmenu";
                             }
                         }
+                        $(document).ready(function(){
+                            $(".hidemenu").click(function(){
+                                $(".submenu").toggle();
+                            });
+                            
+                        });
                     </script>
+
                 </div>
             </div>
         </div>
