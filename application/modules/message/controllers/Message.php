@@ -26,6 +26,7 @@ class Message extends MY_Controller {
         $this->data['trashs'] = $this->message->get_message_list($type = 'trash');
         $this->data['inboxs'] = $this->message->get_message_list($type = 'inbox');
         $this->data['new'] = $this->message->get_message_list($type = 'new');
+         $this->data['page_name'] = 'message'; 
     }
 
                     

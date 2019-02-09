@@ -19,7 +19,8 @@ Class Hostel extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Hostel_Model', 'hostel', true);        
+        $this->load->model('Hostel_Model', 'hostel', true);  
+        $this->data['page_name'] = 'hostel';
     }
 
         

@@ -15,10 +15,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * ********************************************************** */
 
 class Dashboard extends MY_Controller {
-
  public $data = array();
 
     public function __construct() {
+
 
         parent::__construct();
 
@@ -48,7 +48,6 @@ class Dashboard extends MY_Controller {
      * ********************************************************** */
 
     public function index() {
-
         $this->data['year_session'] = $this->dashboard->get_single('academic_years', array('is_running' => 1));
 
         $this->data['news'] = $this->dashboard->get_list('news', array('status' => 1), '', '5', '', 'id', 'ASC');
@@ -71,9 +70,17 @@ class Dashboard extends MY_Controller {
         $this->data['trashs'] = $this->dashboard->get_message_list($type = 'trash');
         $this->data['inboxs'] = $this->dashboard->get_message_list($type = 'inbox');
         $this->data['new'] = $this->dashboard->get_message_list($type = 'new');
+        $this->data['page_name'] = 'dashboard';
+        $this->layout->title($this->lang->line('dashboard') . ' | ' . SMS);
+        $this->layout->view('dashboard-main', $this->data);
+    }
+
+    public function customMenu() {
+        $page_name = $this->input->get('page_name', TRUE);
+        $this->data['page_name'] = $page_name;
 
         $this->layout->title($this->lang->line('dashboard') . ' | ' . SMS);
-        $this->layout->view('dashboard', $this->data);
+        $this->layout->view('new_dashboard', $this->data);
     }
 
 }

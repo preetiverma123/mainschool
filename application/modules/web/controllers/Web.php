@@ -36,7 +36,7 @@ class Web extends CI_Controller {
     * @return          : null 
     * ********************************************************** */
     public function index() {
-
+        
         $this->data['sliders'] = $this->web->get_list('sliders', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
 

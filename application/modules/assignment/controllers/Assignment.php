@@ -21,6 +21,7 @@ class Assignment extends MY_Controller {
         parent::__construct();
 
         $this->load->model('Assignment_Model', 'assignment', true);
+         $this->data['page_name'] = 'assignment'; 
        // check running session
         if(!$this->academic_year_id){
             error($this->lang->line('academic_year_setting'));

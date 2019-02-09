@@ -21,7 +21,7 @@ class Routine extends MY_Controller {
     function __construct() {
         parent::__construct();    
         $this->load->model('Routine_Model', 'routine', true);
-        
+        $this->data['page_name'] = 'class_routine';
         // check running session
         if(!$this->academic_year_id){
             error($this->lang->line('academic_year_setting'));

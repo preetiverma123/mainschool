@@ -20,7 +20,8 @@ class Grade extends MY_Controller {
     
     function __construct() {
         parent::__construct();
-         $this->load->model('Grade_Model', 'grade', true);            
+         $this->load->model('Grade_Model', 'grade', true);  
+          $this->data['page_name'] = 'payroll';           
     }
 
     

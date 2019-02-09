@@ -22,6 +22,7 @@ class Visitor extends MY_Controller {
         $this->load->model('Visitor_Model', 'visitor', true);
         $this->data['visitors'] = $this->visitor->get_visitor_list();
         $this->data['roles'] = $this->visitor->get_list('roles', array('status' => 1), '', '', '', 'id', 'ASC');
+          $this->data['page_name'] = 'visitor';  
     }
 
     

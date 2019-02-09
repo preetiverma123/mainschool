@@ -21,7 +21,8 @@ class Syllabus extends MY_Controller {
     function __construct() {
         parent::__construct();        
         
-        $this->load->model('Syllabus_Model', 'syllabus', true);        
+        $this->load->model('Syllabus_Model', 'syllabus', true);  
+        $this->data['page_name'] = 'syllabus';      
         // check running session
         if(!$this->academic_year_id){
             error($this->lang->line('academic_year_setting'));

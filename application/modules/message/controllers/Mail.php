@@ -23,6 +23,7 @@ class Mail extends MY_Controller {
         $this->data['emails'] = $this->mail->get_email_list();
         $this->data['classes'] = $this->mail->get_list('classes', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['roles'] = $this->mail->get_list('roles', array('status' => 1), '', '', '', 'id', 'ASC');
+         $this->data['page_name'] = 'message'; 
     }
 
         

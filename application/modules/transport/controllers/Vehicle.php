@@ -19,7 +19,8 @@ class Vehicle extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Vehicle_Model', 'vehicle', true);       
+        $this->load->model('Vehicle_Model', 'vehicle', true);   
+          $this->data['page_name'] = 'transport';      
     }
 
     

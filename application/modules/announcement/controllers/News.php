@@ -20,7 +20,8 @@ class News extends MY_Controller {
     
     function __construct() {
         parent::__construct();
-         $this->load->model('News_Model', 'news', true);               
+         $this->load->model('News_Model', 'news', true); 
+          $this->data['page_name'] = 'announcement';               
     }
 
     

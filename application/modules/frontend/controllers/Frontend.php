@@ -19,7 +19,8 @@ class Frontend extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Frontend_Model', 'frontend', true);       
+        $this->load->model('Frontend_Model', 'frontend', true);   
+         $this->data['page_name'] = 'frontend';     
     }
 
 

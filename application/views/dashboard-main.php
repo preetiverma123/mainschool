@@ -1,119 +1,325 @@
-<!-- top tiles -->
-<div class="row tile_count">
-     <?php if(has_permission(VIEW, 'student', 'student')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-group"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('student'); ?></span>
-            <div class="count"><?php echo $total_student ? $total_student : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-     <?php } ?>
-     <?php if(has_permission(VIEW, 'guardian', 'guardian')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-paw"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('guardian'); ?></span>
-            <div class="count"><?php echo $total_guardian ? $total_guardian : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-     <?php } ?>
-    <?php if(has_permission(VIEW, 'teacher', 'teacher')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-users"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('teacher'); ?></span>
-            <div class="count"><?php echo $total_teacher ? $total_teacher : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-    <?php } ?>
-    <?php if(has_permission(VIEW, 'hrm', 'employee')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-user-md"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('employee'); ?></span>
-            <div class="count"><?php echo $total_employee ? $total_employee :0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-    <?php } ?>
-   <!--  <?php if(has_permission(VIEW, 'accounting', 'income')){ ?>
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-            <div class="stats-count-inner">
-                <span class="count_top"><i class="fa fa-dollar"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('income'); ?></span>
-                <div class="count green"><?php echo $total_income ? $total_income : '0.00'; ?></div>
-                <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-            </div>
-        </div>
-     <?php } ?> -->
-  <!--   <?php if(has_permission(VIEW, 'accounting', 'expenditure')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-dollar"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('expenditure'); ?></span>
-            <div class="count red"><?php echo $total_expenditure? $total_expenditure : '0.00'; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-     <?php } ?>
-     -->
-</div>
-<!-- /top tiles -->
+
 <?php $classes = get_classes(); ?>
 <div class="row tile_count">
-     <?php if(has_permission(VIEW, 'setting', 'setting')){ ?>
+     <?php if(has_permission(VIEW, 'setting', 'setting') || has_permission(VIEW, 'setting', 'payment') || has_permission(VIEW, 'setting', 'sms')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-group"></i> <?php echo $this->lang->line('setting'); ?> <?php echo $this->lang->line('student'); ?></span>
-            <div class="count"><?php echo $total_student ? $total_student : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
+            <span class="count_top"><a href="<?php echo site_url('setting'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('setting'); ?> </a>
+         
         </div>
     </div>
      <?php } ?>
-     <?php if(has_permission(VIEW, 'guardian', 'guardian')){ ?>
+
+     <?php if(has_permission(VIEW, 'theme', 'theme')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-paw"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('guardian'); ?></span>
-            <div class="count"><?php echo $total_guardian ? $total_guardian : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
+            <span class="count_top"><a href="<?php echo site_url('theme'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('theme'); ?> </a>
+         
         </div>
     </div>
      <?php } ?>
-    <?php if(has_permission(VIEW, 'teacher', 'teacher')){ ?>
+
+      <?php if(has_permission(VIEW, 'language', 'language')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-users"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('teacher'); ?></span>
-            <div class="count"><?php echo $total_teacher ? $total_teacher : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
+            <span class="count_top"><a href="<?php echo site_url('language'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('language'); ?> </a>
+         
         </div>
     </div>
-    <?php } ?>
-    <?php if(has_permission(VIEW, 'hrm', 'employee')){ ?>
+     <?php } ?>
+
+    <?php if(has_permission(VIEW, 'administrator', 'year') || has_permission(VIEW, 'administrator', 'role') || has_permission(VIEW, 'administrator', 'permission') || has_permission(VIEW, 'administrator', 'user') || has_permission(EDIT, 'administrator', 'password') || has_permission(VIEW, 'administrator', 'backup')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-user-md"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('employee'); ?></span>
-            <div class="count"><?php echo $total_employee ? $total_employee :0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=administrator'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('administrator'); ?></a>
+         
         </div>
     </div>
-    <?php } ?>
-   <!--  <?php if(has_permission(VIEW, 'accounting', 'income')){ ?>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'hrm', 'designation') || has_permission(VIEW, 'hrm', 'employee')){ ?>   
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=human_resource'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('human_resource'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'teacher', 'teacher')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('teacher'); ?>"><i class="fa fa-group"></i>  <?php echo $this->lang->line('teacher'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'academic', 'classes')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('academic/classes/index'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('class'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'academic', 'section')){ ?> 
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=section'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('section'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'academic', 'subject')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=subject'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('subject'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'academic', 'syllabus')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=syllabus'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('syllabus'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'academic', 'routine')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=class_routine'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('class'); ?> <?php echo $this->lang->line('routine'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+    
+    <?php if(has_permission(VIEW, 'guardian', 'guardian')){ ?> 
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div class="stats-count-inner">
-                <span class="count_top"><i class="fa fa-dollar"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('income'); ?></span>
-                <div class="count green"><?php echo $total_income ? $total_income : '0.00'; ?></div>
-                <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
+                <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=guardian'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('guardian'); ?></a>
+             
             </div>
         </div>
-     <?php } ?> -->
-  <!--   <?php if(has_permission(VIEW, 'accounting', 'expenditure')){ ?>
+     <?php } ?>
+
+
+   <?php if(has_permission(VIEW, 'student', 'student') || has_permission(ADD, 'student', 'student')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-dollar"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('expenditure'); ?></span>
-            <div class="count red"><?php echo $total_expenditure? $total_expenditure : '0.00'; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=student'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('student'); ?></a>
+         
         </div>
     </div>
      <?php } ?>
-     -->
+
+     <?php if(has_permission(VIEW, 'attendance', 'student') || has_permission(VIEW, 'attendance', 'teacher') || has_permission(VIEW, 'attendance', 'employee')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=attendance'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('attendance'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'assignment', 'assignment')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=assignment'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('assignment'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'exam', 'grade') || has_permission(VIEW, 'exam', 'exam') || has_permission(VIEW, 'exam', 'schedule') || has_permission(VIEW, 'exam', 'suggestion') || has_permission(VIEW, 'exam', 'attendance')){ ?> 
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=exam'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('exam'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+    <?php if(has_permission(VIEW, 'exam', 'schedule')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=exam_schedule'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('exam'); ?> <?php echo $this->lang->line('schedule'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'exam', 'suggestion')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=exam_suggestion'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('exam'); ?> <?php echo $this->lang->line('suggestion'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'exam', 'attendance')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=attendance'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('exam'); ?> <?php echo $this->lang->line('attendance'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'exam', 'mark') || has_permission(VIEW, 'exam', 'marksheet') || has_permission(VIEW, 'exam', 'result') || has_permission(VIEW, 'exam', 'sms') || has_permission(VIEW, 'exam', 'mail')){ ?> 
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=exam_mark'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('exam_mark'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'academic', 'promotion')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('academic/promotion'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('promotion'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'certificate', 'certificate') || has_permission(VIEW, 'certificate', 'type')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=certificate'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('certificate'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+   <?php if(has_permission(VIEW, 'library', 'book') || has_permission(VIEW, 'library', 'member') || has_permission(VIEW, 'library', 'issue')){ ?> 
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=library'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('library'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'transport', 'vehicle') || has_permission(VIEW, 'transport', 'route') || has_permission(VIEW, 'transport', 'member')){ ?> 
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=transport'); ?>"><i class="fa fa-group"></i>  <?php echo $this->lang->line('transport'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'hostel', 'hostel') || has_permission(VIEW, 'hostel', 'room') || has_permission(VIEW, 'hostel', 'member')){ ?>  
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=hostel'); ?>"><i class="fa fa-group"></i>  <?php echo $this->lang->line('hostel'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+
+     <?php if(has_permission(VIEW, 'message', 'message')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('message/inbox'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('message'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'message', 'mail') || has_permission(VIEW, 'message', 'text')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=mail_and_sms'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('mail_and_sms'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'announcement', 'notice') || has_permission(VIEW, 'announcement', 'news') || has_permission(VIEW, 'announcement', 'holiday')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=announcement'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('announcement'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'event', 'event')){ ?>   
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('event/index/'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('event'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'payroll', 'grade') || has_permission(VIEW, 'payroll', 'payment')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=payroll'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('payroll'); ?></a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+       <?php if(has_permission(VIEW, 'accounting', 'invoice') || has_permission(VIEW, 'accounting', 'exphead') || has_permission(VIEW, 'accounting', 'expenditure') || has_permission(VIEW, 'accounting', 'incomehead') || has_permission(VIEW, 'accounting', 'income')){ ?> 
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=accounting'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('accounting'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+      <?php if(has_permission(VIEW, 'report', 'report')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=report'); ?>"><i class="fa fa-group"></i>  <?php echo $this->lang->line('report'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+       <?php if(has_permission(VIEW, 'gallery', 'gallery') || has_permission(VIEW, 'gallery', 'image')){ ?>       
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=media_gallery'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('media_gallery'); ?>  </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+     <?php if(has_permission(VIEW, 'frontend', 'frontend') || has_permission(VIEW, 'frontend', 'slider')){ ?>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=frontend'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('frontend'); ?> </a>
+         
+        </div>
+    </div>
+     <?php } ?>
+
+         
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <div class="stats-count-inner">
+            <span class="count_top"><a href="<?php echo site_url('Dashboard/customMenu?page_name=profile'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('profile'); ?> </a>
+         
+        </div>
+    </div>
+
+
+     
+
 </div>
 <div class="row">
     <div class="col-md-8 col-sm-8 col-xs-12">

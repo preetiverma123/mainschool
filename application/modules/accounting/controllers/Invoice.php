@@ -22,6 +22,7 @@ class Invoice extends MY_Controller {
         parent::__construct();
          $this->load->model('Invoice_Model', 'invoice', true);
          $this->load->model('Payment_Model', 'payment', true);
+          $this->data['page_name'] = 'accounting'; 
     }
 
     

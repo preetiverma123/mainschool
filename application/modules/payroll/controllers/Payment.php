@@ -20,7 +20,8 @@ class Payment extends MY_Controller {
     
     function __construct() {
         parent::__construct();
-         $this->load->model('Payment_Model', 'payment', true);              
+         $this->load->model('Payment_Model', 'payment', true);  
+          $this->data['page_name'] = 'payroll';            
     }
 
     

@@ -22,6 +22,7 @@ class Module extends MY_Controller {
         parent::__construct();
          $this->load->model('Setting_Model', 'setting', true);
          $this->data['modules'] = $this->setting->get_list('modules', array('status'=>1), '','', '', 'id', 'ASC');
+          $this->data['page_name'] = 'setting';
     }
 
     public function index() {

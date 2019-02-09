@@ -23,6 +23,7 @@ class Marksheet extends MY_Controller {
         $this->data['classes'] = $this->mark->get_list('classes', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['exams'] = $this->mark->get_list('exams', array('status' => 1, 'academic_year_id' => $this->academic_year_id), '', '', '', 'id', 'ASC');
         $this->data['grades'] = $this->mark->get_list('grades', array('status' => 1), '', '', '', 'id', 'ASC');
+        $this->data['page_name'] = 'exam_mark'; 
     }
 
     
