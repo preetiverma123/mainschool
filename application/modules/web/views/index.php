@@ -124,7 +124,7 @@
                               <div>
                                   <p><?php echo substr($obj->notice, 0,120); ?>...</p>
                               </div>
-                              <div class="more-link"><a href="javascript:void(0);" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
+                              <div class="more-link"><a href="<?php echo site_url('notice-detail/').$obj->id; ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
                               </div>
                           <?php } ?>  
                         </div>   
@@ -137,7 +137,12 @@
                           <div class="owl-carousel" id="addmission-board">
                             <div class="item">
                               <div class="addmissionImage">
-                                <img src="assets/uploads/event/event-1523282273-sms.jpg">
+                                <img src="assets/images/addmission-2.jpg" alt="addmission">
+                              </div>
+                            </div>
+                            <div class="item">
+                              <div class="addmissionImage">
+                                <img src="assets/images/addmission-1.jpg" alt="addmission">
                               </div>
                             </div>
                           </div>
@@ -359,7 +364,7 @@
             <?php } ?>
           <?php } ?>
          <div class="text-center btn_view pb-4">
-                <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                <a href="<?php echo site_url('teachers'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
          
@@ -626,6 +631,15 @@
             autoplay: true
           });
           $('#notice-board').owlCarousel({
+            items: 1,
+            loop: true,
+            // margin: 30,
+            nav: false,
+            
+            dots: true,
+            autoplay: true
+          });
+          $('#notice-detail').owlCarousel({
             items: 1,
             loop: true,
             // margin: 30,

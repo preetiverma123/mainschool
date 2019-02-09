@@ -318,7 +318,8 @@ label {
     font-size: 0;
     position: absolute;
 }
-.about-school .owl-carousel .owl-nav.disabled{
+
+.about-school .owl-carousel .owl-nav{
     display: block;
     top: -30px;
 }
@@ -1200,6 +1201,9 @@ button.btn.btn-primary.btn-blue {
     .fact{
         margin: 10px 0;
     }
+    .main-menu ul li > ul.submenu{
+        
+    }
     
 }
 /* Mobile Layout: 320px. */
@@ -1208,13 +1212,22 @@ button.btn.btn-primary.btn-blue {
     .logo a {
         font-size: 20px !important;
     }
-    
+    ul.submenu{
+        display: none;
+    }
+    .mainmenu.responsive{
+        border-top: 1px solid #e41d43;
+    }
+    .main-menu ul li ul.submenu li a{
+        padding: 10px 15px;
+    }
     .go-content-area{
         padding-bottom: 30px;
     }
     .slider_area img{
         height: unset !important;
     }
+    
     .main-menu ul li a,
     .main-menu ul li a:hover,
     .main-menu ul li.active > a {
