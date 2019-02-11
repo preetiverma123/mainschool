@@ -72,7 +72,11 @@ class Dashboard extends MY_Controller {
         $this->data['new'] = $this->dashboard->get_message_list($type = 'new');
         $this->data['page_name'] = 'dashboard';
         $this->layout->title($this->lang->line('dashboard') . ' | ' . SMS);
+
         $this->load->view('dashboard-main', $this->data);
+
+        // $this->layout->view('dashboard', $this->data);
+        
     }
 
     public function customMenu() {
