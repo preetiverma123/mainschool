@@ -153,6 +153,30 @@
     border: 1px solid rgba(52, 73, 94, 0.44);
     padding: 4px
 }
+.dashboardHead{
+    background-color: rgba(228, 29, 67, 1);
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.buttonSignout button{
+    color: #000;
+    font-size: 15px;
+    box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+}
+.buttonSignout{
+    float: right;
+}
+.buttonSignout button:before {
+    content: "\f00d";
+    font-family: fontAwesome;
+    padding-right: 10px;
+    /* position: absolute; */
+}
+.dashboardHead h2 {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 10px;
+}
 .profile_info {
     padding: 25px 10px 10px;
     width: 65%;
@@ -366,10 +390,10 @@ body .container.body .right_col {
     border: 1px solid #50C1CF !important;
     color: #fff
 }
-.container {
+/*.container {
     width: 100%;
     padding: 0
-}
+}*/
 .navbar-nav>li>a,
 .navbar-brand,
 .navbar-nav>li>a {
@@ -1409,11 +1433,13 @@ span.right {
     }
 }
 .tile_count .tile_stats_count span {
-    font-size: 12px
+   padding-top: 20px;
+   display: block;
 }
+
 @media (min-width: 768px) {
     .tile_count .tile_stats_count span {
-        font-size: 13px
+        font-size: 18px
     }
 }
 .tile_count .tile_stats_count .count_bottom i {
@@ -2998,10 +3024,13 @@ label.error{
 .stats-count-inner{
     background: #e8e8e8;
     padding: 5px;
+    height: 100px;
     border-radius: 10px; 
     margin-bottom: 5px;
 }
-
+.count_top .fa{
+    display: block;
+}
 .sub-tabs{
     background: #d6d6d6;
     padding-top: 3px;

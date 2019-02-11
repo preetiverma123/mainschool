@@ -1,5 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta charset="ISO-8859-15">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <title><?php echo $title_for_layout; ?></title>
+        <link rel="icon" href="<?php echo IMG_URL; ?>favicon.ico" type="image/x-icon" />
+        <!-- Bootstrap -->
+        <link href="<?php echo VENDOR_URL; ?>bootstrap/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="<?php echo VENDOR_URL; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+        <!-- Custom Theme Style -->
+        <link href="<?php echo CSS_URL; ?>custom.css" rel="stylesheet">
+        
+        <?php if($this->session->userdata('theme')){ ?>
+            <link href="<?php echo CSS_URL; ?>theme/<?php echo $this->session->userdata('theme'); ?>.css" rel="stylesheet">
+        <?php }else{ ?>
+            <link href="<?php echo CSS_URL; ?>theme/dodger-blue.css" rel="stylesheet">
+        <?php } ?>
+        
+        <!-- jQuery -->
+        <script src="<?php echo JS_URL; ?>jquery-1.11.2.min.js"></script>
+        <script src="<?php echo JS_URL; ?>jquery.validate.js"></script>
+        
+    </head>
+<body>
+<div class="dashboard-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dashboardHead">
+                    <h2>Choose Your Options</h2>
+                </div>
+                <div class="buttonSignout">
+                    <button class="btn btn-primary">Sign out</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 <?php $classes = get_classes(); ?>
+<div class="container">
 <div class="row tile_count">
      <?php if(has_permission(VIEW, 'setting', 'setting') || has_permission(VIEW, 'setting', 'payment') || has_permission(VIEW, 'setting', 'sms')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -13,7 +60,8 @@
      <?php if(has_permission(VIEW, 'theme', 'theme')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
-            <span class="count_top"><a href="<?php echo site_url('theme'); ?>"><i class="fa fa-group"></i> <?php echo $this->lang->line('theme'); ?> </a>
+
+            <span class="count_top"><a href="<?php echo site_url('theme'); ?>"><i class="fa fa-group"></i><?php echo $this->lang->line('theme'); ?> </a>
          
         </div>
     </div>
@@ -319,9 +367,9 @@
 
 
      
-
 </div>
-<div class="row">
+</div>
+<!-- <div class="row">
     <div class="col-md-8 col-sm-8 col-xs-12">
         <div class="col-md-12 col-sm-12 col-xs-12">
 
@@ -355,7 +403,6 @@
                                     day: 'day'
                                 },
 
-                                //events and holidays
                                 events: [
                                     <?php if(isset($events) && !empty($events)){ ?>
                                         <?php foreach($events as $obj){ ?>
@@ -365,7 +412,7 @@
                                             end: '<?php echo date('Y-m-d', strtotime($obj->event_to)); ?>T<?php echo date('H:i:s', strtotime($obj->event_to)); ?>',
                                             backgroundColor: '<?php echo $theme->color_code; ?>', //red
                                             url: '<?php echo site_url('event/view/'.$obj->id); ?>', //red
-                                            color: '#ffffff' //red
+                                            color: '#ffffff' 
                                         },
                                         <?php } ?> 
                                     <?php } ?> 
@@ -376,8 +423,8 @@
                                             start: '<?php echo date('Y-m-d', strtotime($obj->date_from)); ?>T<?php echo date('H:i:s', strtotime($obj->date_from)); ?>',
                                             end: '<?php echo date('Y-m-d', strtotime($obj->date_to)); ?>T<?php echo date('H:i:s', strtotime($obj->date_to)); ?>',
                                             backgroundColor: '<?php echo $theme->color_code; ?>', //red
-                                            url: '<?php echo site_url('announcement/holiday/view/'.$obj->id); ?>', //red
-                                            color: '#ffffff' //red
+                                            url: '<?php echo site_url('announcement/holiday/view/'.$obj->id); ?>', 
+                                            color: '#ffffff' 
                                         },
                                         <?php } ?> 
                                     <?php } ?>                                     
@@ -390,74 +437,7 @@
             </div>          
         </div>          
 
-      <!--   <div class="col-md-6 col-sm-4 col-xs-12">
-            <div class="x_panel tile overflow_hidden">
-                <div class="x_title">
-                    <h4 class="head-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('news'); ?></h4>
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>                                
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                    <ul  class="list-unstyled msg_list">
-                        <?php if(isset($news) && !empty($news)){ ?>
-                            <?php foreach($news as $obj ){ ?>
-                            <li>
-                                <a href="<?php echo site_url('announcement/news/view/'.$obj->id); ?>">
-                                    <span class="image">
-                                    <?php  if($obj->image != ''){ ?>
-                                            <img src="<?php echo UPLOAD_PATH; ?>/news/<?php echo $obj->image; ?>" alt="" width="70" /> 
-                                            <?php }else{ ?>
-                                            <img src="<?php echo IMG_URL; ?>default-user.png" alt="Profile Image" />
-                                    <?php } ?>
-                                    </span>
-                                    <span>
-                                        <span><?php echo $obj->title; ?></span>
-                                        <span class="time"><?php echo get_nice_time($obj->created_at); ?></span>
-                                    </span>
-                                    <span class="message">
-                                        <?php echo substr($obj->news, 0, 120); ?>
-                                    </span>
-                                </a>
-                            </li>
-                            <?php } ?>
-                        <?php } ?> 
-                    </ul>
-                </div>
-            </div>
-        </div> -->
-   <!--      <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="x_panel tile overflow_hidden">
-                <div class="x_title">
-                    <h4 class="head-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('notice'); ?></h4>
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>                                
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                    <ul  class="list-unstyled msg_list">
-                        <?php if(isset($notices) && !empty($notices)){ ?>
-                            <?php foreach($notices as $obj ){ ?>
-                            <li>
-                                <a href="<?php echo site_url('announcement/notice/view/'.$obj->id); ?>">
-                                    <span class="image"><img src="<?php echo IMG_URL; ?>default-user.png" alt="Profile Image" /></span>
-                                    <span>
-                                        <span><?php echo $obj->title; ?></span>
-                                        <span class="time"><?php echo get_nice_time($obj->created_at); ?></span>
-                                    </span>
-                                    <span class="message">
-                                        <?php echo substr($obj->notice, 0, 120); ?>
-                                    </span>
-                                </a>
-                            </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
+     
 
     </div>
 
@@ -670,7 +650,9 @@
             </div>
         </div>  
     </div>
-</div>
+</div> -->
+</body>
 <script src="<?php echo VENDOR_URL; ?>/chart/js/highcharts.js"></script>
 <script src="<?php echo VENDOR_URL; ?>/chart/js/highcharts-3d.js"></script>
 <script src="<?php echo VENDOR_URL; ?>/chart/js/modules/exporting.js"></script>
+</html>
