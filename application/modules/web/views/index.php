@@ -1,25 +1,68 @@
  
 <section class="slider_area">
-  <div class="owl-carousel" id="slider_area">
-    <div class="item">
-      <img src="assets/uploads/slider/slider-move.jpg" class="img-responsive" alt="slider">
-      <div class="overlay"></div>
-      <!-- <?php $slider_str = ''; foreach($sliders as $obj){ ?>
-        <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
-      <?php } ?>
-    <div id="demo-1" data-zs-src='[<?php echo rtrim($slider_str, ','); ?>]' data-zs-overlay="dots">
-        <div class="demo-inner-content"></div>
-    </div>  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="owl-carousel" id="slider_area">
+        <div class="item">
+          <img src="assets/uploads/slider/slider-move.jpg" class="img-responsive" alt="slider">
+          <div class="overlay"></div>
+          <!-- <?php $slider_str = ''; foreach($sliders as $obj){ ?>
+            <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
+          <?php } ?>
+        <div id="demo-1" data-zs-src='[<?php echo rtrim($slider_str, ','); ?>]' data-zs-overlay="dots">
+            <div class="demo-inner-content"></div>
+        </div>  -->
+          </div>
+          <div class="item">
+            <img src="assets/uploads/slider/slider-banner.jpg" class="img-responsive" alt="slider">
+            <div class="overlay"></div>
+          </div>
+           <div class="item">
+            <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" class="img-responsive" alt="slider">
+            <div class="overlay"></div>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <img src="assets/uploads/slider/slider-banner.jpg" class="img-responsive" alt="slider">
-        <div class="overlay"></div>
-      </div>
-       <div class="item">
-        <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" class="img-responsive" alt="slider">
-        <div class="overlay"></div>
+     <div class="col-lg-4 col-md-4">
+        <div class="notice_board">
+              <div class="notice-board">
+                <?php if(isset($notices) && !empty($notices)){ ?>
+                  
+                    <div class="go-heading go-lined">
+                        <h3 class="title-section1"><?php echo $this->lang->line('notice'); ?></h3>
+                    </div>
+                     
+
+                      <!-- <div class="row"> -->
+                        <div class="notice-single">
+                         <div class="notice-marquee">
+                            <marquee onmouseover="stop();" onmouseout="start();" scrollamount="1" scrolldelay="1" direction="up" style="width: 100%; margin: 0px 0px 10px 0px; padding: 0px 0px; float: right; height: 200px;text-align:center">
+                              <?php foreach($notices as $obj){ ?>  
+                                 <div class="item">             
+                                  <div class="notice-title">
+                                      <h2><?php echo $obj->title; ?></h2>
+                                      <h3><i class="fa fa-calendar"></i>  <?php echo date('M j, Y', strtotime($obj->date)); ?> </h3>
+                                  </div>
+                                  <div>
+                                      <p><?php echo substr($obj->notice, 0,120); ?>...</p>
+                                  </div>
+                                  <div class="more-link"><a href="<?php echo site_url('notice-detail/').$obj->id; ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
+                                  </div>
+                              <?php } ?>
+                            </marquee>  
+                        </div>   
+                      </div>
+                   
+                    <!-- </div>           -->
+                  </div>
+              <?php } ?>
+              </div>
+            </div>
+          
       </div>
     </div>
+  </div>
 </section>
 <section class="messageContainer padding-btm" id="message-section">
   <div class="container">
@@ -104,30 +147,30 @@
       <div class="col-lg-4 col-md-4">
         <div class="notice_board">
               <div class="notice-board">
-                <?php if(isset($notices) && !empty($notices)){ ?>
+                <!-- <?php if(isset($notices) && !empty($notices)){ ?> -->
                   
-                    <div class="go-heading go-lined">
-                        <h3 class="title-section1"><?php echo $this->lang->line('notice'); ?></h3>
-                    </div>
-                     
-
-                      <div class="row">
-                        <div class="notice-single col-lg-12">
-                         <div class="owl-carousel" id="notice-board">
-                            
-                          <?php foreach($notices as $obj){ ?>  
-                             <div class="item">             
-                              <div class="notice-title">
-                                  <h2><?php echo $obj->title; ?></h2>
-                                  <h3><i class="fa fa-calendar"></i>  <?php echo date('M j, Y', strtotime($obj->date)); ?> </h3>
-                              </div>
-                              <div>
-                                  <p><?php echo substr($obj->notice, 0,120); ?>...</p>
-                              </div>
-                              <div class="more-link"><a href="<?php echo site_url('notice-detail/').$obj->id; ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
-                              </div>
-                          <?php } ?>  
-                        </div>   
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="facility-school">
+                          <div class="go-heading go-lined">
+                            <h3 class="title-section1">Facilities</h3>
+                          </div>
+                          <div class="facilityProvide">
+                            <ul>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Bus facility</li>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Smart Classes</li>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Yoga facility</li>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Canteen facility</li>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Bus facility</li>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Smart Classes</li>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Yoga facility</li>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Canteen facility</li>
+                            </ul>
+                             <div class="text-center btn_view pb-4">
+                              <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div class="video-single col-lg-12">
                         <div class="about-school">
@@ -148,9 +191,10 @@
                           </div>
                         </div>  
                       </div>
+                      
                     </div>          
                   </div>
-              <?php } ?>
+              <!-- <?php } ?> -->
               </div>
             </div>
           
@@ -162,41 +206,44 @@
 </section>
 <!-- Gallery section -->
   <div class="gallery-section">
-    <div class="site-title">
-      <h3 class="title-section1">Gallery</h3>
-    </div>
-    <div class="gallerydiv">
-      <div class="grid-sizer"></div>
-      <?php if (isset($galleries) && !empty($galleries)) { ?>
-        <?php foreach($galleries as $obj){?>
-          <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
-            <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><i class="ti-plus"></i></a>
-          </div>
+      <div class="container">
+      <div class="site-title">
+        <h3 class="title-section1">Gallery</h3>
+      </div>
+      <div class="gallerydiv">
+        <div class="grid-sizer"></div>
+        <?php if (isset($galleries) && !empty($galleries)) { ?>
+          <?php foreach($galleries as $obj){?>
+
+            <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
+              <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><i class="ti-plus"></i></a>
+            </div>
+          <?php }?>
         <?php }?>
-      <?php }?>
-     <!--  <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
-        <a class="img-popup" href="assets/images/gallery1.jpg"><i class="ti-plus"></i></a>
+       <!--  <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
+          <a class="img-popup" href="assets/images/gallery1.jpg"><i class="ti-plus"></i></a>
+        </div>
+        <div class="gallery-item set-bg" data-setbg="assets/images/gallery2.jpg">
+          <a class="img-popup" href="assets/images/gallery2.jpg"><i class="ti-plus"></i></a>
+        </div>
+        <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery3.jpg">
+          <a class="img-popup" href="assets/images/gallery3.jpg"><i class="ti-plus"></i></a>
+        </div>
+        <div class="gallery-item gi-big set-bg" data-setbg="assets/images/gallery4.jpg">
+          <a class="img-popup" href="assets/images/gallery4.jpg"><i class="ti-plus"></i></a>
+        </div>
+        <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery5.jpg">
+          <a class="img-popup" href="assets/images/gallery5.jpg"><i class="ti-plus"></i></a>
+        </div>
+        <div class="gallery-item set-bg" data-setbg="assets/images/gallery6.jpg">
+          <a class="img-popup" href="assets/images/gallery6.jpg"><i class="ti-plus"></i></a>
+        </div>
+        <div class="gallery-item set-bg" data-setbg="assets/images/gallery7.jpg">
+          <a class="img-popup" href="assets/images/gallery7.jpg"><i class="ti-plus"></i></a>
+        </div> -->
+        </div>
       </div>
-      <div class="gallery-item set-bg" data-setbg="assets/images/gallery2.jpg">
-        <a class="img-popup" href="assets/images/gallery2.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery3.jpg">
-        <a class="img-popup" href="assets/images/gallery3.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item gi-big set-bg" data-setbg="assets/images/gallery4.jpg">
-        <a class="img-popup" href="assets/images/gallery4.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery5.jpg">
-        <a class="img-popup" href="assets/images/gallery5.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item set-bg" data-setbg="assets/images/gallery6.jpg">
-        <a class="img-popup" href="assets/images/gallery6.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item set-bg" data-setbg="assets/images/gallery7.jpg">
-        <a class="img-popup" href="assets/images/gallery7.jpg"><i class="ti-plus"></i></a>
-      </div> -->
     </div>
-  </div>
   <!-- Gallery section -->
 
  <?php if(isset($events) && !empty($events)){ ?>

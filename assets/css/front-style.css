@@ -239,7 +239,7 @@ label {
     /*text-transform: uppercase;*/
 } 
 #contact-section{
-    padding: 60px 0;
+   padding: 40px 0;
 }
 .contact-form input{
     height: 40px;
@@ -250,7 +250,7 @@ label {
     padding-right: 10px;
 }
 #message-section .go-heading{
-        margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .main-menu ul li ul.submenu {   
     left: 0;
@@ -313,7 +313,7 @@ label {
 }
 .owl-carousel .owl-nav {
     height: 40px;
-    top: 50%;
+    top: 40%;
     width: 100%;
     font-size: 0;
     position: absolute;
@@ -389,11 +389,12 @@ label {
 .top-menu ul li:hover > a{color:#013e6d}
 .top-menu ul li > a.active{color:#013e6d;font-weight: bold;}
 .owl-carousel .owl-dots {
-    /*position: absolute;*/
+    position: absolute;
     /* top: 0; */
     text-align: center;
-    bottom: 13px;
+    bottom: 0;
     left: 10px;
+    right: 10px;
 }
 .owl-carousel .owl-dot.active span {
     display: block;
@@ -461,13 +462,31 @@ label {
 .about-area p strong{
     color: #013e6d;
 }
-
+.facility-school .title-section1{
+    background-color: #e41d43;
+    font-size: 22px;
+    padding: 6px 0;
+    color: #fff;
+}
+.notice-board .title-section1{
+    background-color: #e41d43;
+    font-size: 22px;
+    padding: 6px 0;
+    color: #fff;
+}
+.notice-marquee {
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #e41d43;
+}
 .notice-single {
     border-right: 1px solid #e8e8e8;
 }
 .notice-single{
     border-right: none;
-    margin: 0 30px;
+    /*margin: 0 30px;*/
+    height: 356px;
+    margin-top: -10px;
     text-align: center;
     box-shadow: 0 2px 5px 0 #00000014;
     background: #fff3f3;
@@ -475,6 +494,8 @@ label {
 .notice-single .notice-title h2{
     font-size: 18px;
     line-height: 1.5;
+    text-transform: capitalize;
+    margin-bottom: 8px;
     color: #d42a4b;
     font-weight: 600;
 }
@@ -597,8 +618,12 @@ footer{
 .gallerydiv .grid-sizer {
     width: 12.5%;
 }
+.slider_area {
+    padding-top: 20px;
+}
 .gallerydiv .gallery-item.gi-big, .gallerydiv .gallery-item.gi-long {
-    width: 25%;
+    width: 24%;
+    margin-right: 10px;
 }
 .gallerydiv .gallery-item {
     width: 12.5%;
@@ -787,7 +812,7 @@ button.btn.btn-primary.btn-blue {
 }
 
 .gallery-section {
-    padding: 60px 0;
+    padding: 40px 0 57px;
     border-top:2px solid #e41d43;
     border-bottom:2px solid #e41d43;
 }
