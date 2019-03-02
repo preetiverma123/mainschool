@@ -65,7 +65,7 @@
 </section>
 <section class="facilitySection">
   <div class="container">
-    <div class="col-md-12">
+    <div class="col-md-12 pd-none">
       <div class="facilityWrapper">
         <div class="facilityHead">
           <h2>Bus Facility</h2>
@@ -107,19 +107,19 @@
       </div>
     </div>
     <!-- second facility -->
-    <div class="col-md-12">
+    <div class="col-md-12 pd-none">
       <div class="facilityWrapper">
         <div class="facilityHead">
           <h2>Bus Facility</h2>
         </div>
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-8">
             <div class="facilityContent">
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-4">
             <div class="facilityImg">
               <img src="assets/images/library.jpg" alt="facility">
             </div>

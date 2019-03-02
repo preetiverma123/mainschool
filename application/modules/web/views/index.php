@@ -681,15 +681,7 @@
             dots: true,
             autoplay: true
           });
-          $('#notice-board').owlCarousel({
-            items: 1,
-            loop: true,
-            // margin: 30,
-            nav: false,
-            
-            dots: true,
-            autoplay: true
-          });
+          
           
           $('#addmission-board').owlCarousel({
             items: 1,
@@ -698,13 +690,7 @@
             dots: true,
             autoplay: true
           });
-          $('#slider_area').owlCarousel({
-            items: 1,
-            loop: true,
-            nav: true,
-            dots: true,
-            autoplay: true
-          });
+          
           
           $('#event-held').owlCarousel({
             loop: true,

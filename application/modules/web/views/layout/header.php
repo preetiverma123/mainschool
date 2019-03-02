@@ -80,8 +80,27 @@
                             $(".hidemenu").click(function(){
                                 $(".submenu").toggle();
                             });
+
+                            $('#slider_area').owlCarousel({
+                                items: 1,
+                                loop: true,
+                                nav: true,
+                                dots: true,
+                                autoplay: true
+                              });
+
+                            $('#notice-board').owlCarousel({
+                                items: 1,
+                                loop: true,
+                                // margin: 30,
+                                nav: false,
+                                
+                                dots: true,
+                                autoplay: true
+                              });
                             
                         });
+
                     </script>
 
                 </div>

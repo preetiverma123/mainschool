@@ -18,6 +18,26 @@ h6{
     background-color: #fff;
     background-size: 200px;
 }
+.facilityWrapper{
+    /*border-bottom: 3px solid #FA620F;*/
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(241, 241, 241);
+    /*background: linear-gradient(-30deg, #fff 100%,rgb(241, 241, 241) 100%);*/
+    border-radius: 5px;
+    box-shadow: 0 0 2px #8D8D88;
+}
+.facilityImg img {
+    width: 100%;
+    height: 233px;
+    margin-top: 10px;
+}
+.pd-none {
+    padding: 0;
+}
+.facilitySection {
+    padding: 40px 0;
+}
 #content-block {
     position: relative;
     overflow: hidden;
@@ -563,11 +583,28 @@ footer {
 }
 .facilityHead{
     background-color: #e41d43;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.facilityContent ul li{
+    color: #e41d43;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+.facilityContent ul li i{
+    padding-right: 10px;
+    color: #e41d43;
+}
+.facilityContent p{
+   margin-top: 10px;
+    margin-bottom: 7px;
 }
 .facilityHead h2{
     text-transform: uppercase;
     color: #fff;
+    font-size: 20px;
+    margin: 0;
+    text-align: left;
 }
 .notice-marquee p{
     margin-bottom: 5px;
