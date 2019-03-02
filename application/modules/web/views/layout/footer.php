@@ -4,7 +4,7 @@
             <div class="col-lg-5 col-md-5">
                 <h3 class="footer-title"><?php echo $this->lang->line('about'); ?> <?php echo $this->lang->line('school'); ?></h3>
                 <div class="footer-text about_description">
-                    <?php echo substr($about->page_description,0,220); ?>
+                    <?php echo (substr(strip_tags($about->page_description),0,220)).'...'; ?>
                 </div>
                 <div class="q-links">
                 <h3 class="footer-title"><?php echo $this->lang->line('social_link'); ?></h3>
