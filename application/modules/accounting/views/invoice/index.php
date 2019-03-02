@@ -80,6 +80,16 @@
                                                 <?php if($obj->paid_status == 'unpaid'){ ?>
                                                     <a href="<?php echo site_url('accounting/invoice/delete/'.$obj->id); ?>" onclick="javascript: return confirm('<?php echo $this->lang->line('confirm_alert'); ?>');" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> <?php echo $this->lang->line('delete'); ?> </a>
                                                 <?php } ?>
+
+                                              <?php if($obj->paid_status == 'paid'){ ?>
+                                                    <a href="<?php echo site_url('accounting/invoice/status_change/'.$obj->id); ?>" onclick="javascript: return confirm('Do you want to change status from Paid to Unpaid');" class="btn btn-success btn-xs"><i class="fa fa-pencil-o"></i>Change Status </a>
+                                                <?php } ?>
+                                                <?php if($obj->paid_status == 'unpaid'){ ?>
+                                                    <a href="<?php echo site_url('accounting/invoice/status_change/'.$obj->id); ?>" onclick="javascript: return confirm('Do you want to change status from Unpaid to Paid');" class="btn btn-success btn-xs"><i class="fa fa-pencil-o"></i>Change Status </a>
+                                                <?php } ?>
+                                                   
+                                                
+                                            
                                             </td>
                                         </tr>
                                         <?php } ?>

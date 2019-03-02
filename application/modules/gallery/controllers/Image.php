@@ -19,8 +19,7 @@ class Image extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Image_Model', 'image', true);  
-        $this->data['page_name'] = 'gallery';      
+        $this->load->model('Image_Model', 'image', true);       
     }
 
 

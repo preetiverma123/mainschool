@@ -20,8 +20,7 @@ class Role extends MY_Controller {
     
     function __construct() {
         parent::__construct();
-         $this->load->model('Role_Model', 'role', true);  
-         $this->data['page_name'] = 'administrator';       
+         $this->load->model('Role_Model', 'role', true);        
     }
 
     

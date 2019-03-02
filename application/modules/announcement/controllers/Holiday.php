@@ -21,7 +21,6 @@ class Holiday extends MY_Controller {
     function __construct() {
         parent::__construct();
          $this->load->model('Holiday_Model', 'holiday', true);
-         $this->data['page_name'] = 'announcement'; 
             
     }
 

@@ -21,7 +21,6 @@ class Sms extends MY_Controller {
         parent::__construct();
         $this->load->model('Setting_Model', 'setting', true);
         $this->data['setting'] = $this->setting->get_single('sms_settings', array('status' => 1));
-         $this->data['page_name'] = 'setting';
     }
 
             

@@ -25,7 +25,6 @@ class Gateway extends CI_Controller {
          $this->academic_year_id = $this->db->get_where('academic_years', array('is_running'=>1))->row()->id;         
          $this->config->load('custom');
          $this->load->library("paypal");  
-         $this->data['page_name'] = 'accounting'; 
     }
 
         

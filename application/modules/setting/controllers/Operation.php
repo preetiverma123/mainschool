@@ -23,7 +23,6 @@ class Operation extends MY_Controller {
          $this->load->model('Setting_Model', 'setting', true);
          $this->data['modules'] = $this->setting->get_list('modules', array('status'=>1), '','', '', 'id', 'ASC'); 
          $this->data['operations'] = $this->setting->get_operation_list();
-          $this->data['page_name'] = 'setting';
     }
 
     public function index() {

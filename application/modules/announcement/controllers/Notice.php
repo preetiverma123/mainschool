@@ -19,8 +19,7 @@ class Notice extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Notice_Model', 'notice', true);  
-         $this->data['page_name'] = 'announcement';       
+        $this->load->model('Notice_Model', 'notice', true);        
     }
 
     

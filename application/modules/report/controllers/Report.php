@@ -27,7 +27,6 @@ class Report extends My_Controller {
 
         $this->date_from = date('Y-m-01');
         $this->date_to = date('Y-m-t');
-         $this->data['page_name'] = 'report';
     }
 
         

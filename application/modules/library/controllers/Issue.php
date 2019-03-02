@@ -20,7 +20,7 @@ class Issue extends MY_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Book_Model', 'book', true);
-         $this->data['page_name'] = 'library'; 
+        
        // check running session
         if(!$this->academic_year_id){
             error($this->lang->line('academic_year_setting'));

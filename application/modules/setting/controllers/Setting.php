@@ -22,7 +22,6 @@ class Setting extends MY_Controller {
         $this->load->model('Setting_Model', 'setting', true);        
         $this->data['fields'] = $this->setting->get_table_fields('languages');
         $this->data['years'] = $this->setting->get_list('academic_years', array('status' => 1), '', '', '', 'id', 'ASC');
-        $this->data['page_name'] = 'setting';
     }
 
         

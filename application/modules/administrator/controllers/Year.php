@@ -21,7 +21,6 @@ class Year extends MY_Controller {
     function __construct() {
         parent::__construct();
          $this->load->model('Year_Model', 'year', true);
-         $this->data['page_name'] = 'administrator'; 
     }
 
     

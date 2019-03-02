@@ -33,9 +33,7 @@
     <body class="nav-md">
         <div class="container body">
             <div class="main_container">
-                <?php $this->load->view('layout/left-side'); ?>
-              <!--Side menu hidden -->
-          
+                 <?php $this->load->view('layout/left-side'); ?>   
                 <!-- top navigation -->
                  <?php $this->load->view('layout/header'); ?>   
                 <!-- /top navigation -->

@@ -9,7 +9,7 @@
         </div>
     </div>
      <?php } ?>
-     <?php if(has_permission(VIEW, 'guardian', 'guardian')){ ?>
+    <!-- <?php if(has_permission(VIEW, 'guardian', 'guardian')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
             <span class="count_top"><i class="fa fa-paw"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('guardian'); ?></span>
@@ -17,7 +17,7 @@
             <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
         </div>
     </div>
-     <?php } ?>
+     <?php } ?>-->
     <?php if(has_permission(VIEW, 'teacher', 'teacher')){ ?>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
@@ -57,64 +57,7 @@
      -->
 </div>
 <!-- /top tiles -->
-<?php $classes = get_classes(); ?>
-<div class="row tile_count">
-     <?php if(has_permission(VIEW, 'setting', 'setting')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-group"></i> <?php echo $this->lang->line('setting'); ?> <?php echo $this->lang->line('student'); ?></span>
-            <div class="count"><?php echo $total_student ? $total_student : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-     <?php } ?>
-     <?php if(has_permission(VIEW, 'guardian', 'guardian')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-paw"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('guardian'); ?></span>
-            <div class="count"><?php echo $total_guardian ? $total_guardian : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-     <?php } ?>
-    <?php if(has_permission(VIEW, 'teacher', 'teacher')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-users"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('teacher'); ?></span>
-            <div class="count"><?php echo $total_teacher ? $total_teacher : 0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-    <?php } ?>
-    <?php if(has_permission(VIEW, 'hrm', 'employee')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-user-md"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('employee'); ?></span>
-            <div class="count"><?php echo $total_employee ? $total_employee :0; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-    <?php } ?>
-   <!--  <?php if(has_permission(VIEW, 'accounting', 'income')){ ?>
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-            <div class="stats-count-inner">
-                <span class="count_top"><i class="fa fa-dollar"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('income'); ?></span>
-                <div class="count green"><?php echo $total_income ? $total_income : '0.00'; ?></div>
-                <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-            </div>
-        </div>
-     <?php } ?> -->
-  <!--   <?php if(has_permission(VIEW, 'accounting', 'expenditure')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top"><i class="fa fa-dollar"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('expenditure'); ?></span>
-            <div class="count red"><?php echo $total_expenditure? $total_expenditure : '0.00'; ?></div>
-            <span class="count_bottom"><?php echo isset($year_session->session_year) ? $year_session->session_year : '' ; ?></span>
-        </div>
-    </div>
-     <?php } ?>
-     -->
-</div>
+
 <div class="row">
     <div class="col-md-8 col-sm-8 col-xs-12">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -255,7 +198,7 @@
 
     </div>
 
-    <div class="col-md-4 col-sm-4 col-xs-12">
+   <!-- <div class="col-md-4 col-sm-4 col-xs-12">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel tile fixed_height_320 overflow_hidden">
@@ -463,7 +406,7 @@
                 </div>
             </div>
         </div>  
-    </div>
+    </div>-->
 </div>
 <script src="<?php echo VENDOR_URL; ?>/chart/js/highcharts.js"></script>
 <script src="<?php echo VENDOR_URL; ?>/chart/js/highcharts-3d.js"></script>

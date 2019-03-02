@@ -22,7 +22,6 @@ class Member extends MY_Controller {
         $this->load->model('Member_Model', 'member', true);
         $this->data['members'] = $this->member->get_hostel_member_list($is_hostel_member = 1);
         $this->data['non_members'] = $this->member->get_hostel_member_list($is_hostel_member = 0);
-         $this->data['page_name'] = 'hostel';
     }
 
     

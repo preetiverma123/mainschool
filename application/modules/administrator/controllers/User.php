@@ -21,7 +21,6 @@ class User extends MY_Controller {
         $this->load->model('Administrator_Model', 'administrator', true);
         $this->data['roles'] = $this->administrator->get_list('roles', array('status' => 1), '','', '', 'id', 'ASC');
         $this->data['classes'] = $this->administrator->get_list('classes', array('status' => 1), '','', '', 'id', 'ASC');
-        $this->data['page_name'] = 'administrator'; 
     }
 
     public $data = array();

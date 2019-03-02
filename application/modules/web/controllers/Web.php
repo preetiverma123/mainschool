@@ -36,7 +36,7 @@ class Web extends CI_Controller {
     * @return          : null 
     * ********************************************************** */
     public function index() {
-        
+
         $this->data['sliders'] = $this->web->get_list('sliders', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
 
@@ -48,8 +48,8 @@ class Web extends CI_Controller {
         $this->data['galleries'] = $this->web->get_list('galleries', array('status'=>1, 'is_view_on_web'=>1), '', '', '', 'id', 'DESC');
 
         ///StudentsCount
-    /*    $this->db->select('*');
-        $this->db->from('');
+        $this->db->select('*');
+        $this->db->from('students');
         $query = $this->db->get();
 
         if ( $query->num_rows() > 0 )
@@ -58,10 +58,10 @@ class Web extends CI_Controller {
 
             
         }
-        $this->data['students'] = $students;*/
+        $this->data['students'] = $students;
 
         ////Subjects Count
-        /*$this->db->select('*');
+        $this->db->select('*');
         $this->db->from('sections');
         $query = $this->db->get();
 
@@ -71,7 +71,7 @@ class Web extends CI_Controller {
 
             
         }
-        $this->data['sections'] = $sections;*/
+        $this->data['sections'] = $sections;
 
         ////Employees Count
         $this->db->select('*');
