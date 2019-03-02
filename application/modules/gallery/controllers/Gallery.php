@@ -19,8 +19,7 @@ class Gallery extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Gallery_Model', 'gallery', true); 
-        $this->data['page_name'] = 'gallery';       
+        $this->load->model('Gallery_Model', 'gallery', true);       
     }
 
 

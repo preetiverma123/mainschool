@@ -23,7 +23,6 @@ class Result extends MY_Controller {
         $this->data['classes'] = $this->result->get_list('classes', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['exams'] = $this->result->get_list('exams', array('status' => 1, 'academic_year_id' => $this->academic_year_id), '', '', '', 'id', 'ASC');
         $this->data['grades'] = $this->result->get_list('grades', array('status' => 1), '', '', '', 'id', 'ASC');
-        $this->data['page_name'] = 'exam_mark'; 
     }
 
     

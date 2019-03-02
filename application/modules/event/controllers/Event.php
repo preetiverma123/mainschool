@@ -19,8 +19,7 @@ class Event extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Event_Model', 'event', true); 
-        $this->data['page_name'] = 'event';       
+        $this->load->model('Event_Model', 'event', true);       
     }
 
 

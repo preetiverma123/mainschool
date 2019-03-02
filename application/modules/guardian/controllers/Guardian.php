@@ -19,8 +19,7 @@ class Guardian extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Guardian_Model', 'guardian', true);  
-        $this->data['page_name'] = 'guardian';       
+        $this->load->model('Guardian_Model', 'guardian', true);        
     }
 
     /*****************Function index**********************************

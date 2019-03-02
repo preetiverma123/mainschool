@@ -28,7 +28,6 @@ class Text extends MY_Controller {
         $this->load->library('bulk');
         $this->load->library('msg91');
         $this->load->library('plivo');
-         $this->data['page_name'] = 'message'; 
     }
 
             

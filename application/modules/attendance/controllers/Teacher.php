@@ -20,7 +20,6 @@ class Teacher extends MY_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Teacher_Model', 'teacher', true);
-        $this->data['page_name'] = 'attendance'; 
     }
 
     

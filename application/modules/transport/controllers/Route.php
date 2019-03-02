@@ -20,8 +20,7 @@ class Route extends MY_Controller {
     function __construct() {
         parent::__construct();
        
-        $this->load->model('Route_Model', 'route', true);  
-          $this->data['page_name'] = 'transport';      
+        $this->load->model('Route_Model', 'route', true);      
         
     }
 

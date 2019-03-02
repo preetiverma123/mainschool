@@ -20,7 +20,6 @@ class Employee extends MY_Controller {
     function __construct() {
         parent::__construct();
          $this->load->model('Employee_Model', 'employee', true);
-         $this->data['page_name'] = 'attendance'; 
     }
 
     

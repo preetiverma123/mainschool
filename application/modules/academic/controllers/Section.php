@@ -22,7 +22,6 @@ class Section extends MY_Controller {
         parent::__construct();
                  
          $this->load->model('Section_Model', 'section', true);
-         $this->data['page_name'] = 'section';
     }
 
     

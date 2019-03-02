@@ -22,7 +22,6 @@ class Attendance extends MY_Controller {
         $this->load->model('Attendance_Model', 'attendance', true);
         $this->data['classes'] = $this->attendance->get_list('classes', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['exams'] = $this->attendance->get_list('exams', array('status' => 1, 'academic_year_id' => $this->academic_year_id), '', '', '', 'id', 'ASC');
-        $this->data['page_name'] = 'exam_attendance'; 
     }
 
     

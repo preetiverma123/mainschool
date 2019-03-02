@@ -26,7 +26,7 @@
             <div class="col-md-12 col-lg-4">
                 <section class="right-pane clearfix">
                     <h2 class="widget-title"><?php echo $this->lang->line('latest'); ?> <?php echo $this->lang->line('notice'); ?></h2>                  
-                    <div class="owl-carousel" id="notice-detail">
+
                     <?php if (isset($notices) && !empty($notices)) { ?>
                         <?php foreach ($notices as $obj) { ?>
                             <div class="col-md-12 col-sm-12">
@@ -41,7 +41,6 @@
                             </div>
                         <?php } ?>
                     <?php } ?>
-                    </div>
                 </section> 
             </div>
 

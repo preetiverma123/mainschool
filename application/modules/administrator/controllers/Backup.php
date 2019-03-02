@@ -21,7 +21,6 @@ class Backup extends MY_Controller {
          $this->load->model('Administrator_Model', 'administrator', true);
          $this->data['roles'] = $this->administrator->get_list('roles', array('status' => 1), '','', '', 'id', 'ASC');
          $this->data['years'] = $this->administrator->get_list('academic_years', array('status' => 1), '','', '', 'id', 'ASC');
-          $this->data['page_name'] = 'administrator'; 
     }
     
     

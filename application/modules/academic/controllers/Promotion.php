@@ -21,7 +21,7 @@ class Promotion extends MY_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Promotion_Model', 'promotion', true);
-        $this->data['page_name'] = 'promotion';
+        
         if(!$this->academic_year_id){
             error($this->lang->line('academic_year_setting'));
             redirect('setting');

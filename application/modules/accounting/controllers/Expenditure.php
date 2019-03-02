@@ -20,8 +20,7 @@ class Expenditure extends MY_Controller {
     
     function __construct() {
         parent::__construct();
-         $this->load->model('Expenditure_Model', 'expenditure', true); 
-         $this->data['page_name'] = 'accounting';              
+         $this->load->model('Expenditure_Model', 'expenditure', true);              
     }
 
     

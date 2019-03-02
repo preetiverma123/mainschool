@@ -21,7 +21,7 @@ class Designation extends MY_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Designation_Model', 'designation', true);
-         $this->data['page_name'] = 'human_resource';     
+        
     }
 
     

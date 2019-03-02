@@ -481,5 +481,43 @@ class Invoice extends MY_Controller {
         
         redirect('accounting/invoice/index');
     }
+
+    public function status_change($id = null) {
+        
+        check_permission(DELETE);
+        if(!is_numeric($id)){
+            error($this->lang->line('unexpected_error'));
+             redirect('accounting/invoice/index');
+        } 
+
+        $this->db->select('paid_status');
+        $this->db->from('invoices');
+        $this->db->where('id',$id);
+        $query = $this->db->get();
+
+        if ( $query->num_rows() > 0 )
+        {
+            $employees = $query->row_array();
+
+            
+        }
+        
+
+        if($employees['paid_status']=='paid'){
+             $updated = $this->invoice->update('invoices', array('paid_status'=>'unpaid'), array('id' => $id));
+        }else{
+             $updated = $this->invoice->update('invoices',  array('paid_status'=>'paid'), array('id' => $id));
+        }
+       
+        if ($updated) {  
+            
+           
+            success($this->lang->line('update_success'));
+        } else {
+            error($this->lang->line('update_failed'));
+        }
+        
+        redirect('accounting/invoice/index');
+    }
    
 }

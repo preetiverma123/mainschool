@@ -21,7 +21,7 @@ class Type extends MY_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Type_Model', 'type', true);
-        $this->data['page_name'] = 'certificate'; 
+        
     }
 
     

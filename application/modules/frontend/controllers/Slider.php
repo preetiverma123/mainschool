@@ -19,8 +19,7 @@ class Slider extends MY_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Slider_Model', 'slider', true);
-        $this->data['page_name'] = 'frontend';        
+        $this->load->model('Slider_Model', 'slider', true);       
     }
 
 

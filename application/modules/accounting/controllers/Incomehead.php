@@ -20,8 +20,7 @@ class Incomehead extends MY_Controller {
     
     function __construct() {
         parent::__construct();
-         $this->load->model('Incomehead_Model', 'incomehead', true);  
-          $this->data['page_name'] = 'accounting';              
+         $this->load->model('Incomehead_Model', 'incomehead', true);               
     }
 
     

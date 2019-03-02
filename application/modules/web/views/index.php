@@ -255,12 +255,12 @@
       <div class="row">
         <div class="col-sm-6 col-lg-3 fact">
           <div class="fact-icon">
-            <i class="ti-crown"></i>
+            <i class="ti-pencil-alt"></i>
           </div>
           <div class="fact-text">
-            <span class="goeducation-counter js-counter" data-from="0" data-to="50" data-speed="60" data-refresh-interval="50">50</span>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($sections);?>" data-speed="60" data-refresh-interval="50"><?php echo count($sections);?></span>
             <!-- <h2><?php echo count($sections);?></h2> -->
-            <p>YEARS</p>
+            <p>Sections</p>
 
           </div>
         </div>
@@ -279,11 +279,10 @@
           <div class="fact-icon">
             <i class="ti-user"></i>
           </div>
-
           <div class="fact-text">
-            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($events);?>" data-speed="60" data-refresh-interval="50"><?php echo count($events);?></span>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($students);?>" data-speed="60" data-refresh-interval="50"><?php echo count($students);?></span>
             <!-- <h2><?php echo count($students);?></h2> -->
-            <p>EVENTS</p>
+            <p>STUDENTS</p>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3 fact">

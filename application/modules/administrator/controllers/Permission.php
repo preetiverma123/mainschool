@@ -23,7 +23,6 @@ class Permission extends MY_Controller {
          $this->load->model('Role_Model', 'role', true);
          $this->data['roles'] = $this->role->get_list('roles', array('status' => 1), '','', '', 'id', 'ASC');
          $this->data['modules'] = $this->role->get_list('modules', array('status' => 1), '','', '', 'id', 'ASC');
-         $this->data['page_name'] = 'administrator'; 
     }
     
     

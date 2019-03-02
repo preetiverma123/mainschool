@@ -20,7 +20,7 @@ class Suggestion extends MY_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Suggestion_Model', 'suggestion', true);
-        $this->data['page_name'] = 'exam_suggestion'; 
+
          // check running session
         if(!$this->academic_year_id){
             error($this->lang->line('academic_year_setting'));

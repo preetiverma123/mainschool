@@ -19,8 +19,7 @@ class Income extends MY_Controller {
     
     function __construct() {
         parent::__construct();
-         $this->load->model('Income_Model', 'income', true);  
-          $this->data['page_name'] = 'accounting';                
+         $this->load->model('Income_Model', 'income', true);                 
     }
 
             
