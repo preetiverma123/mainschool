@@ -157,6 +157,7 @@
                           </div>
                           <div class="facilityProvide">
                             <ul>
+                              
                               <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Bus facility</li>
                               <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Smart Classes</li>
                               <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Yoga facility</li>

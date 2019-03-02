@@ -68,6 +68,7 @@ $route['admission'] = 'web/admission';
 $route['privacy'] = 'web/privacy';
 $route['terms'] = 'web/terms';
 $route['about'] = 'web/about';
+$route['facilities'] = 'web/facilities';
 $route['login'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
