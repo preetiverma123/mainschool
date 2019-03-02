@@ -39,7 +39,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <?php  $var = htmlspecialchars_decode(htmlentities($about->page_description)); echo $var;  ?>
+                <?php  $var = htmlspecialchars_decode(htmlentities($aboutpage->page_description)); echo $var;  ?>
                <!--  <div class="about_us_page">
                 <div class="row">
                     <h3>Why Choose Us?</h3>
@@ -65,7 +65,7 @@
               </div> -->
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid img-thumbnail" src="<?php echo UPLOAD_PATH; ?>/page/<?php echo $about->page_image; ?>" alt="">
+                <img class="img-fluid img-thumbnail" src="<?php echo UPLOAD_PATH; ?>/page/<?php echo $aboutpage->page_image; ?>" alt="">
             </div>      
         </div>
     </div>

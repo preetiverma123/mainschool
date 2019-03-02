@@ -119,11 +119,24 @@ class Web extends CI_Controller {
         
         $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');*/
 
-         $this->data['about'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>$slug), '', '', '', 'id', 'ASC');
+         $this->data['aboutpage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>$slug), '', '', '', 'id', 'ASC');
 
         $this->data['list'] = TRUE;
         $this->layout->title($this->lang->line('about_us') . ' ' . $this->lang->line('school'). ' | ' . SMS);
         $this->layout->view('about', $this->data);
+    }
+
+    public function fees() {
+        
+       /* $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
+        
+        $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');*/
+
+         $this->data['fees'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'fees'), '', '', '', 'id', 'ASC');
+
+        $this->data['list'] = TRUE;
+        $this->layout->title($this->lang->line('fees') . ' ' . $this->lang->line('school'). ' | ' . SMS);
+        $this->layout->view('fees', $this->data);
     }
     
 

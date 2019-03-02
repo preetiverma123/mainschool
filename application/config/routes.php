@@ -67,6 +67,7 @@ $route['contact'] = 'web/contact';
 $route['admission'] = 'web/admission';
 $route['privacy'] = 'web/privacy';
 $route['terms'] = 'web/terms';
+$route['fees'] = 'web/fees';
 $route['about/(:any)'] = 'web/about/$1';
 $route['facilities'] = 'web/facilities';
 $route['login'] = 'welcome';
