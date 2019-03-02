@@ -5,7 +5,7 @@
         </div>
     </div>
 </section>
-<section class="messageContainer pd-b" id="message-section">
+<!-- <section class="messageContainer pd-b" id="message-section">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -25,14 +25,13 @@
                 <?php echo htmlspecialchars_decode(stripslashes($mdmessage->page_description)); ?>
                 </p>
             </div>
-           <!--  <div class="text-left btn_view pb-4"><a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
-         </div> -->
+        
           </div>
          </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <section class="go-content-area pd-all about-content aboutus-wrap">
     <div class="container">
          <div class="row">
@@ -40,7 +39,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <?php echo $about->page_description; ?>
+                <?php  $var = htmlspecialchars_decode(htmlentities($aboutpage->page_description)); echo $var;  ?>
                <!--  <div class="about_us_page">
                 <div class="row">
                     <h3>Why Choose Us?</h3>
@@ -66,7 +65,7 @@
               </div> -->
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid img-thumbnail" src="<?php echo UPLOAD_PATH; ?>/page/<?php echo $about->page_image; ?>" alt="">
+                <img class="img-fluid img-thumbnail" src="<?php echo UPLOAD_PATH; ?>/page/<?php echo $aboutpage->page_image; ?>" alt="">
             </div>      
         </div>
     </div>

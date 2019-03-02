@@ -113,6 +113,33 @@ class Web extends CI_Controller {
         $this->layout->view('news', $this->data);
     }
 
+    public function about($slug) {
+        
+       /* $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
+        
+        $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');*/
+
+         $this->data['aboutpage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>$slug), '', '', '', 'id', 'ASC');
+
+        $this->data['list'] = TRUE;
+        $this->layout->title($this->lang->line('about_us') . ' ' . $this->lang->line('school'). ' | ' . SMS);
+        $this->layout->view('about', $this->data);
+    }
+
+    public function fees() {
+        
+       /* $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
+        
+        $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');*/
+
+         $this->data['fees'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'fees'), '', '', '', 'id', 'ASC');
+
+        $this->data['list'] = TRUE;
+        $this->layout->title($this->lang->line('fees') . ' ' . $this->lang->line('school'). ' | ' . SMS);
+        $this->layout->view('fees', $this->data);
+    }
+    
+
     public function facilities() {
 
         $this->data['facilities'] = $this->web->get_list('facilities', array('status'=>1), '', '', '', 'id', 'DESC'); 
@@ -353,7 +380,7 @@ class Web extends CI_Controller {
     * @param           : null
     * @return          : null 
     * ********************************************************** */
-    public function about() {
+   /* public function about() {
         
         $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
         
@@ -361,7 +388,7 @@ class Web extends CI_Controller {
         $this->data['list'] = TRUE;
         $this->layout->title($this->lang->line('about_us') . ' ' . $this->lang->line('school'). ' | ' . SMS);
         $this->layout->view('about', $this->data);
-    }
+    }*/
     
     /*****************Function admission**********************************
     * @type            : Function

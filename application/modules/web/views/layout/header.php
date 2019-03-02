@@ -51,12 +51,14 @@
                                         <li><a href="<?php echo site_url('holiday'); ?>"><?php echo $this->lang->line('holiday'); ?></a></li>
                                     </ul>
                                 </li>
-                                <li><a href="<?php echo site_url('about'); ?>"><?php echo $this->lang->line('about'); ?>
+                                <li><a href="javascript:void(0)"><?php echo $this->lang->line('about'); ?>
                                     <i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
-                                        <li><a href="<?php echo site_url('news'); ?>"><?php echo $this->lang->line('news'); ?></a></li>
-                                        <li><a href="<?php echo site_url('notice'); ?>"><?php echo $this->lang->line('notice'); ?></a></li>
-                                        <li><a href="<?php echo site_url('holiday'); ?>"><?php echo $this->lang->line('holiday'); ?></a></li>
+                                        <li><a href="<?php echo site_url('about/about-us'); ?>"><?php echo 'About Us'; ?></a></li>
+                                        <li><a href="<?php echo site_url('about/md-message'); ?>"><?php echo "MD's message"; ?></a></li>
+                                        <li><a href="<?php echo site_url('about/principal-message'); ?>"><?php echo "Principal's Message"; ?></a></li>
+                                         <li><a href="<?php echo site_url('fees'); ?>"><?php echo 'Fee Structure'; ?></a></li>
+                                          <li><a href="<?php echo site_url('about/admission'); ?>"><?php echo 'Admission Procedure'; ?></a></li>
                                     </ul>
                               
                                 </li>
