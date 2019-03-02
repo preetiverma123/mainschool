@@ -561,8 +561,13 @@ footer {
     margin-top: 4px;
     border:2px solid #e41d43;
 }
+.facilityHead{
+    background-color: #e41d43;
+    padding: 20px;
+}
 .facilityHead h2{
-    text-transform: capitalize;
+    text-transform: uppercase;
+    color: #fff;
 }
 .notice-marquee p{
     margin-bottom: 5px;
