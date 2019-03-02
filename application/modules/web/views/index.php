@@ -1,4 +1,4 @@
- 
+
 <section class="slider_area">
   <div class="container">
     <div class="row">
@@ -37,7 +37,7 @@
                       <!-- <div class="row"> -->
                         <div class="notice-single">
                          <div class="notice-marquee">
-                            <marquee onmouseover="stop();" onmouseout="start();" scrollamount="1" scrolldelay="1" direction="up" style="width: 100%; margin: 0px 0px 10px 0px; padding: 0px 0px; float: right; height: 200px;text-align:center">
+                            <marquee onmouseover="stop();" onmouseout="start();" scrollamount="1" scrolldelay="1" direction="up" style="width: 100%; margin: 0px 0px 10px 0px; padding: 0px 0px; float: right; height: 270px;text-align:center">
                               <?php foreach($notices as $obj){ ?>  
                                  <div class="item">             
                                   <div class="notice-title">
