@@ -157,18 +157,21 @@
                           </div>
                           <div class="facilityProvide">
                             <ul>
-                              
-                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Bus facility</li>
-                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Smart Classes</li>
+                              <?php if(!empty($facilities)) { ?>
+                                <?php foreach($facilities as $facility) { ?>
+                                  <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?php echo !empty($facility->name)?$facility->name:''; ?></li>
+                                <?php } ?>
+                              <?php } ?>
+                             <!--  <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Smart Classes</li>
                               <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Yoga facility</li>
                               <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Canteen facility</li>
                               <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Bus facility</li>
                               <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Smart Classes</li>
                               <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Yoga facility</li>
-                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Canteen facility</li>
+                              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>Canteen facility</li> -->
                             </ul>
                              <div class="text-center btn_view pb-4">
-                              <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                              <a href="<?php echo site_url('facilities'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
                             </div>
                           </div>
                         </div>
