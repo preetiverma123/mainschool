@@ -56,7 +56,7 @@
                                 <li><a href="<?php echo site_url('galleries'); ?>"><?php echo $this->lang->line('gallery'); ?></a></li>
                                 <li><a href="<?php echo site_url('teachers'); ?>"><?php echo $this->lang->line('teacher'); ?></a></li>
                                 <li><a href="<?php echo site_url('staff'); ?>"><?php echo $this->lang->line('staff'); ?></a></li>
-                                <li><a href="javascript:void(0);">Facility</a></li>
+                                <li><a href="<?php echo site_url('facilities'); ?>">Facility</a></li>
                                 <li><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('contact_us'); ?></a></li>
                                 
                             </ul>
