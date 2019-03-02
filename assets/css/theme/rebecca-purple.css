@@ -595,6 +595,13 @@ footer {
     padding-right: 10px;
     color: #e41d43;
 }
+a.img-popup {
+    display: block;
+}
+.
+.gallery-Item img{
+    height: 200px;
+}
 .facilityContent p{
    margin-top: 10px;
    color: #4b4848;

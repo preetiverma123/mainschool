@@ -117,7 +117,7 @@
                 </div>
               </div>
             </div> -->
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
               <div class="go-box-wrap our-direct bg-light">
                 <div class="block-title">
                   <h2>
@@ -214,16 +214,18 @@
       <div class="site-title">
         <h3 class="title-section1">Gallery</h3>
       </div>
-      <div class="gallerydiv">
-        <div class="grid-sizer"></div>
+      <div class="galleryDiv">
+        <!-- <div class="grid-sizer"></div> -->
+        <div class="owl-carousel" id="owl-gallery">
         <?php if (isset($galleries) && !empty($galleries)) { ?>
           <?php foreach($galleries as $obj){?>
 
-            <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
-              <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><i class="ti-plus"></i></a>
+            <div class="gallery-Item">
+              <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><img src="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>"></a>
             </div>
           <?php }?>
         <?php }?>
+        </div>
        <!--  <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
           <a class="img-popup" href="assets/images/gallery1.jpg"><i class="ti-plus"></i></a>
         </div>
@@ -714,6 +716,38 @@
               },
               1200: {
                   items: 2
+              }
+            }
+          });
+
+          $('#owl-gallery').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            items: 2,
+            dots: true,
+            autoplay: true,
+            responsive: {
+              0: {
+                  items: 1
+              },
+              360: {
+                  items: 1
+              },
+              420: {
+                items: 2
+              },
+              576: {
+                  items: 2
+              },
+              767: {
+                  items: 2
+              },
+              991: {
+                  items: 3
+              },
+              1200: {
+                  items: 4
               }
             }
           });
