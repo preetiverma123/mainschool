@@ -178,7 +178,7 @@
                                 <div class="item form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description"><?php echo $this->lang->line('description'); ?></label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <textarea  class="form-control col-md-7 col-xs-12"  name="description"  id="description" placeholder="<?php echo $this->lang->line('description'); ?>"><?php echo isset($facility->description) ?  $facility->description : ''; ?></textarea>
+                                        <textarea  class="form-control col-md-7 col-xs-12"  name="description"  id="edit_description" placeholder="<?php echo $this->lang->line('description'); ?>"><?php echo isset($facility->description) ?  $facility->description : ''; ?></textarea>
                                         <div class="help-block"><?php echo form_error('description'); ?></div>
                                     </div>
                                 </div>
@@ -252,9 +252,13 @@
   <!-- bootstrap-datetimepicker -->
 <link href="<?php echo VENDOR_URL; ?>datepicker/datepicker.css" rel="stylesheet">
  <script src="<?php echo VENDOR_URL; ?>datepicker/datepicker.js"></script>
+ <link href="<?php echo VENDOR_URL; ?>editor/jquery-te-1.4.0.css" rel="stylesheet">
+ <script type="text/javascript" src="<?php echo VENDOR_URL; ?>editor/jquery-te-1.4.0.min.js"></script>
 <!-- datatable with buttons -->
  <script type="text/javascript">
-     
+
+        $('#description').jqte();
+        $('#edit_description').jqte();
     $('#add_dob').datepicker();
   $('#edit_dob').datepicker();
   
