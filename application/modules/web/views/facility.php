@@ -7,13 +7,15 @@
 </section>
 <section class="facilitySection">
   <div class="container">
+   <!--  <?php if(!empty($facilities)) { ?>
+    <?php foreach($facilities as $facility) { ?>
     <div class="col-md-12 pd-none">
       <div class="facilityWrapper">
         <div class="facilityHead">
-          <h2>Bus Facility</h2>
+          <h2><?php echo (!empty($facility->name))?$facility->name:'';?></h2>
         </div>
         <div class="facilityContent">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p><?php echo (!empty($facility->description))?$facility->description:'';?></p>
           <div class="row">
             <div class="col-md-4">
               <ul>
@@ -48,26 +50,33 @@
         </div>
       </div>
     </div>
+  <?php } ?>
+<?php } ?> -->
     <!-- second facility -->
+    <?php if(!empty($facilities)) { ?>
+    <?php foreach($facilities as $facility) { ?>
     <div class="col-md-12 pd-none">
       <div class="facilityWrapper">
         <div class="facilityHead">
-          <h2>Bus Facility</h2>
+          <h2><?php echo (!empty($facility->name))?$facility->name:'';?></h2>
         </div>
         <div class="row">
           <div class="col-md-8">
             <div class="facilityContent">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p><?php echo (!empty($facility->description))?$facility->description:'';?></p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="facilityImg">
-              <img src="assets/images/library.jpg" alt="facility">
+              <?php if(!empty($facility->photo)){ ?>
+                <img src="assets/uploads/facility-photo/<?php echo (!empty($facility->photo))?$facility->photo:''; ?>" alt="facility">
+              <?php }?>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <?php } ?>
+<?php } ?>
   </div>
 </section>
