@@ -480,6 +480,14 @@
                     </li>  
                     <?php } ?>
                     
+                    <?php if(has_permission(VIEW, 'facility', 'facility')){ ?>
+                        <li>
+                            <a href="<?php echo site_url('facility'); ?>"><i class="fa fa-desktop"></i><?php echo 'Facilities' ?></a>
+                       
+                        </li>  
+                    <?php } ?>
+                    
+
                     <li><a><i class="fa fa-lock"></i><?php echo $this->lang->line('profile'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo site_url('profile'); ?>"><?php echo $this->lang->line('my_profile'); ?></a></li>

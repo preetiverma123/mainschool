@@ -61,6 +61,7 @@ $config['my_accounting']['income']['1'] = '1|1|1|1';
 $config['my_accounting']['invoice']['1'] = '1|1|1|1';
 $config['my_accounting']['payment']['1'] = '1|0|1|0';
 $config['my_report']['report']['1'] = '0|0|1|0';
+$config['my_facility']['facility']['1'] = '1|1|1|1';
 $config['my_setting']['setting']['3'] = '0|0|0|0';
 $config['my_setting']['payment']['3'] = '0|0|0|0';
 $config['my_setting']['sms']['3'] = '0|0|0|0';
