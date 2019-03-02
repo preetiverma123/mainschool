@@ -46,7 +46,7 @@ class Web extends CI_Controller {
         $this->data['events'] = $this->web->get_event_list(3);
         $this->data['teachers'] = $this->web->get_teacher_list();
         $this->data['galleries'] = $this->web->get_list('galleries', array('status'=>1, 'is_view_on_web'=>1), '', '', '', 'id', 'DESC');
-        $this->data['facilities'] = $this->web->get_list('facilities', array('status'=>1), '', '', '', 'id', 'DESC');
+        $this->data['facilities'] = $this->web->get_list('facilities', array('status'=>1), '', 8, '', 'id', 'DESC');
 
         ///StudentsCount
         $this->db->select('*');
