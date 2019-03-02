@@ -67,7 +67,9 @@
   <div class="container">
     <div class="col-md-12">
       <div>
-        <div class=""></div>
+        <div class="facilityHead">
+          <h2>Bus Facility</h2>
+        </div>
       </div>
     </div>
   </div>
