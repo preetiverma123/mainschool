@@ -1182,6 +1182,12 @@ button.btn.btn-primary.btn-blue {
     .galleryDiv .owl-carousel .owl-dots{
         bottom: -30px;
     }
+    .top-menu ul li a{
+        font-size: 12px;
+    }
+    .header-top a{
+        font-size: 12px;
+    }
     .facilitySection {
         padding: 0px 0 40px;
     }
