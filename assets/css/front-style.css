@@ -100,13 +100,13 @@ ul {
     padding: 0px;
 }
 li {
-    /*list-style: none*/
+    list-style: none
 }
 p {
     font-size: 14px;
     font-weight: normal;
-    line-height: 25px !important;
-    color: #000000;
+    line-height: 24px;
+    color: #7e7e7e;
     margin-bottom: 15px;
 }
 hr {
@@ -206,31 +206,16 @@ label {
     padding: 1px 0 0;
 }
 .logo img{
-    /* padding-top: 4px; */
-    max-width: 61px;
-    height:67px;
-    padding: 4px 4px 5px 4px;
+    max-width: 72px;
 }
 
 /* Menu Area start  */
 .main-menu {
-    /*text-align: right;*/
-    /*margin-top: 6px;*/
+    text-align: right;
+    margin-top: 6px;
 }
 .main-menu ul li ul.submenu li a:hover{
     color: #000 !important;
-}
-.logo h3 {
-    color: #d51c1f;
-    font-size: 16px;
-    /* float: left; */
-    padding-left: 5px;
-    line-height: 22px;
-    margin-bottom: 0;
-    font-weight: 800;
-}
-.panel.panel-head .panel-heading h3{
-    font-size:15px;
 }
 .pb-4, .py-4 {
     padding-bottom: 1.5rem!important;
@@ -248,24 +233,13 @@ label {
     color: #222222;
     display: block;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 14px;
     /* font-size: 14px; */
-    padding: 27px 7px 20px;
+    padding: 23px 8px 20px;
     /*text-transform: uppercase;*/
 } 
-.feesBanner img{
-    width:100%;
-    height:250px;
-}
-.feesSection {
-    padding: 40px 0;
-}
-.feesWrapper {
-    padding-bottom: 40px;
-}
 #contact-section{
-    padding: 60px 0;
-    border-top: 1px solid #d51c1f;
+   padding: 40px 0;
 }
 .contact-form input{
     height: 40px;
@@ -276,7 +250,7 @@ label {
     padding-right: 10px;
 }
 #message-section .go-heading{
-        margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .main-menu ul li ul.submenu {   
     left: 0;
@@ -285,7 +259,7 @@ label {
     top: 110%;
     transition: all 0.3s ease 0s;
     visibility: hidden;
-    width: 160px;
+    width: 220px;
     text-align: left;
     z-index: 2;
 }
@@ -301,8 +275,7 @@ label {
 .main-menu ul li ul.submenu li a {
     color: #fff;
     font-size: 13px;
-    padding: 8px 10px;
-    /*padding: 15px 20px;*/
+    padding: 7px 20px;
 }
 .main-menu ul li ul.submenu li:hover > a{color:#888} 
 .main-menu ul li ul.submenu li ul.submenu {
@@ -346,43 +319,37 @@ label {
     font-size: 0;
     position: absolute;
 }
-.team-item .team-img:hover .normal-text{
-    opacity: 0;
-}
-.main-menu ul li ul li.inline-items-menu{
-    border:1px solid transparent !important;
-}
+
 .about-school .owl-carousel .owl-nav{
     display: block;
-    top: -31px;
-    /* height: 20px; */
+    top: -30px;
 }
 .about-school .owl-carousel .owl-prev:before {
     content: "\f053";
-    font-size: 11px;
+    font-size: 15px;
     color: #fff;
     right: 35px;
     border:1px solid transparent;
     padding: 5px 5px 2px;
-    background-color: #d51c1f;
+    background-color: #d42a4b;
     font-family: fontAwesome;
     position: absolute;
 }
 .about-school .owl-carousel .owl-next:before {
     content: "\f054";
-    font-size: 11px;
+    font-size: 15px;
     color: #fff;
     border:1px solid transparent;
     padding: 5px 5px 2px;
-    background-color: #f33c1f;
+    background-color: #d42a4b;
     font-family: fontAwesome;
     position: absolute;
 }
 .about-school .owl-carousel .owl-prev:hover:before {
     content: "\f053";
     font-size: 15px;
-    color: #f33c1f;
-    border:1px solid #f33c1f;
+    color: #d42a4b;
+    border:1px solid #d42a4b;
     right: 35px;
     padding: 5px 5px 2px;
     background-color: #fff;
@@ -392,8 +359,8 @@ label {
 .about-school .owl-carousel .owl-next:hover:before {
     content: "\f054";
     font-size: 15px;
-    color: #f33c1f;
-    border:1px solid #f33c1f;
+    color: #d42a4b;
+    border:1px solid #d42a4b;
     padding: 5px 5px 2px;
     background-color: #fff;
     font-family: fontAwesome;
@@ -403,21 +370,18 @@ label {
     position: absolute;
     right: 0;
 }
-.course-image img {
-    width: 100%;
-}
 .owl-carousel .owl-prev:before{
     content:"\f053";
-    font-size: 30px;
-    color: #f33c1f;
+    font-size: 50px;
+    color: #d42a4b;
     font-family: fontAwesome;
     position: absolute;
 }
 
 .owl-carousel .owl-next:before{
    content: "\f054";
-    font-size: 30px;
-    color: #f33c1f;
+    font-size: 50px;
+    color: #d42a4b;
     right: 8px;
     /* left: auto; */
     font-family: fontAwesome;
@@ -426,18 +390,19 @@ label {
 .top-menu ul li:hover > a{color:#013e6d}
 .top-menu ul li > a.active{color:#013e6d;font-weight: bold;}
 .owl-carousel .owl-dots {
-    /*position: absolute;*/
+    position: absolute;
     /* top: 0; */
     text-align: center;
-    bottom: 13px;
+    bottom: 0;
     left: 10px;
+    right: 10px;
 }
 .owl-carousel .owl-dot.active span {
     display: block;
     height: 10px;
     border-radius: 50%;
     width: 10px;
-    background-color: #f33c1f;
+    background-color: #d42a4b;
 }
 .owl-carousel .owl-dot span {
     display: block;
@@ -498,66 +463,46 @@ label {
 .about-area p strong{
     color: #013e6d;
 }
-
+.facility-school .title-section1{
+    background-color: #e41d43;
+    font-size: 22px;
+    padding: 6px 0;
+    color: #fff;
+}
+.notice-board .title-section1{
+    background-color: #e41d43;
+    font-size: 22px;
+    padding: 6px 0;
+    color: #fff;
+}
+.notice-marquee {
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #e41d43;
+}
 .notice-single {
     border-right: 1px solid #e8e8e8;
 }
 .notice-single{
     border-right: none;
     /*margin: 0 30px;*/
+    height: 356px;
+    margin-top: -10px;
     text-align: center;
     box-shadow: 0 2px 5px 0 #00000014;
     background: #fff3f3;
 }
-.d_papers:before, .d_papers:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: rotateZ(2.5deg);
-    -o-transform: rotate(2.5deg);
-    transform: rotateZ(2.5deg);
-    z-index: -1;
-}
-.d_papers:after {
-    -webkit-transform: rotateZ(-2.5deg) !important;
-    -o-transform: rotate(-2.5deg) !important;
-    transform: rotateZ(-2.5deg) !important;
-}
-
-.d_papers, .d_papers:before, .d_papers:after {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 0 30px rgba(0,0,0,0.1), 1px 1px 3px rgba(0,0,0,0.2);
-}
-.d_papers {
-    position: relative;
-    width: 90%;
-    padding: 1em 1em 0;
-    margin: 0px auto;
-    /*margin-top: 40px;*/
-}
-.noticeMarquee{
-    height: 270px;
-}
-ul.static-links li {
-    list-style: none;
-}
-.addmissionImage {
-    /* padding: 10px; */
-}
 .notice-single .notice-title h2{
     font-size: 18px;
     line-height: 1.5;
-    color: #e41d43;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    color: #d42a4b;
     font-weight: 600;
 }
 .notice-single .notice-title h3{
     font-size: 13px;
-    font-weight: 700;
-    color: #000000;
+    font-weight: 300;
     font-style: italic;
 }
 .notice-single .notice-icon {
@@ -568,7 +513,7 @@ ul.static-links li {
 }
 
 .form-row{
-    /*float: left;*/
+    float: left;
     width: 100%;
 } 
 
@@ -674,8 +619,12 @@ footer{
 .gallerydiv .grid-sizer {
     width: 12.5%;
 }
+.slider_area {
+    padding-top: 20px;
+}
 .gallerydiv .gallery-item.gi-big, .gallerydiv .gallery-item.gi-long {
-    width: 25%;
+    width: 24%;
+    margin-right: 10px;
 }
 .gallerydiv .gallery-item {
     width: 12.5%;
@@ -738,18 +687,15 @@ nav{
 }
 button.btn.btn-primary.btn-blue {
     padding: 13px 30px;
-    background: #f33c1f;
-    border: 1px solid #f33c1f;
-}
-.contact-form button.btn.btn-primary.btn-blue {
-    padding: 13px 30px;
-    background: #f33c1f;
-    border: 1px solid #f33c1f;
+    background: #33a0ca;
+    border: 1px solid #33a0ca;
 }
 .right-pane{
     padding: 10px;
     background: #f6f6f4;
     /*float: left;*/
+    height: 460px;
+    overflow-y: scroll;
     box-shadow: 0 2px 5px 0 #00000014;
     margin-bottom: 20px; 
     border: 1px solid #e0e0e0;
@@ -855,7 +801,9 @@ button.btn.btn-primary.btn-blue {
     -webkit-transition: all .4s ease 0s;
     transition: all .4s ease 0s;
 }
-
+.facilitySection {
+    padding: 0px 0 40px;
+}
 .single-event-list {
     position: relative; 
     margin-bottom: 30px;
@@ -869,15 +817,15 @@ button.btn.btn-primary.btn-blue {
 }
 
 .gallery-section {
-    padding: 60px 0;
-    border-top:2px solid #f33c1f;
-    border-bottom:2px solid #f33c1f;
+    padding: 40px 0 57px;
+    border-top:2px solid #e41d43;
+    border-bottom:2px solid #e41d43;
 }
 .gallerydiv .gallery-item a {
-    position: absolute;
+    /*position: absolute;
     width: 50px;
     height: 50px;
-    background: #f33c1f;
+    background: #e41d43;
     color: #fff;
     left: 50%;
     top: 60%;
@@ -890,12 +838,12 @@ button.btn.btn-primary.btn-blue {
     z-index: 1;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
-    transition: all 0.4s;
+    transition: all 0.4s;*/
 }
 .gallerydiv .gallery-item:after {
-    content: '';
+    /*content: '';
     display: block;
-    clear: both;
+    clear: both;*/
 }
 .gallerydiv .gallery-item a i {
     font-size: 24px;
@@ -924,7 +872,7 @@ button.btn.btn-primary.btn-blue {
 
 .event-area{
     padding-top: 40px;
-    /*border-top:1px solid #f33c1f; */
+    /*border-top:1px solid #e41d43; */
     /*background: #ebf0f4;*/
     padding-bottom: 70px;
 }
@@ -982,44 +930,16 @@ button.btn.btn-primary.btn-blue {
 
 .gallery{
     padding: 5px;   
-    position: relative;
-    /*float: left;*/
+    float: left;
     margin-bottom: 30px;
 }
-.gallery:hover .overlay-gallery{
-    bottom: 0;
-    opacity: 1;
-    height: 100%;
-    box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
-}
-.gallery:hover .overlay-gallery .gallery-title{
-    opacity: 1;
-    bottom: 0;
-    height: 100%;
-}
-.overlay-gallery{
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    right: 0;
-    height: 0;
-    bottom: 100%;
-    /*top:0;*/
-    transition: .5s ease-in;
-    background-color: rgba(0,0,0,.5);
-}
-.gallery img {
-    height: 220px;
-}
-
-/*.gallery:hover{
+.gallery:hover{
     box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
-}*/
+}
 
 .gallery-title{
     padding: 10px;
-    opacity: 0;
-    /*background: #f9f9f9;*/
+    background: #f9f9f9;
     font-size: 20px;
     color: #736e6e;
     text-align: center;
@@ -1081,7 +1001,7 @@ button.btn.btn-primary.btn-blue {
 }
 
 .profile-details h4{
-    background: #f33c1f;
+    background: #e41d43;
     padding: 5px;
     font-size: 20px;
     margin: 0 20px;
@@ -1115,55 +1035,11 @@ button.btn.btn-primary.btn-blue {
     margin-bottom: 30px;
     padding-bottom: 43px;
 }
-.marginContact{
-    margin-top: 50px;
-}
-.marginBox{
-    margin-bottom: 80px;
-}
-.career-modal-head {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.career-modal-head h3{
-    font-size: 22px;
-    padding-left: 10px;
-}
-.career-modal .modal-header {
-    padding: 5px;
-}
-.career-form-modal form{
-    padding: 40px 40px 0;
-    margin-bottom: 30px;
-}
-.career-modal-head img{
-    max-width: 60px;
-}
+
 .admission-form{      
     min-height: 500px;
     margin: 0px 10px;
     padding: 10px;
-}
-.career-modal .btn-default{
-    border: 1px solid transparent;
-    background-color: transparent;
-    text-align: left;
-    color: #7e7e7e;
-    padding: 0;
-}
-.fileUpload i {
-    color: #7e7e7e !important;
-    font-size: 18px;
-}
-#careerModal button {
-    background: #f33c1f;
-    /* padding-left: 10px; */
-    margin-left: 15px;
-    border: 1px solid #f33c1f;
-}
-.career-modal .btn-default:hover{
-    background-color: transparent;
 }
 .admission-address{
     text-align: center;
@@ -1205,7 +1081,6 @@ button.btn.btn-primary.btn-blue {
     .main-menu ul li {
         display: block;
         text-align: left;
-        padding: 27px 8px 20px 0;
     }
     .main-menu ul li a {
         padding: 10px 8px;
@@ -1224,7 +1099,7 @@ button.btn.btn-primary.btn-blue {
     }
     .main-menu ul li.manutoggle {
         position: absolute;
-        top: -80px;
+        top: -62px;
         font-size: 24px;
         right: 10px;
         display: block;
@@ -1235,12 +1110,7 @@ button.btn.btn-primary.btn-blue {
     .main-menu ul li a,
     .main-menu ul li a:hover,
     .main-menu ul li.active > a {
-        /*color: #ffffff;*/
-    }
-    ul.submenu-course{
-        left: 0 !important;
-        display: none;
-        top: 100% !important;
+        color: #ffffff;
     }
     #header.sticky .logo {
         /*padding: 15px 0 15px;*/
@@ -1269,8 +1139,7 @@ button.btn.btn-primary.btn-blue {
         display: none;
         text-align: left;
     }
-    
-    
+
     
     .col-xl-9.static {
         background: #013e6d;
@@ -1278,7 +1147,7 @@ button.btn.btn-primary.btn-blue {
     .main-menu ul li a,
     .main-menu ul li a:hover,
     .main-menu ul li.active > a {
-        color: #ffffff;
+        /*color: #ffffff;*/
     }
     #header.sticky .logo {
         /* padding: 15px 0 15px; */
@@ -1310,6 +1179,22 @@ button.btn.btn-primary.btn-blue {
     .main-menu ul li:not(:first-child) {
         display: none;
     }
+    .galleryDiv .owl-carousel .owl-dots{
+        bottom: -30px;
+    }
+    .top-menu ul li a{
+        font-size: 12px;
+    }
+    .header-top a{
+        font-size: 12px;
+    }
+    .facilitySection {
+        padding: 0px 0 40px;
+    }
+    .video-single .about-school{
+        padding: 10px 0 0;
+    }
+    
     .main-menu ul li a {
         padding: 10px 8px;
     }
@@ -1325,7 +1210,7 @@ button.btn.btn-primary.btn-blue {
     }
     .main-menu ul li.manutoggle {
         position: absolute;
-        top: -50px;
+        top: -56px;
         right: 10px;
         display: block;
     }
@@ -1365,9 +1250,6 @@ button.btn.btn-primary.btn-blue {
     .main-menu ul li > ul.submenu{
         
     }
-    .contact-form{
-        margin-top: 20px;
-    }
     
 }
 /* Mobile Layout: 320px. */
@@ -1376,52 +1258,17 @@ button.btn.btn-primary.btn-blue {
     .logo a {
         font-size: 20px !important;
     }
-    #contact-section{
-        padding:30px 0 20px;
-    }
-    .section-testimonial{
-        padding: 30px 0 !important;
-    }
-    footer{
-        padding-top: 20px;
-    }
-    .message-content p{
-        height: unset !important;
-    }
-    .moved-text marquee{
-        padding: 5px !important;
-    }
-    .moved-text {
-        height: 19px !important;
-    }
     ul.submenu{
         display: none;
     }
-    .slider_area .panel.panel-head {
-        margin-top: 20px;
-    }
-    .team-item {
-        padding: 0 15px;
-    }
     .mainmenu.responsive{
-        border-top: 1px solid #f33c1f;
+        border-top: 1px solid #e41d43;
     }
     .main-menu ul li ul.submenu li a{
         padding: 10px 15px;
     }
     .go-content-area{
         padding-bottom: 30px;
-    }
-    ul.submenu-course{
-        left: 4% !important;
-        display: none;
-        height: 200px;
-         overflow-y: scroll;
-        width: 90% !important;
-        top: 57% !important;
-    }
-    ul.submenu-course .inline-items-menu{
-        float: unset !important;
     }
     .slider_area img{
         height: unset !important;
@@ -1476,25 +1323,16 @@ button.btn.btn-primary.btn-blue {
 
     .main-menu ul li.manutoggle a{
         font-size: 18px;
-        /*padding-top: 7px;*/
-        line-height: 6px;
+        line-height: 12px;
     }
 
     
     .q-links{
         /*padding-left: 20px;*/
     }
-    section.messageContainer {
-        padding:0 0 50px !important;
-    }
-    .video-single{
-        margin-top: 50px;
-    }
-    .gallery-section{
-        padding:30px 0;
-    }
+    
     section.padding-btm {
-        padding: 50px 0;
+        padding: 30px 0;
     }
     section.event-area {
         padding: 30px 0;
@@ -1528,43 +1366,13 @@ button.btn.btn-primary.btn-blue {
     section.about-content {
         padding: 30px 0;
     }
-    .go-directors .btn_view{
-        margin-bottom: 20px;
-    }
-    .directorWrapper .go-directors{
-        padding-bottom: 0;
-    }
-    .gallerydiv .gallery-item, .gallerydiv .gallery-item.gi-big, .gallerydiv .gallery-item.gi-long {
-        width: 50%;
-    }
-
 }
 
 @media only screen and (max-width: 576px){
     .logo img {
-        /* height: 50px; */
-        max-width: 56px;
-        padding: 4px 0 3px;
-    }
-    .main-menu ul li a{
-        padding: 7px 8px;
-    }
-    .gallerydiv .gallery-item, .gallerydiv .gallery-item.gi-big, .gallerydiv .gallery-item.gi-long {
-        width: 100%;
+        max-width: 60px;
     }
     .gallery-section{
-        margin: 20px;
-    }
-    .section_team .owl-nav{
-        display: none;
-    }
-    .gallery-section{
-        padding: 30px 0;
-    }
-    section.padding-btm {
-        padding: 0 0;
-    }
-    #contact-section{
         padding: 30px 0;
     }
     .spad {
@@ -1575,7 +1383,10 @@ button.btn.btn-primary.btn-blue {
         font-size: 25px;
     }
     .main-menu ul li.manutoggle {
-        top: -45px;
+        top: -50px;
+    }
+    .logo span:first-child{
+        padding-left: 0;
     }
 
 }
