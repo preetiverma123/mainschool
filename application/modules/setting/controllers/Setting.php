@@ -132,12 +132,14 @@ class Setting extends MY_Controller {
         $this->form_validation->set_rules('school_name', $this->lang->line('school') . ' ' . $this->lang->line('name'), 'trim|required');
         $this->form_validation->set_rules('address', $this->lang->line('address'), 'trim|required');
         $this->form_validation->set_rules('phone', $this->lang->line('phone'), 'trim|required');
-        $this->form_validation->set_rules('other_phone', $this->lang->line('other').'_'.$this->lang->line('phone'), 'trim');
+        $this->form_validation->set_rules('other_phone','other_'.$this->lang->line('phone'), 'trim');
         $this->form_validation->set_rules('email', $this->lang->line('email'), 'trim|required');
         $this->form_validation->set_rules('currency', $this->lang->line('currency'), 'trim|required');
         $this->form_validation->set_rules('currency_symbol', $this->lang->line('currency_symbol'), 'trim|required');
         $this->form_validation->set_rules('language', $this->lang->line('language'), 'trim|required');
         $this->form_validation->set_rules('footer', $this->lang->line('footer'), 'trim|required');
+         $this->form_validation->set_rules('classes',$this->lang->line('class'), 'trim');
+          $this->form_validation->set_rules('students',$this->lang->line('student'), 'trim');
         $this->form_validation->set_rules('running_year', $this->lang->line('running_year'), 'trim|required');
     }
 
@@ -164,6 +166,8 @@ class Setting extends MY_Controller {
         $items[] = 'running_year';
         $items[] = 'school_fax';
         $items[] = 'school_geocode';
+        $items[] = 'classes';
+        $items[] = 'students';
         $items[] = 'facebook_url';
         $items[] = 'twitter_url';
         $items[] = 'linkedin_url';

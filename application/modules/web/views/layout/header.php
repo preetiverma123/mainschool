@@ -7,7 +7,9 @@
                     <p>
                         <a href="mailto:<?php echo $settings->email; ?>"><i class="fa fa-envelope"></i> <?php echo $settings->email; ?></a>
                         <a href="tel:<?php echo $settings->phone; ?>"><i class="fa fa-phone"></i> <?php echo $settings->phone; ?></a>
-                        <a href="tel:<?php echo $settings->phone; ?>"><i class="fa fa-phone"></i> <?php echo $settings->phone; ?></a>
+                        <?php if(!empty($settings->other_phone)){?>
+                            <a href="tel:<?php echo $settings->other_phone; ?>"><i class="fa fa-phone"></i><?php echo $settings->other_phone; ?></a>
+                        <?php }?>
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">                            

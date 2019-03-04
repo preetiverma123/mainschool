@@ -63,7 +63,7 @@
                                 </div>
 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="other_phone"><?php echo $this->lang->line('other'); ?><?php echo $this->lang->line('phone'); ?> </label>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="other_phone"><?php echo 'Other '; ?><?php echo $this->lang->line('phone'); ?> </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input  class="form-control col-md-7 col-xs-12"  name="other_phone" value="<?php echo isset($setting) ? $setting->other_phone : ''; ?>"  placeholder="<?php echo $this->lang->line('phone'); ?>"  type="text">
                                         <div class="help-block"><?php echo form_error('other_phone'); ?></div>
@@ -147,6 +147,22 @@
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input  class="form-control col-md-7 col-xs-12"  name="school_geocode" value="<?php echo isset($setting) ? $setting->school_geocode : ''; ?>"  placeholder="<?php echo $this->lang->line('school_geocode'); ?>" type="text">
                                         <div class="help-block"><?php echo form_error('school_geocode'); ?></div>
+                                    </div>
+                                </div>
+
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="classes"> <?php echo 'No Of '.$this->lang->line('class'); ?> </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input  class="form-control col-md-7 col-xs-12"  name="classes" value="<?php echo isset($setting) ? $setting->classes : ''; ?>"  placeholder="<?php echo $this->lang->line('class'); ?>" type="text">
+                                        <div class="help-block"><?php echo form_error('classes'); ?></div>
+                                    </div>
+                                </div>
+
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="students"> <?php echo 'No Of '.$this->lang->line('student'); ?> </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input  class="form-control col-md-7 col-xs-12"  name="students" value="<?php echo isset($setting) ? $setting->students : ''; ?>"  placeholder="<?php echo $this->lang->line('student'); ?>" type="text">
+                                        <div class="help-block"><?php echo form_error('students'); ?></div>
                                     </div>
                                 </div>
                                 

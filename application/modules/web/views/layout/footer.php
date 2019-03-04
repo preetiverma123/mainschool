@@ -67,7 +67,12 @@
                 <div class="footer-contact-info">
                     <div class="icon"><i class="fa fa-phone"></i></div>
                     <div class="text padding-top">
-                        <a href="tel:<?php echo $settings->phone; ?>"><?php echo $settings->phone; ?></a></div>
+                        <a href="tel:<?php echo $settings->phone; ?>"><?php echo $settings->phone; ?></a>
+                        <div class="icon"><i class="fa fa-phone"></i></div>
+                        <?php if(!empty($settings->other_phone)){?>
+                             <a href="tel:<?php echo $settings->other_phone; ?>"><?php echo $settings->other_phone; ?></a>
+                        <?php }?>
+                    </div>
                 </div>
                 <div class="footer-contact-info">
                     <div class="icon"><i class="fa fa-envelope"></i></div>
