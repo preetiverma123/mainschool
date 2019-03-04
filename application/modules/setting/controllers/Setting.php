@@ -132,6 +132,7 @@ class Setting extends MY_Controller {
         $this->form_validation->set_rules('school_name', $this->lang->line('school') . ' ' . $this->lang->line('name'), 'trim|required');
         $this->form_validation->set_rules('address', $this->lang->line('address'), 'trim|required');
         $this->form_validation->set_rules('phone', $this->lang->line('phone'), 'trim|required');
+        $this->form_validation->set_rules('other_phone', $this->lang->line('other').'_'.$this->lang->line('phone'), 'trim');
         $this->form_validation->set_rules('email', $this->lang->line('email'), 'trim|required');
         $this->form_validation->set_rules('currency', $this->lang->line('currency'), 'trim|required');
         $this->form_validation->set_rules('currency_symbol', $this->lang->line('currency_symbol'), 'trim|required');
@@ -155,6 +156,7 @@ class Setting extends MY_Controller {
         $items[] = 'school_name';
         $items[] = 'address';
         $items[] = 'phone';
+        $items[] = 'other_phone';
         $items[] = 'email';
         $items[] = 'currency';
         $items[] = 'currency_symbol';

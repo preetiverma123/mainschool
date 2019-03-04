@@ -61,6 +61,14 @@
                                         <div class="help-block"><?php echo form_error('phone'); ?></div>
                                     </div>
                                 </div>
+
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="other_phone"><?php echo $this->lang->line('other'); ?><?php echo $this->lang->line('phone'); ?> </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input  class="form-control col-md-7 col-xs-12"  name="other_phone" value="<?php echo isset($setting) ? $setting->other_phone : ''; ?>"  placeholder="<?php echo $this->lang->line('phone'); ?>"  type="text">
+                                        <div class="help-block"><?php echo form_error('other_phone'); ?></div>
+                                    </div>
+                                </div>
                                 
                                 <div class="item form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="school_fax"><?php echo $this->lang->line('school_fax'); ?> </label>
