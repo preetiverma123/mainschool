@@ -87,9 +87,11 @@
                                         ,<?php echo $settings->other_phone; ?>
                                 <?php }?></p>
                                 </li>
-                                <li>
-                                    <p><strong><?php echo $this->lang->line('school_fax'); ?>: </strong><?php echo $settings->school_fax; ?></p>
-                                </li>
+                                <?php if(!empty($settings->school_fax)){?>
+                                    <li>
+                                        <p><strong><?php echo $this->lang->line('school_fax'); ?>: </strong><?php echo $settings->school_fax; ?></p>
+                                    </li>
+                                <?php }?>
                             </ul>
                         </div> 
                     </div>
