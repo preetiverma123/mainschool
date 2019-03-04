@@ -83,7 +83,9 @@
                                     <p><strong><?php echo $this->lang->line('email'); ?>: </strong><?php echo $settings->email; ?></p>
                                 </li>
                                 <li>
-                                    <p><strong><?php echo $this->lang->line('phone'); ?>: </strong><?php echo $settings->phone; ?></p>
+                                    <p><strong><?php echo $this->lang->line('phone'); ?>: </strong><?php echo $settings->phone; ?>  <?php if(!empty($settings->other_phone)){?>
+                                        ,<?php echo $settings->other_phone; ?>
+                                <?php }?></p>
                                 </li>
                                 <li>
                                     <p><strong><?php echo $this->lang->line('school_fax'); ?>: </strong><?php echo $settings->school_fax; ?></p>
