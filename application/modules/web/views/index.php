@@ -433,7 +433,19 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12">
               <div class="map-contact">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4165.321812020541!2d77.38378970022572!3d28.61164902546254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5aa32ba7abd%3A0x348f1dd49387e0a7!2sMainee+Steel+Works+Private+Limited!5e0!3m2!1sen!2sin!4v1543673481681" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div id="map" style="height: 455px;"></div>
+                  <script>
+                      function myMap() {
+                          var myCenter = new google.maps.LatLng(<?php echo $settings->school_geocode; ?>);
+                          var mapCanvas = document.getElementById("map");
+                          var mapOptions = {center: myCenter, zoom: 16};
+                          var map = new google.maps.Map(mapCanvas, mapOptions);
+                          var marker = new google.maps.Marker({position: myCenter});
+                          marker.setMap(map);
+                          //infowindow.open(map, marker);
+                      }
+                  </script>
+                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwNfbMeqVjiM6GstU-IfuyXvg0R1F2UaY&callback=myMap"></script>
               </div>
                 <!-- <script>
                     function myMap() {
@@ -446,7 +458,7 @@
                         //infowindow.open(map, marker);
                     }
                 </script> -->
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwNfbMeqVjiM6GstU-IfuyXvg0R1F2UaY&callback=myMap"></script>
+               
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div class="contact-form">

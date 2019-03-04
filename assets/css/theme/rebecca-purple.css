@@ -994,6 +994,9 @@ a.img-popup {
     vertical-align: middle;
     font-weight: 600;
 }
+.map-contact{
+    height: 457px;
+}
 .logo span:first-child{
      padding-left: 10px;
 }
