@@ -59,7 +59,7 @@ class Web extends CI_Controller {
 
             
         }
-        $this->data['students'] = $students;
+        $this->data['students'] = $this->data['settings']->students;
 
         ////Subjects Count
         $this->db->select('*');
@@ -72,7 +72,7 @@ class Web extends CI_Controller {
 
             
         }
-        $this->data['sections'] = $sections;
+        $this->data['sections'] = $this->data['settings']->classes;
 
         ////Employees Count
         $this->db->select('*');

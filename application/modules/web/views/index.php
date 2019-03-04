@@ -311,9 +311,9 @@
             <i class="ti-pencil-alt"></i>
           </div>
           <div class="fact-text">
-            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($sections);?>" data-speed="60" data-refresh-interval="50"><?php echo count($sections);?></span>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo (!empty($sections)?$sections:'0');?>" data-speed="60" data-refresh-interval="50"><?php echo (!empty($sections)?$sections:'0');?></span>
             <!-- <h2><?php echo count($sections);?></h2> -->
-            <p>Sections</p>
+            <p>CLASSES</p>
 
           </div>
         </div>
@@ -333,7 +333,7 @@
             <i class="ti-user"></i>
           </div>
           <div class="fact-text">
-            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($students);?>" data-speed="60" data-refresh-interval="50"><?php echo count($students);?></span>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo !empty($students)?$students:'0';?>" data-speed="60" data-refresh-interval="50"><?php echo !empty($students)?$students:'0';?></span>
             <!-- <h2><?php echo count($students);?></h2> -->
             <p>STUDENTS</p>
           </div>
