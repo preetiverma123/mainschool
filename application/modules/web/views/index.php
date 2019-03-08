@@ -4,24 +4,24 @@
     <div class="row">
       <div class="col-md-8">
         <div class="owl-carousel" id="slider_area">
-        <div class="item">
-          <img src="assets/uploads/slider/slider-move.jpg" class="img-responsive" alt="slider">
-          <div class="overlay"></div>
-          <!-- <?php $slider_str = ''; foreach($sliders as $obj){ ?>
+          <?php $slider_str = ''; foreach($sliders as $obj){ ?>
             <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
+            <div class="item">
+              <img src="<?php echo base_url().'assets/uploads/slider/'.$obj->image;?>" class="img-responsive" alt="slider">
+              <div class="overlay"></div>
+              
+            </div>
           <?php } ?>
-        <div id="demo-1" data-zs-src='[<?php echo rtrim($slider_str, ','); ?>]' data-zs-overlay="dots">
-            <div class="demo-inner-content"></div>
-        </div>  -->
-          </div>
-          <div class="item">
+        
+        
+         <!--  <div class="item">
             <img src="assets/uploads/slider/slider-banner.jpg" class="img-responsive" alt="slider">
             <div class="overlay"></div>
           </div>
            <div class="item">
             <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" class="img-responsive" alt="slider">
             <div class="overlay"></div>
-          </div>
+          </div> -->
         </div>
       </div>
      <div class="col-lg-4 col-md-4">
